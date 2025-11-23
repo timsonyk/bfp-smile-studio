@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-accent text-accent-foreground">
+  return <footer className="bg-accent text-accent-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -41,11 +39,11 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>Москва, Алтуфьевское шоссе 89А</span>
+                <span>Москва, Дербеневская набережная, 1/2            </span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <a href="tel:+74951234567" className="hover:text-primary-foreground transition-colors">+7 (495) 123-45-67</a>
+                <a href="tel:+74951234567" className="hover:text-primary-foreground transition-colors">+7 (495) 120-01-88</a>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
@@ -59,8 +57,6 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} BFP Concept. Все права защищены.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

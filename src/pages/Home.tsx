@@ -46,6 +46,21 @@ const Home = () => {
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h1 className="leading-[1.2] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-5 md:mb-6 text-3xl text-center">
               BFP Concept — Биофункциональная стоматология
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-7 md:mb-8 leading-relaxed reveal-section reveal-delay-1">
               Диагностика. Функциональное восстановление. Эстетическая стоматология.
