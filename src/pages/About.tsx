@@ -48,11 +48,11 @@ const About = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 bg-gradient-to-b from-primary/5 to-background">
+      <section className="pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-20 lg:pb-24 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center reveal-section">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">О клинике</h1>
-            <p className="text-xl text-muted-foreground">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">О клинике</h1>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
               Биофункциональная стоматология для здоровья и красоты
             </p>
           </div>
@@ -60,11 +60,11 @@ const About = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-24">
+      <section className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto reveal-section">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">Наша философия</h2>
-            <div className="space-y-6 text-lg text-muted-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center">Наша философия</h2>
+            <div className="space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg text-muted-foreground">
               <p>
                 BFP Concept основана в Москве как клиника биофункциональной стоматологии — направления, которое рассматривает зубочелюстную систему не изолированно, а как часть всего организма.
               </p>
@@ -83,17 +83,17 @@ const About = () => {
       </section>
 
       {/* Principles Section */}
-      <section className="py-24 bg-secondary/30">
+      <section className="py-12 md:py-20 lg:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center reveal-section">Принципы работы</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 lg:mb-16 text-center reveal-section">Принципы работы</h2>
+            <div className="grid sm:grid-cols-3 gap-6 md:gap-8">
               {principles.map((principle, idx) => (
                 <div key={principle.number} className={`reveal-section reveal-delay-${idx + 1}`}>
-                  <div className="bg-card rounded-xl p-8 shadow-lg h-full">
-                    <div className="text-6xl font-bold text-primary/20 mb-4">{principle.number}</div>
-                    <h3 className="text-2xl font-bold mb-4">{principle.title}</h3>
-                    <p className="text-muted-foreground">{principle.description}</p>
+                  <div className="bg-card rounded-xl p-6 md:p-8 shadow-lg h-full">
+                    <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary/20 mb-3 md:mb-4">{principle.number}</div>
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-3 md:mb-4">{principle.title}</h3>
+                    <p className="text-sm md:text-base text-muted-foreground">{principle.description}</p>
                   </div>
                 </div>
               ))}
@@ -103,19 +103,19 @@ const About = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-24">
+      <section className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center reveal-section">Современные технологии</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 lg:mb-16 text-center reveal-section">Современные технологии</h2>
+            <div className="grid sm:grid-cols-3 gap-6 md:gap-8">
               {technologies.map((tech, idx) => {
                 const Icon = tech.icon;
                 return (
                   <div key={tech.title} className={`reveal-section reveal-delay-${idx + 1}`}>
-                    <div className="bg-card rounded-xl p-8 shadow-lg card-hover text-center h-full">
-                      <Icon className="w-16 h-16 mx-auto mb-4 text-primary" />
-                      <h3 className="text-xl font-bold mb-4">{tech.title}</h3>
-                      <p className="text-muted-foreground">{tech.description}</p>
+                    <div className="bg-card rounded-xl p-6 md:p-8 shadow-lg card-hover text-center h-full">
+                      <Icon className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 mx-auto mb-3 md:mb-4 text-primary" />
+                      <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">{tech.title}</h3>
+                      <p className="text-sm md:text-base text-muted-foreground">{tech.description}</p>
                     </div>
                   </div>
                 );
