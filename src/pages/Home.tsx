@@ -25,24 +25,24 @@ const Home = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5">
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-32 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 blur-3xl animate-wave"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center reveal-section">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight">
               BFP Concept — биофункциональная стоматология
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 reveal-section reveal-delay-1">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-8 reveal-section reveal-delay-1">
               Диагностика. Функциональное восстановление. Эстетическая стоматология.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center reveal-section reveal-delay-2">
-              <Button asChild size="lg" className="text-lg px-8">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center reveal-section reveal-delay-2">
+              <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8">
                 <Link to="/contacts">Записаться</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-lg px-8">
+              <Button asChild size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8">
                 <Link to="/services/diagnostics">Первичная диагностика</Link>
               </Button>
             </div>
@@ -51,11 +51,11 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-24 bg-secondary/30">
+      <section className="py-12 md:py-20 lg:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center reveal-section">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">О клинике</h2>
-            <div className="space-y-4 text-lg text-muted-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8">О клинике</h2>
+            <div className="space-y-3 md:space-y-4 text-sm sm:text-base md:text-lg text-muted-foreground">
               <p>
                 BFP Concept — это клиника биофункциональной стоматологии, где мы рассматриваем зубочелюстную систему как часть всего организма.
               </p>
@@ -66,7 +66,7 @@ const Home = () => {
                 Наш подход: сначала диагностика, затем восстановление функции, и только потом — эстетика. Это обеспечивает долговременный и предсказуемый результат.
               </p>
             </div>
-            <Button asChild className="mt-8" size="lg">
+            <Button asChild className="mt-6 md:mt-8" size="lg">
               <Link to="/about">
                 Узнать больше <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
@@ -76,30 +76,30 @@ const Home = () => {
       </section>
 
       {/* Main Doctor Section */}
-      <section className="py-24">
+      <section className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="reveal-section">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="reveal-section order-2 md:order-1">
                 <img
                   src={mainDoctor.image}
                   alt={mainDoctor.name}
-                  className="w-full aspect-[3/4] object-cover rounded-2xl shadow-2xl"
+                  className="w-full aspect-[3/4] object-cover rounded-xl md:rounded-2xl shadow-2xl"
                 />
               </div>
-              <div className="reveal-section reveal-delay-1">
-                <h2 className="text-4xl md:text-5xl font-bold mb-4">Главный врач</h2>
-                <h3 className="text-2xl font-semibold text-primary mb-2">{mainDoctor.name}</h3>
-                <p className="text-lg text-muted-foreground mb-6">{mainDoctor.position}</p>
-                <ul className="space-y-3 mb-8">
-                  {mainDoctor.shortDescription.map((item, idx) => (
-                    <li key={idx} className="flex items-start text-lg">
-                      <span className="text-primary mr-3 mt-1">•</span>
+              <div className="reveal-section reveal-delay-1 order-1 md:order-2">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Главный врач</h2>
+                <h3 className="text-xl md:text-2xl font-semibold text-primary mb-2">{mainDoctor.name}</h3>
+                <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6">{mainDoctor.position}</p>
+                <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
+                  {mainDoctor.shortDescription.slice(0, 4).map((item, idx) => (
+                    <li key={idx} className="flex items-start text-sm md:text-base lg:text-lg">
+                      <span className="text-primary mr-2 md:mr-3 mt-1">•</span>
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="w-full sm:w-auto">
                   <Link to={`/team/${mainDoctor.slug}`}>
                     Подробнее о враче <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
@@ -111,15 +111,15 @@ const Home = () => {
       </section>
 
       {/* Team Preview Section */}
-      <section className="py-24 bg-secondary/30">
+      <section className="py-12 md:py-20 lg:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 reveal-section">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Наша команда</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16 reveal-section">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Наша команда</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
               Профессионалы с многолетним опытом
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
             {teamPreview.map((member, idx) => (
               <div key={member.id} className={`reveal-section reveal-delay-${idx + 1}`}>
                 <TeamCard member={member} />
@@ -127,7 +127,7 @@ const Home = () => {
             ))}
           </div>
           <div className="text-center reveal-section reveal-delay-4">
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
               <Link to="/team">
                 Вся команда <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
@@ -137,15 +137,15 @@ const Home = () => {
       </section>
 
       {/* Services Preview Section */}
-      <section className="py-24">
+      <section className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 reveal-section">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши услуги</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16 reveal-section">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Наши услуги</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
               Полный спектр стоматологических услуг
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {services.map((service, idx) => {
               const Icon = service.icon;
               return (
@@ -154,16 +154,16 @@ const Home = () => {
                   to={`/services/${service.slug}`}
                   className={`reveal-section reveal-delay-${idx % 4 + 1}`}
                 >
-                  <div className="bg-card rounded-xl p-8 shadow-lg card-hover text-center h-full">
-                    <Icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                    <h3 className="text-lg font-semibold">{service.title}</h3>
+                  <div className="bg-card rounded-lg md:rounded-xl p-4 md:p-6 lg:p-8 shadow-lg card-hover text-center h-full">
+                    <Icon className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 mx-auto mb-3 md:mb-4 text-primary" />
+                    <h3 className="text-sm md:text-base lg:text-lg font-semibold">{service.title}</h3>
                   </div>
                 </Link>
               );
             })}
           </div>
-          <div className="text-center mt-12 reveal-section reveal-delay-4">
-            <Button asChild size="lg">
+          <div className="text-center mt-8 md:mt-12 reveal-section reveal-delay-4">
+            <Button asChild size="lg" className="w-full sm:w-auto">
               <Link to="/services">
                 Все услуги <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
@@ -173,11 +173,11 @@ const Home = () => {
       </section>
 
       {/* Before/After Section */}
-      <section className="py-24 bg-secondary/30">
+      <section className="py-12 md:py-20 lg:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 reveal-section">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Результаты</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16 reveal-section">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Результаты</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
               Наши работы говорят сами за себя
             </p>
           </div>
@@ -188,8 +188,8 @@ const Home = () => {
               alt="Ортопедическая реставрация"
             />
           </div>
-          <div className="text-center mt-12 reveal-section reveal-delay-2">
-            <Button asChild size="lg" variant="outline">
+          <div className="text-center mt-8 md:mt-12 reveal-section reveal-delay-2">
+            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
               <Link to="/before-after">
                 Смотреть все работы <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
@@ -199,24 +199,24 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24">
+      <section className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 reveal-section">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Отзывы пациентов</h2>
+          <div className="text-center mb-8 md:mb-12 lg:mb-16 reveal-section">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Отзывы пациентов</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {[1, 2, 3].map((i) => (
-              <div key={i} className={`bg-card rounded-xl p-8 shadow-lg reveal-section reveal-delay-${i}`}>
+              <div key={i} className={`bg-card rounded-xl p-6 md:p-8 shadow-lg reveal-section reveal-delay-${i}`}>
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-sm md:text-base">
                     {i}
                   </div>
-                  <div className="ml-4">
-                    <div className="font-semibold">Пациент {i}</div>
-                    <div className="text-sm text-muted-foreground">Пациент клиники</div>
+                  <div className="ml-3 md:ml-4">
+                    <div className="font-semibold text-sm md:text-base">Пациент {i}</div>
+                    <div className="text-xs md:text-sm text-muted-foreground">Пациент клиники</div>
                   </div>
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-sm md:text-base text-muted-foreground">
                   Отличная клиника с профессиональным подходом. Результат превзошел все ожидания. Спасибо команде BFP Concept!
                 </p>
               </div>
@@ -226,12 +226,12 @@ const Home = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-24 bg-secondary/30">
+      <section className="py-12 md:py-20 lg:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 reveal-section">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Наша клиника</h2>
+          <div className="text-center mb-8 md:mb-12 lg:mb-16 reveal-section">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Наша клиника</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 max-w-7xl mx-auto">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
               <div key={i} className={`aspect-square overflow-hidden rounded-lg reveal-section reveal-delay-${(i % 4) + 1}`}>
                 <img
@@ -246,13 +246,13 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24">
+      <section className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
               <div className="reveal-section">
-                <h2 className="text-4xl md:text-5xl font-bold mb-8">Контакты</h2>
-                <div className="space-y-6 text-lg">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8">Контакты</h2>
+                <div className="space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg">
                   <div>
                     <div className="font-semibold mb-2">Адрес</div>
                     <div className="text-muted-foreground">Москва, Алтуфьевское шоссе 89А</div>
