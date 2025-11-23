@@ -8,6 +8,7 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import BookingForm from "@/components/BookingForm";
 import { teamMembers } from "@/data/teamData";
 import heroImage from "@/assets/hero-clinic.png";
+import heroMobileImage from "@/assets/hero-mobile.png";
 const Home = () => {
   const mainDoctor = teamMembers[0];
   const teamPreview = teamMembers.slice(1, 4);
@@ -38,10 +39,17 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-[92vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-20 px-5 sm:px-6 md:px-4">
         <div className="absolute inset-0">
+          {/* Desktop Hero Image */}
           <img 
             src={heroImage} 
             alt="BFP Concept Clinic" 
-            className="w-full h-full object-cover object-center opacity-85"
+            className="hidden md:block w-full h-full object-cover object-center opacity-85"
+          />
+          {/* Mobile Hero Image */}
+          <img 
+            src={heroMobileImage} 
+            alt="BFP Concept Clinic" 
+            className="block md:hidden w-full h-full object-cover object-center opacity-85"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-background/75 via-background/65 to-background/70"></div>
         </div>
