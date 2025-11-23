@@ -9,6 +9,11 @@ import BookingForm from "@/components/BookingForm";
 import { teamMembers } from "@/data/teamData";
 import heroImage from "@/assets/hero-clinic.png";
 import heroMobileImage from "@/assets/hero-mobile.png";
+import clinic1 from "@/assets/clinic-1.png";
+import clinic2 from "@/assets/clinic-2.png";
+import clinic3 from "@/assets/clinic-3.png";
+import clinic4 from "@/assets/clinic-4.png";
+import clinic5 from "@/assets/clinic-5.png";
 const Home = () => {
   const mainDoctor = teamMembers[0];
   const teamPreview = teamMembers.slice(1, 4);
@@ -279,10 +284,22 @@ const Home = () => {
           <div className="text-center mb-8 md:mb-12 lg:mb-16 reveal-section">
             <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Наша клиника</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4 max-w-7xl mx-auto">
-            {[1, 2, 3, 4, 5, 6].map(i => <div key={i} className={`aspect-square overflow-hidden rounded-xl reveal-section reveal-delay-${i % 4 + 1}`}>
-                <img src={`https://images.unsplash.com/photo-162917495617${i}-c8b417780e63?w=600&h=600&fit=crop`} alt={`Интерьер клиники ${i}`} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-              </div>)}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 max-w-7xl mx-auto">
+            <div className="aspect-square overflow-hidden rounded-xl reveal-section reveal-delay-1">
+              <img src={clinic1} alt="Ресепшен клиники" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-xl reveal-section reveal-delay-2">
+              <img src={clinic2} alt="Зона ожидания" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-xl reveal-section reveal-delay-3">
+              <img src={clinic3} alt="Интерьер клиники" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-xl reveal-section reveal-delay-4">
+              <img src={clinic4} alt="Продукция для ухода" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-xl reveal-section reveal-delay-1">
+              <img src={clinic5} alt="Коридор клиники" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
           </div>
         </div>
       </section>
