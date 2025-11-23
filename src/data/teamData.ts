@@ -1,8 +1,3 @@
-import makarovImg from "@/assets/makarov.png";
-import ayvazyanImg from "@/assets/ayvazyan.png";
-import mamishov Img from "@/assets/mamishov.png";
-import ayurovaImg from "@/assets/ayurova.png";
-
 export interface TeamMember {
   id: string;
   name: string;
@@ -34,7 +29,7 @@ export const teamMembers: TeamMember[] = [
       "Полный сбор анамнеза",
       "Комплексный план лечения с привлечением специалистов"
     ],
-    image: makarovImg,
+    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=800&fit=crop",
     slug: "artur-makarov"
   },
   {
@@ -55,7 +50,7 @@ export const teamMembers: TeamMember[] = [
       "Участник семинаров и конференций",
       "Постоянно повышает квалификацию"
     ],
-    image: ayvazyanImg,
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&h=800&fit=crop",
     slug: "albert-ayvazyan"
   },
   {
@@ -75,7 +70,7 @@ export const teamMembers: TeamMember[] = [
       "Протезирование на имплантах, виниры",
       "Все виды съёмного и несъёмного протезирования"
     ],
-    image: mamishov Img,
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=800&fit=crop",
     slug: "ilkin-mamishov"
   },
   {
@@ -100,7 +95,7 @@ export const teamMembers: TeamMember[] = [
       "Отбеливание Zoom4+",
       "Назначение домашнего ухода"
     ],
-    image: ayurovaImg,
+    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&h=800&fit=crop",
     slug: "ekaterina-ayurova"
   }
 ];
