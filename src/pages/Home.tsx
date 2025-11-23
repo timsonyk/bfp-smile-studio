@@ -260,7 +260,7 @@ const Home = () => {
                   </div>
                   <div>
                     <div className="font-semibold mb-2">Телефон</div>
-                    <a href="tel:+74951234567" className="text-primary hover:underline">+7 (495) 123-45-67</a>
+                    <a className="text-primary hover:underline" href="tel:+74951200188">+7 (495) 123-45-67</a>
                   </div>
                   <div>
                     <div className="font-semibold mb-2">Email</div>
