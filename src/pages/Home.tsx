@@ -41,9 +41,17 @@ const Home = () => {
           <img 
             src={heroImage} 
             alt="BFP Concept Clinic" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
+            style={{
+              filter: 'contrast(1.15) saturate(1.06) brightness(0.96)'
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85"></div>
+          <div 
+            className="absolute inset-0" 
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 100%)'
+            }}
+          ></div>
         </div>
         
         <div className="container mx-auto relative z-10">
