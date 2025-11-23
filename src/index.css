@@ -116,8 +116,15 @@ All colors MUST be HSL.
 
 @layer utilities {
   .reveal-section {
-    @apply opacity-0 translate-y-8 blur-sm;
+    @apply opacity-0 translate-y-8;
     animation: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @media (max-width: 768px) {
+    .reveal-section {
+      @apply translate-y-3;
+      animation: reveal-mobile 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
   }
 
   .reveal-delay-1 {
@@ -140,8 +147,20 @@ All colors MUST be HSL.
     @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl;
   }
 
+  @media (max-width: 768px) {
+    .card-hover {
+      @apply active:scale-[1.02] active:shadow-2xl;
+    }
+  }
+
   .team-card-hover {
     @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl;
+  }
+
+  @media (max-width: 768px) {
+    .team-card-hover {
+      @apply active:scale-[1.02] active:shadow-2xl;
+    }
   }
 
   .gradient-text {
@@ -159,6 +178,17 @@ All colors MUST be HSL.
     opacity: 1;
     transform: translateY(0);
     filter: blur(0);
+  }
+}
+
+@keyframes reveal-mobile {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
