@@ -2,10 +2,8 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BookingForm from "@/components/BookingForm";
-
 const Contacts = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
@@ -47,8 +45,8 @@ const Contacts = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-base md:text-lg mb-1 md:mb-2">Телефон</h3>
-                    <a href="tel:+74951234567" className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors">
-                      +7 (495) 123-45-67
+                    <a className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors" href="tel:+74951200188">
+                      +7 (495) 120-01-88
                     </a>
                   </div>
                 </div>
@@ -82,20 +80,10 @@ const Contacts = () => {
                 <div className="pt-4 md:pt-6">
                   <h3 className="font-semibold text-base md:text-lg mb-3 md:mb-4">Мессенджеры</h3>
                   <div className="flex flex-col sm:flex-row gap-3 sm:space-x-4">
-                    <a
-                      href="https://wa.me/74951234567"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#25D366] text-white hover:bg-[#25D366]/90 h-10 md:h-11 px-6"
-                    >
+                    <a href="https://wa.me/74951234567" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#25D366] text-white hover:bg-[#25D366]/90 h-10 md:h-11 px-6">
                       WhatsApp
                     </a>
-                    <a
-                      href="https://t.me/bfpconcept"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#0088cc] text-white hover:bg-[#0088cc]/90 h-10 md:h-11 px-6"
-                    >
+                    <a href="https://t.me/bfpconcept" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#0088cc] text-white hover:bg-[#0088cc]/90 h-10 md:h-11 px-6">
                       Telegram
                     </a>
                   </div>
@@ -120,21 +108,13 @@ const Contacts = () => {
           <div className="max-w-6xl mx-auto reveal-section">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Как нас найти</h2>
             <div className="aspect-video bg-muted rounded-xl md:rounded-2xl overflow-hidden shadow-xl">
-              <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A12345&amp;source=constructor"
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                title="Карта"
-              ></iframe>
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A12345&amp;source=constructor" width="100%" height="100%" frameBorder="0" title="Карта"></iframe>
             </div>
           </div>
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contacts;
