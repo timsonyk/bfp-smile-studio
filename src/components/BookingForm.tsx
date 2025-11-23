@@ -23,13 +23,14 @@ const BookingForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
       <div>
         <Input
           placeholder="Ваше имя"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           required
+          className="h-11 sm:h-12 text-base"
         />
       </div>
       <div>
@@ -39,6 +40,7 @@ const BookingForm = () => {
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           required
+          className="h-11 sm:h-12 text-base"
         />
       </div>
       <div>
@@ -48,6 +50,7 @@ const BookingForm = () => {
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           required
+          className="h-11 sm:h-12 text-base"
         />
       </div>
       <div>
@@ -56,9 +59,10 @@ const BookingForm = () => {
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           rows={4}
+          className="text-base resize-none"
         />
       </div>
-      <Button type="submit" className="w-full" size="lg">
+      <Button type="submit" className="w-full h-12 text-base" size="lg">
         Записаться на прием
       </Button>
     </form>

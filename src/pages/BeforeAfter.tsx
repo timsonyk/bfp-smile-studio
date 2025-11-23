@@ -75,11 +75,11 @@ const BeforeAfter = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4">
+      <section className="pt-20 md:pt-28 lg:pt-32 pb-12 md:pb-20 lg:pb-24 bg-gradient-to-b from-primary/5 to-background">
+        <div className="container mx-auto px-5 sm:px-6 md:px-4">
           <div className="max-w-4xl mx-auto text-center reveal-section">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Результаты лечения</h1>
-            <p className="text-xl text-muted-foreground">
+            <h1 className="text-[1.75rem] leading-tight sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6">Результаты лечения</h1>
+            <p className="text-[0.9375rem] leading-relaxed sm:text-lg md:text-xl text-muted-foreground">
               Наши работы — лучшее доказательство качества и профессионализма
             </p>
           </div>
@@ -87,15 +87,15 @@ const BeforeAfter = () => {
       </section>
 
       {/* Filters */}
-      <section className="py-12 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3">
+      <section className="py-8 md:py-12 bg-secondary/30">
+        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+          <div className="flex flex-wrap justify-center gap-2.5 md:gap-3">
             {filters.map((filter) => (
               <Button
                 key={filter.id}
                 variant={activeFilter === filter.id ? "default" : "outline"}
                 onClick={() => setActiveFilter(filter.id)}
-                className="rounded-full"
+                className="rounded-full text-sm md:text-base h-9 md:h-10 px-4 md:px-5"
               >
                 {filter.label}
               </Button>
@@ -105,9 +105,9 @@ const BeforeAfter = () => {
       </section>
 
       {/* Cases Grid */}
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+      <section className="py-12 md:py-20 lg:py-24 pb-20 md:pb-24">
+        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-7xl mx-auto">
             {filteredCases.map((caseItem, idx) => (
               <div key={caseItem.id} className={`reveal-section reveal-delay-${(idx % 2) + 1}`}>
                 <BeforeAfterSlider
@@ -115,9 +115,9 @@ const BeforeAfter = () => {
                   afterImage={caseItem.afterImage}
                   alt={caseItem.title}
                 />
-                <div className="mt-6">
-                  <h3 className="text-2xl font-bold mb-2">{caseItem.title}</h3>
-                  <p className="text-muted-foreground">{caseItem.description}</p>
+                <div className="mt-5 md:mt-6">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">{caseItem.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{caseItem.description}</p>
                 </div>
               </div>
             ))}
@@ -126,14 +126,14 @@ const BeforeAfter = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
+      <section className="py-14 md:py-20 lg:py-24 bg-secondary/30">
+        <div className="container mx-auto px-5 sm:px-6 md:px-4">
           <div className="max-w-4xl mx-auto text-center reveal-section">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">Хотите такой же результат?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-8">Хотите такой же результат?</h2>
+            <p className="text-[0.9375rem] leading-relaxed sm:text-lg md:text-xl text-muted-foreground mb-7 md:mb-8">
               Запишитесь на консультацию, и мы составим индивидуальный план лечения
             </p>
-            <Button asChild size="lg" className="text-lg px-8">
+            <Button asChild size="lg" className="h-12 text-base md:text-lg px-7 md:px-8 w-full sm:w-auto">
               <a href="/contacts">Записаться на консультацию</a>
             </Button>
           </div>
