@@ -7,6 +7,7 @@ import TeamCard from "@/components/TeamCard";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import BookingForm from "@/components/BookingForm";
 import { teamMembers } from "@/data/teamData";
+import heroImage from "@/assets/hero-clinic.png";
 const Home = () => {
   const mainDoctor = teamMembers[0];
   const teamPreview = teamMembers.slice(1, 4);
@@ -36,10 +37,13 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-[92vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-20 px-5 sm:px-6 md:px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5 opacity-95">
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-24 sm:h-32 bg-gradient-to-r from-primary/15 via-primary/8 to-primary/15 blur-3xl animate-wave" style={{
-          animationDuration: '8s'
-        }}></div>
+        <div className="absolute inset-0">
+          <img 
+            src={heroImage} 
+            alt="BFP Concept Clinic" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85"></div>
         </div>
         
         <div className="container mx-auto relative z-10">
