@@ -102,6 +102,35 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-14 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-6 sm:mb-8 md:mb-10 reveal-section">
+              <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
+                Видео о клинике
+              </h2>
+              <p className="text-[0.9375rem] sm:text-base md:text-lg lg:text-xl text-muted-foreground">
+                Узнайте больше о нашем подходе и философии
+              </p>
+            </div>
+            <div className="reveal-section reveal-delay-1">
+              <div className="relative w-full rounded-xl md:rounded-2xl overflow-hidden shadow-2xl bg-card">
+                <div className="aspect-video w-full">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="BFP Concept - О клинике"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main Doctor Section */}
       <section className="py-14 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-5 sm:px-6 md:px-4">
