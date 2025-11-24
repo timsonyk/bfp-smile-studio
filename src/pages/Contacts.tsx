@@ -34,7 +34,7 @@ const Contacts = () => {
                   <div>
                     <h3 className="font-semibold text-base md:text-lg mb-1 md:mb-2">Адрес</h3>
                     <p className="text-sm md:text-base text-muted-foreground">
-                      Москва, Алтуфьевское шоссе 89А
+                      Москва, Дербеневская набережная, 1/2
                     </p>
                   </div>
                 </div>
