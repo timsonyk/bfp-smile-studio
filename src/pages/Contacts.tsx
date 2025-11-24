@@ -71,7 +71,7 @@ const Contacts = () => {
                     <h3 className="font-semibold text-base md:text-lg mb-1 md:mb-2">Часы работы</h3>
                     <div className="text-sm md:text-base text-muted-foreground space-y-1">
                       <p>Ежедневно: 9:00 - 21:00</p>
-                      <p>Сб: 10:00 - 18:00</p>
+                      <p>​</p>
                       <p>   Ежедневно: 9:00 - 21:00</p>
                     </div>
                   </div>
