@@ -45,17 +45,9 @@ const Home = () => {
       <section className="relative min-h-[92vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-20 px-5 sm:px-6 md:px-4">
         <div className="absolute inset-0">
           {/* Desktop Hero Image */}
-          <img 
-            src={heroImage} 
-            alt="BFP Concept Clinic" 
-            className="hidden md:block w-full h-full object-cover object-center opacity-85"
-          />
+          <img src={heroImage} alt="BFP Concept Clinic" className="hidden md:block w-full h-full object-cover object-center opacity-85" />
           {/* Mobile Hero Image */}
-          <img 
-            src={heroMobileImage} 
-            alt="BFP Concept Clinic" 
-            className="block md:hidden w-full h-full object-cover object-center opacity-85"
-          />
+          <img src={heroMobileImage} alt="BFP Concept Clinic" className="block md:hidden w-full h-full object-cover object-center opacity-85" />
           <div className="absolute inset-0 bg-gradient-to-br from-background/75 via-background/65 to-background/70"></div>
         </div>
         
@@ -134,13 +126,7 @@ const Home = () => {
             <div className="reveal-section reveal-delay-1">
               <div className="relative w-full rounded-xl md:rounded-2xl overflow-hidden shadow-2xl bg-card">
                 <div className="aspect-video w-full">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="BFP Concept - О клинике"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                  <iframe className="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="BFP Concept - О клинике" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
                 </div>
               </div>
             </div>
@@ -314,11 +300,11 @@ const Home = () => {
                 <div className="space-y-5 md:space-y-6 text-[0.9375rem] sm:text-base md:text-lg">
                   <div>
                     <div className="font-semibold mb-2">Адрес</div>
-                    <div className="text-muted-foreground leading-relaxed">Москва, Алтуфьевское шоссе 89А</div>
+                    <div className="text-muted-foreground leading-relaxed">Москва, Дербеневская набережная, 1/Москва, Дербеневская набережная, 1/2Москва, Дербеневская набережная, 1/2</div>
                   </div>
                   <div>
                     <div className="font-semibold mb-2">Телефон</div>
-                    <a className="text-primary hover:underline" href="tel:+74951200188">+7 (495) 123-45-67</a>
+                    <a className="text-primary hover:underline" href="tel:+74951200188">+7 (495) 120-01-88</a>
                   </div>
                   <div>
                     <div className="font-semibold mb-2">Email</div>
