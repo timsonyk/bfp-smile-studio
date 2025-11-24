@@ -65,7 +65,7 @@ const Navigation = () => {
               <div className="pt-6 space-y-5 border-t border-border/50">
                 <a href="tel:+74951234567" className="flex items-center space-x-3 text-base text-muted-foreground hover:text-primary transition-colors py-2">
                   <Phone className="w-5 h-5" />
-                  <span>+7 (495) 123-45-67</span>
+                  <span>+7 (495) 120-01-88</span>
                 </a>
                 <Button asChild className="w-full h-12 text-base" size="lg">
                   <Link to="/contacts" onClick={() => setIsOpen(false)}>Записаться</Link>
