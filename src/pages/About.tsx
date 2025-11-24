@@ -5,6 +5,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
 import { teamMembers } from "@/data/teamData";
+import clinic1 from "@/assets/clinic-1.png";
+import clinic2 from "@/assets/clinic-2.png";
+import clinic3 from "@/assets/clinic-3.png";
+import clinic4 from "@/assets/clinic-4.png";
+import clinic5 from "@/assets/clinic-5.png";
 
 const About = () => {
   const principles = [
@@ -144,16 +149,42 @@ const About = () => {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center reveal-section">Интерьеры клиники</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className={`aspect-[4/3] overflow-hidden rounded-xl shadow-lg reveal-section reveal-delay-${(i % 3) + 1}`}>
-                <img
-                  src={`https://images.unsplash.com/photo-162917495617${i}-c8b417780e63?w=800&h=600&fit=crop`}
-                  alt={`Интерьер клиники ${i}`}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
+            <div className="aspect-square overflow-hidden rounded-xl shadow-lg reveal-section reveal-delay-1">
+              <img
+                src={clinic1}
+                alt="Ресепшен клиники"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-xl shadow-lg reveal-section reveal-delay-2">
+              <img
+                src={clinic2}
+                alt="Зона ожидания"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-xl shadow-lg reveal-section reveal-delay-3">
+              <img
+                src={clinic3}
+                alt="Интерьер клиники"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-xl shadow-lg reveal-section reveal-delay-1">
+              <img
+                src={clinic4}
+                alt="Продукция для ухода"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden rounded-xl shadow-lg reveal-section reveal-delay-2">
+              <img
+                src={clinic5}
+                alt="Коридор клиники"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
           </div>
         </div>
       </section>
