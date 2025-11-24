@@ -300,7 +300,7 @@ const Home = () => {
                 <div className="space-y-5 md:space-y-6 text-[0.9375rem] sm:text-base md:text-lg">
                   <div>
                     <div className="font-semibold mb-2">Адрес</div>
-                    <div className="text-muted-foreground leading-relaxed">Москва, Дербеневская набережная, 1/Москва, Дербеневская набережная, 1/2Москва, Дербеневская набережная, 1/2</div>
+                    <div className="text-muted-foreground leading-relaxed">Москва, Дербеневская набережная, 1/2</div>
                   </div>
                   <div>
                     <div className="font-semibold mb-2">Телефон</div>
