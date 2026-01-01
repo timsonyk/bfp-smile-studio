@@ -32,11 +32,8 @@ const BeforeAfterSlider = ({ beforeImage, afterImage, alt }: BeforeAfterSliderPr
 
   return (
     <div className="relative w-full">
-      <div className="block sm:hidden text-center mb-3 text-sm text-muted-foreground animate-fade-in">
-        Проведите пальцем, чтобы сравнить →
-      </div>
       <div
-        className="relative w-full aspect-[4/3] overflow-hidden rounded-xl md:rounded-2xl shadow-2xl cursor-col-resize select-none touch-pan-y"
+        className="relative w-full aspect-[4/3] overflow-hidden cursor-col-resize select-none touch-pan-y"
         onMouseMove={handleMouseMove}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
@@ -46,34 +43,42 @@ const BeforeAfterSlider = ({ beforeImage, afterImage, alt }: BeforeAfterSliderPr
         onTouchEnd={handleMouseUp}
       >
         {/* After Image */}
-        <img src={afterImage} alt={`${alt} - После`} className="absolute inset-0 w-full h-full object-cover" />
+        <img
+          src={afterImage}
+          alt={`${alt} - После`}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
         {/* Before Image with Clip */}
         <div
           className="absolute inset-0 overflow-hidden"
           style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
         >
-          <img src={beforeImage} alt={`${alt} - До`} className="absolute inset-0 w-full h-full object-cover" />
+          <img
+            src={beforeImage}
+            alt={`${alt} - До`}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
         </div>
 
-        {/* Slider Line */}
+        {/* Slider Line - Minimal */}
         <div
-          className="absolute top-0 bottom-0 w-1 bg-white shadow-2xl z-20"
+          className="absolute top-0 bottom-0 w-px bg-background z-20"
           style={{ left: `${sliderPosition}%` }}
         >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-2xl flex items-center justify-center">
-            <div className="flex space-x-1">
-              <div className="w-0.5 h-5 sm:h-6 bg-primary"></div>
-              <div className="w-0.5 h-5 sm:h-6 bg-primary"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-background border border-border flex items-center justify-center">
+            <div className="flex space-x-0.5">
+              <div className="w-px h-3 bg-foreground/50" />
+              <div className="w-px h-3 bg-foreground/50" />
             </div>
           </div>
         </div>
 
-        {/* Labels */}
-        <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-black/60 backdrop-blur-sm text-white px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-md text-xs sm:text-sm font-medium">
+        {/* Labels - Minimal */}
+        <div className="absolute bottom-4 left-4 text-xs text-background/90 uppercase tracking-widest">
           До
         </div>
-        <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-black/60 backdrop-blur-sm text-white px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-md text-xs sm:text-sm font-medium">
+        <div className="absolute bottom-4 right-4 text-xs text-background/90 uppercase tracking-widest">
           После
         </div>
       </div>
