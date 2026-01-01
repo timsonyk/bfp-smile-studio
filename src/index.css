@@ -131,32 +131,6 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  /* Minimal reveal - subtle fade only */
-  .reveal-section {
-    @apply opacity-0;
-    animation: fade-in 0.5s ease-out forwards;
-  }
-
-  .reveal-delay-1 { animation-delay: 0.05s; }
-  .reveal-delay-2 { animation-delay: 0.1s; }
-  .reveal-delay-3 { animation-delay: 0.15s; }
-  .reveal-delay-4 { animation-delay: 0.2s; }
-
-  /* Minimal card hover - subtle border change only */
-  .card-hover {
-    @apply transition-colors duration-200;
-  }
-  .card-hover:hover {
-    @apply border-foreground/20;
-  }
-
-  .team-card-hover {
-    @apply transition-colors duration-200;
-  }
-  .team-card-hover:hover {
-    @apply border-foreground/20;
-  }
-
   /* Japanese-style divider line */
   .divider {
     @apply w-12 h-px bg-foreground/30 mx-auto;
@@ -171,9 +145,4 @@ All colors MUST be HSL.
   .prose-container {
     @apply max-w-3xl mx-auto;
   }
-}
-
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }

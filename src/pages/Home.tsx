@@ -7,8 +7,6 @@ import TeamCard from "@/components/TeamCard";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import BookingForm from "@/components/BookingForm";
 import { teamMembers } from "@/data/teamData";
-import heroImage from "@/assets/hero-clinic.png";
-import heroMobileImage from "@/assets/hero-mobile.png";
 import clinic1 from "@/assets/clinic-1.png";
 import clinic2 from "@/assets/clinic-2.png";
 import clinic3 from "@/assets/clinic-3.png";
@@ -19,40 +17,45 @@ const Home = () => {
   const mainDoctor = teamMembers[0];
   const allTeam = teamMembers;
 
+  const beforeAfterCases = [
+    {
+      before: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop",
+      after: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop",
+      title: "Ортопедическая реставрация"
+    },
+    {
+      before: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&h=600&fit=crop",
+      after: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&h=600&fit=crop",
+      title: "Эстетическая реставрация"
+    },
+    {
+      before: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&h=600&fit=crop",
+      after: "https://images.unsplash.com/photo-1579165466991-467135ad3110?w=800&h=600&fit=crop",
+      title: "Виниры"
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section - Minimalist */}
-      <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center pt-20 md:pt-24">
-        <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="BFP Concept Clinic"
-            className="hidden md:block w-full h-full object-cover object-center opacity-40"
-          />
-          <img
-            src={heroMobileImage}
-            alt="BFP Concept Clinic"
-            className="block md:hidden w-full h-full object-cover object-center opacity-40"
-          />
-        </div>
-
-        <div className="container mx-auto px-6 md:px-8 relative z-10">
+      {/* Hero Section - Clean, no background image */}
+      <section className="min-h-[70vh] md:min-h-[80vh] flex items-center justify-center pt-20 md:pt-24 border-b border-border">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="divider mb-8" />
-            <h1 className="mb-6 reveal-section">
+            <h1 className="mb-6">
               BFP Concept
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 reveal-section reveal-delay-1 mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground mb-4 mx-auto">
               Биофункциональная стоматология
             </p>
-            <p className="text-base text-muted-foreground mb-10 reveal-section reveal-delay-2 max-w-xl mx-auto">
+            <p className="text-base text-muted-foreground mb-10 max-w-xl mx-auto">
               Диагностика. Функциональное восстановление. Эстетика.
             </p>
 
             {/* WhatsApp & Telegram buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center reveal-section reveal-delay-3">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 asChild
                 variant="outline"
@@ -77,12 +80,12 @@ const Home = () => {
       </section>
 
       {/* Artur Makarov - Part 1: 2x2 Grid */}
-      <section className="section-padding border-t border-border">
+      <section className="section-padding border-b border-border">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
               {/* Photo */}
-              <div className="reveal-section">
+              <div>
                 <img
                   src={mainDoctor.image}
                   alt={mainDoctor.name}
@@ -91,7 +94,7 @@ const Home = () => {
               </div>
 
               {/* Content */}
-              <div className="reveal-section reveal-delay-1">
+              <div>
                 <p className="text-sm text-muted-foreground uppercase tracking-widest mb-4">
                   Основатель клиники
                 </p>
@@ -126,10 +129,10 @@ const Home = () => {
       </section>
 
       {/* Artur Makarov - Part 2: Vertical blocks */}
-      <section className="section-padding bg-secondary/50 border-t border-border">
+      <section className="section-padding bg-secondary/50 border-b border-border">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12 md:mb-16 reveal-section">
+            <div className="text-center mb-12 md:mb-16">
               <p className="text-sm text-muted-foreground uppercase tracking-widest mb-4">
                 Философия лечения
               </p>
@@ -138,7 +141,7 @@ const Home = () => {
 
             {/* 4 vertical blocks */}
             <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-              <div className="reveal-section reveal-delay-1 border-l border-border pl-6">
+              <div className="border-l border-border pl-6">
                 <p className="text-sm text-muted-foreground uppercase tracking-widest mb-3">01</p>
                 <h3 className="text-lg mb-2">Диагностика</h3>
                 <p className="text-muted-foreground text-sm">
@@ -146,7 +149,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="reveal-section reveal-delay-2 border-l border-border pl-6">
+              <div className="border-l border-border pl-6">
                 <p className="text-sm text-muted-foreground uppercase tracking-widest mb-3">02</p>
                 <h3 className="text-lg mb-2">Планирование</h3>
                 <p className="text-muted-foreground text-sm">
@@ -154,7 +157,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="reveal-section reveal-delay-3 border-l border-border pl-6">
+              <div className="border-l border-border pl-6">
                 <p className="text-sm text-muted-foreground uppercase tracking-widest mb-3">03</p>
                 <h3 className="text-lg mb-2">Функция</h3>
                 <p className="text-muted-foreground text-sm">
@@ -162,7 +165,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="reveal-section reveal-delay-4 border-l border-border pl-6">
+              <div className="border-l border-border pl-6">
                 <p className="text-sm text-muted-foreground uppercase tracking-widest mb-3">04</p>
                 <h3 className="text-lg mb-2">Эстетика</h3>
                 <p className="text-muted-foreground text-sm">
@@ -171,7 +174,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="text-center mt-12 md:mt-16 reveal-section">
+            <div className="text-center mt-12 md:mt-16">
               <Button
                 asChild
                 variant="outline"
@@ -187,25 +190,34 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Before/After Section - Clean */}
-      <section className="section-padding border-t border-border">
+      {/* Before/After Section - Multiple sliders */}
+      <section className="section-padding border-b border-border">
         <div className="container mx-auto px-6 md:px-8">
-          <div className="text-center mb-10 md:mb-14 reveal-section">
+          <div className="text-center mb-10 md:mb-14">
             <p className="text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Результаты
             </p>
             <h2>До и после</h2>
           </div>
 
-          <div className="max-w-4xl mx-auto reveal-section reveal-delay-1">
-            <BeforeAfterSlider
-              beforeImage="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=900&fit=crop"
-              afterImage="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&h=900&fit=crop"
-              alt="Ортопедическая реставрация"
-            />
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+              {beforeAfterCases.map((item, idx) => (
+                <div key={idx}>
+                  <BeforeAfterSlider
+                    beforeImage={item.before}
+                    afterImage={item.after}
+                    alt={item.title}
+                  />
+                  <p className="text-sm text-muted-foreground mt-3 text-center">
+                    {item.title}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="text-center mt-10 md:mt-14 reveal-section reveal-delay-2">
+          <div className="text-center mt-10 md:mt-14">
             <Button
               asChild
               variant="outline"
@@ -221,9 +233,9 @@ const Home = () => {
       </section>
 
       {/* Team Section - Clean Grid */}
-      <section className="section-padding bg-secondary/50 border-t border-border">
+      <section className="section-padding bg-secondary/50 border-b border-border">
         <div className="container mx-auto px-6 md:px-8">
-          <div className="text-center mb-10 md:mb-14 reveal-section">
+          <div className="text-center mb-10 md:mb-14">
             <p className="text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Специалисты
             </p>
@@ -231,14 +243,14 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-            {allTeam.map((member, idx) => (
-              <div key={member.id} className={`reveal-section reveal-delay-${(idx % 4) + 1}`}>
+            {allTeam.map((member) => (
+              <div key={member.id}>
                 <TeamCard member={member} />
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-10 md:mt-14 reveal-section">
+          <div className="text-center mt-10 md:mt-14">
             <Button
               asChild
               variant="outline"
@@ -254,9 +266,9 @@ const Home = () => {
       </section>
 
       {/* Services Section - Minimal */}
-      <section className="section-padding border-t border-border">
+      <section className="section-padding border-b border-border">
         <div className="container mx-auto px-6 md:px-8">
-          <div className="text-center mb-10 md:mb-14 reveal-section">
+          <div className="text-center mb-10 md:mb-14">
             <p className="text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Направления
             </p>
@@ -276,7 +288,7 @@ const Home = () => {
                 <Link
                   key={service.slug}
                   to={`/services/${service.slug}`}
-                  className={`reveal-section reveal-delay-${(idx % 4) + 1} border-b border-border py-6 px-4 flex justify-between items-center hover:bg-secondary/30 transition-colors group ${idx % 2 === 0 ? 'md:border-r' : ''}`}
+                  className={`border-b border-border py-6 px-4 flex justify-between items-center hover:bg-secondary/30 transition-colors group ${idx % 2 === 0 ? 'md:border-r' : ''}`}
                 >
                   <div>
                     <h3 className="text-base font-medium mb-1">{service.title}</h3>
@@ -288,7 +300,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="text-center mt-10 md:mt-14 reveal-section">
+          <div className="text-center mt-10 md:mt-14">
             <Button
               asChild
               variant="outline"
@@ -304,9 +316,9 @@ const Home = () => {
       </section>
 
       {/* Clinic Gallery - Minimal */}
-      <section className="section-padding bg-secondary/50 border-t border-border">
+      <section className="section-padding bg-secondary/50 border-b border-border">
         <div className="container mx-auto px-6 md:px-8">
-          <div className="text-center mb-10 md:mb-14 reveal-section">
+          <div className="text-center mb-10 md:mb-14">
             <p className="text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Пространство
             </p>
@@ -315,10 +327,7 @@ const Home = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-3 max-w-6xl mx-auto">
             {[clinic1, clinic2, clinic3, clinic4, clinic5].map((img, idx) => (
-              <div
-                key={idx}
-                className={`aspect-square overflow-hidden reveal-section reveal-delay-${(idx % 4) + 1}`}
-              >
+              <div key={idx} className="aspect-square overflow-hidden">
                 <img
                   src={img}
                   alt={`Клиника ${idx + 1}`}
@@ -332,11 +341,11 @@ const Home = () => {
       </section>
 
       {/* Contact Section - Minimal */}
-      <section className="section-padding border-t border-border">
+      <section className="section-padding">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-              <div className="reveal-section">
+              <div>
                 <p className="text-sm text-muted-foreground uppercase tracking-widest mb-4">
                   Связаться
                 </p>
@@ -383,7 +392,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="reveal-section reveal-delay-1">
+              <div>
                 <BookingForm />
               </div>
             </div>
