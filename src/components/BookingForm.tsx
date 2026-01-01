@@ -9,7 +9,6 @@ const BookingForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
     message: "",
   });
 
@@ -19,51 +18,55 @@ const BookingForm = () => {
       title: "Заявка отправлена",
       description: "Мы свяжемся с вами в ближайшее время",
     });
-    setFormData({ name: "", phone: "", email: "", message: "" });
+    setFormData({ name: "", phone: "", message: "" });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <p className="text-sm text-muted-foreground uppercase tracking-widest mb-6">
+        Записаться на приём
+      </p>
+
       <div>
+        <label className="block text-xs text-muted-foreground mb-2">Имя</label>
         <Input
           placeholder="Ваше имя"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           required
-          className="h-11 sm:h-12 text-base"
+          className="h-11 text-base bg-transparent border-border focus:border-foreground/50 rounded-none"
         />
       </div>
+
       <div>
+        <label className="block text-xs text-muted-foreground mb-2">Телефон</label>
         <Input
           type="tel"
-          placeholder="Телефон"
+          placeholder="+7 (___) ___-__-__"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           required
-          className="h-11 sm:h-12 text-base"
+          className="h-11 text-base bg-transparent border-border focus:border-foreground/50 rounded-none"
         />
       </div>
+
       <div>
-        <Input
-          type="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          required
-          className="h-11 sm:h-12 text-base"
-        />
-      </div>
-      <div>
+        <label className="block text-xs text-muted-foreground mb-2">Сообщение</label>
         <Textarea
-          placeholder="Сообщение"
+          placeholder="Опишите вашу ситуацию (необязательно)"
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          rows={4}
-          className="text-base resize-none"
+          rows={3}
+          className="text-base bg-transparent border-border focus:border-foreground/50 rounded-none resize-none"
         />
       </div>
-      <Button type="submit" className="w-full h-12 text-base" size="lg">
-        Записаться на прием
+
+      <Button
+        type="submit"
+        className="w-full h-12 text-base rounded-none bg-foreground text-background hover:bg-foreground/90"
+        size="lg"
+      >
+        Отправить
       </Button>
     </form>
   );

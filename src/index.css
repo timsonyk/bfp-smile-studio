@@ -8,83 +8,85 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 25% 27%;
+    /* Japanese-inspired minimalist palette - Rice paper aesthetic */
+    --background: 35 33% 94%;           /* #F5F1EB - warm rice paper */
+    --foreground: 0 0% 10%;             /* #1A1A1A - almost black */
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card: 35 27% 95%;                 /* Slightly lighter than background */
+    --card-foreground: 0 0% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover: 35 33% 94%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 221 83% 53%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 17%;                /* #2C2C2C - muted black for accents */
+    --primary-foreground: 35 33% 94%;
 
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary: 32 20% 90%;            /* #EDE8E0 - light sand */
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 32 20% 90%;
+    --muted-foreground: 25 6% 40%;      /* #6B6560 - warm gray */
 
-    --accent: 215 25% 27%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 0% 17%;
+    --accent-foreground: 35 33% 94%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 60% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
+    --border: 30 12% 83%;               /* #D9D4CC - soft beige border */
+    --input: 30 12% 83%;
+    --ring: 0 0% 17%;
 
-    --radius: 0.75rem;
+    --radius: 0.25rem;                  /* Minimal border radius */
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 215 25% 27%;
-    --sidebar-primary: 221 83% 53%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 20% 96%;
-    --sidebar-accent-foreground: 215 25% 27%;
-    --sidebar-border: 214 32% 91%;
-    --sidebar-ring: 221 83% 53%;
+    --sidebar-background: 35 33% 94%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 0 0% 17%;
+    --sidebar-primary-foreground: 35 33% 94%;
+    --sidebar-accent: 32 20% 90%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 30 12% 83%;
+    --sidebar-ring: 0 0% 17%;
   }
 
+  /* Dark mode kept minimal - site is meant to be light */
   .dark {
-    --background: 215 28% 17%;
-    --foreground: 0 0% 98%;
+    --background: 30 10% 8%;
+    --foreground: 35 20% 90%;
 
-    --card: 215 28% 17%;
-    --card-foreground: 0 0% 98%;
+    --card: 30 10% 10%;
+    --card-foreground: 35 20% 90%;
 
-    --popover: 215 28% 17%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 30 10% 8%;
+    --popover-foreground: 35 20% 90%;
 
-    --primary: 221 83% 53%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 35 20% 85%;
+    --primary-foreground: 30 10% 8%;
 
-    --secondary: 215 20% 25%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 30 10% 15%;
+    --secondary-foreground: 35 20% 90%;
 
-    --muted: 215 20% 25%;
-    --muted-foreground: 215 16% 65%;
+    --muted: 30 10% 15%;
+    --muted-foreground: 30 10% 60%;
 
-    --accent: 221 83% 53%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 35 20% 85%;
+    --accent-foreground: 30 10% 8%;
 
-    --destructive: 0 63% 31%;
+    --destructive: 0 50% 40%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 215 20% 25%;
-    --input: 215 20% 25%;
-    --ring: 221 83% 53%;
-    
-    --sidebar-background: 215 28% 17%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 221 83% 53%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 215 20% 25%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 215 20% 25%;
-    --sidebar-ring: 221 83% 53%;
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 35 20% 85%;
+
+    --sidebar-background: 30 10% 8%;
+    --sidebar-foreground: 35 20% 90%;
+    --sidebar-primary: 35 20% 85%;
+    --sidebar-primary-foreground: 30 10% 8%;
+    --sidebar-accent: 30 10% 15%;
+    --sidebar-accent-foreground: 35 20% 90%;
+    --sidebar-border: 30 10% 20%;
+    --sidebar-ring: 35 20% 85%;
   }
 }
 
@@ -94,109 +96,84 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    @apply font-medium tracking-tight;
+    line-height: 1.15;
   }
 
   h1 {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+    font-weight: 500;
+    letter-spacing: -0.02em;
   }
 
   h2 {
-    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+    font-weight: 500;
+    letter-spacing: -0.015em;
   }
 
   h3 {
-    @apply text-xl sm:text-2xl md:text-3xl;
+    @apply text-lg sm:text-xl md:text-2xl;
+    font-weight: 500;
+  }
+
+  p {
+    max-width: 65ch;
   }
 }
 
 @layer utilities {
+  /* Minimal reveal - subtle fade only */
   .reveal-section {
-    @apply opacity-0 translate-y-8;
-    animation: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    @apply opacity-0;
+    animation: fade-in 0.5s ease-out forwards;
   }
 
-  @media (max-width: 768px) {
-    .reveal-section {
-      @apply translate-y-3;
-      animation: reveal-mobile 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-  }
+  .reveal-delay-1 { animation-delay: 0.05s; }
+  .reveal-delay-2 { animation-delay: 0.1s; }
+  .reveal-delay-3 { animation-delay: 0.15s; }
+  .reveal-delay-4 { animation-delay: 0.2s; }
 
-  .reveal-delay-1 {
-    animation-delay: 0.1s;
-  }
-
-  .reveal-delay-2 {
-    animation-delay: 0.2s;
-  }
-
-  .reveal-delay-3 {
-    animation-delay: 0.3s;
-  }
-
-  .reveal-delay-4 {
-    animation-delay: 0.4s;
-  }
-
+  /* Minimal card hover - subtle border change only */
   .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl;
+    @apply transition-colors duration-200;
   }
-
-  @media (max-width: 768px) {
-    .card-hover {
-      @apply active:scale-[1.02] active:shadow-2xl;
-    }
+  .card-hover:hover {
+    @apply border-foreground/20;
   }
 
   .team-card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl;
+    @apply transition-colors duration-200;
+  }
+  .team-card-hover:hover {
+    @apply border-foreground/20;
   }
 
-  @media (max-width: 768px) {
-    .team-card-hover {
-      @apply active:scale-[1.02] active:shadow-2xl;
-    }
+  /* Japanese-style divider line */
+  .divider {
+    @apply w-12 h-px bg-foreground/30 mx-auto;
   }
 
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  /* Block spacing utility */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  /* Container with max width for text readability */
+  .prose-container {
+    @apply max-w-3xl mx-auto;
   }
 }
 
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(32px);
-    filter: blur(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-
-@keyframes reveal-mobile {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes wave {
-  0%, 100% {
-    transform: translateX(-50%) translateY(0) scaleX(1);
-  }
-  50% {
-    transform: translateX(-50%) translateY(-10px) scaleX(1.02);
-  }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
