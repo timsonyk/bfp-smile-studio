@@ -12,8 +12,7 @@ import clinic3 from "@/assets/clinic-3.png";
 import clinic4 from "@/assets/clinic-4.png";
 import clinic5 from "@/assets/clinic-5.png";
 
-// Uncomment when you add the kanji image:
-// import kanjiImg from "@/assets/kanji.png";
+import kanjiImg from "@/assets/kanji.png";
 
 const Home = () => {
   const mainDoctor = teamMembers[0];
@@ -66,86 +65,63 @@ const Home = () => {
 
       {/* ═══════════════════════════════════════════════════════════════
           БЛОК 1: КЛИНИКА (Hero)
-          Более наполненный hero с ключевой информацией
+          Минималистичный вариант — текст по центру с иероглифами на фоне
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="min-h-screen flex items-center pt-20 md:pt-24 pb-16">
-        <div className="container mx-auto px-6 md:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-              {/* Левая часть — текст */}
-              <div>
-                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-8">
-                  bfp <span className="font-light">concept</span>
-                </h1>
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div className="container mx-auto px-6 md:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Логотип */}
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-medium tracking-tight mb-8">
+              bfp <span className="font-light">concept</span>
+            </h1>
 
-                <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-light leading-relaxed">
-                  Клиника биофункциональной стоматологии в Москве
-                </p>
+            {/* Разделитель */}
+            <div className="w-16 h-px bg-foreground/20 mx-auto mb-8" />
 
-                <p className="text-base text-muted-foreground/80 mb-12 max-w-md leading-relaxed">
-                  Мы восстанавливаем функцию зубочелюстной системы, чтобы эстетика стала её естественным следствием.
-                </p>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-6 font-light leading-relaxed">
+              Клиника биофункциональной стоматологии
+            </p>
 
-                {/* Контакты */}
-                <div className="space-y-4 mb-12">
-                  <div className="flex items-center gap-4">
-                    <span className="text-xs text-muted-foreground uppercase tracking-wider w-20">Телефон</span>
-                    <a
-                      href="tel:+74951200188"
-                      className="text-lg hover:text-muted-foreground transition-colors"
-                    >
-                      +7 (495) 120-01-88
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <span className="text-xs text-muted-foreground uppercase tracking-wider w-20">Адрес</span>
-                    <span className="text-lg">
-                      Дербеневская наб., 1/2
-                    </span>
-                  </div>
-                </div>
+            <p className="text-base text-muted-foreground/70 mb-12 max-w-xl mx-auto leading-relaxed">
+              Мы восстанавливаем функцию зубочелюстной системы, чтобы эстетика стала её естественным следствием
+            </p>
 
-                {/* CTA */}
-                <div className="flex flex-wrap gap-4">
-                  <a
-                    href="https://wa.me/74951200188"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-6 py-3 bg-foreground text-background text-sm hover:bg-foreground/90 transition-colors"
-                  >
-                    Записаться
-                  </a>
-                  <Link
-                    to="/about"
-                    className="inline-flex items-center px-6 py-3 border border-border text-sm hover:bg-secondary transition-colors"
-                  >
-                    О клинике
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
+            {/* CTA */}
+            <div className="flex flex-wrap justify-center gap-4 mb-16">
+              <a
+                href="https://wa.me/74951200188"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-8 py-4 bg-foreground text-background text-sm rounded-lg hover:bg-foreground/90 transition-colors"
+              >
+                Записаться на приём
+              </a>
+              <Link
+                to="/about"
+                className="inline-flex items-center px-8 py-4 border border-border text-sm rounded-lg hover:bg-secondary transition-colors"
+              >
+                О клинике
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
 
-              {/* Правая часть — краткие принципы */}
-              <div className="hidden md:block">
-                <div className="space-y-8">
-                  <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-8">
-                    Принципы работы
-                  </p>
-                  {[
-                    { num: "01", text: "Сначала диагностика — потом лечение" },
-                    { num: "02", text: "Функция важнее эстетики" },
-                    { num: "03", text: "Системный подход к каждому пациенту" },
-                    { num: "04", text: "Предсказуемый долгосрочный результат" },
-                  ].map((item) => (
-                    <div key={item.num} className="flex gap-6 items-start">
-                      <span className="text-xs text-muted-foreground font-medium">{item.num}</span>
-                      <p className="text-base text-foreground/80">{item.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            {/* Контакты — горизонтально */}
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 text-sm text-muted-foreground">
+              <a
+                href="tel:+74951200188"
+                className="hover:text-foreground transition-colors"
+              >
+                +7 (495) 120-01-88
+              </a>
+              <span className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground/50" />
+              <span>Москва, Дербеневская наб., 1/2</span>
             </div>
           </div>
+        </div>
+
+        {/* Скролл-индикатор */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <div className="w-px h-12 bg-gradient-to-b from-transparent via-foreground/20 to-foreground/40" />
         </div>
       </section>
 
@@ -158,7 +134,7 @@ const Home = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
               {/* Фото */}
-              <div>
+              <div className="overflow-hidden rounded-2xl">
                 <img
                   src={mainDoctor.image}
                   alt={mainDoctor.name}
@@ -213,15 +189,13 @@ const Home = () => {
 
       {/* ═══════════════════════════════════════════════════════════════
           БЛОК 3: ФИЛОСОФИЯ
-          4 этапа подхода. Иероглифы — изображением (когда добавишь).
+          4 этапа подхода. Иероглифы — изображением.
       ═══════════════════════════════════════════════════════════════ */}
       <section className="section-padding relative overflow-hidden">
-        {/*
-          Иероглифы как фоновый элемент — раскомментируй когда добавишь изображение:
-          <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 pointer-events-none select-none opacity-[0.03]">
-            <img src={kanjiImg} alt="" className="w-[40rem] md:w-[60rem]" />
-          </div>
-        */}
+        {/* Иероглифы как фоновый элемент — по центру, увеличены в 2 раза */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none opacity-[0.04]">
+          <img src={kanjiImg} alt="" className="w-[80rem] md:w-[120rem]" />
+        </div>
 
         <div className="container mx-auto px-6 md:px-8 relative z-10">
           <div className="max-w-5xl mx-auto">
@@ -339,7 +313,7 @@ const Home = () => {
 
       {/* ═══════════════════════════════════════════════════════════════
           БЛОК 6: ПРОСТРАНСТВО (Интерьер)
-          Интерьер как продолжение философии.
+          Интерьер как продолжение философии. Bento-сетка.
       ═══════════════════════════════════════════════════════════════ */}
       <section className="section-padding bg-secondary">
         <div className="container mx-auto px-6 md:px-8">
@@ -352,17 +326,53 @@ const Home = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-3 max-w-6xl mx-auto">
-            {[clinic1, clinic2, clinic3, clinic4, clinic5].map((img, idx) => (
-              <div key={idx} className="aspect-square overflow-hidden">
-                <img
-                  src={img}
-                  alt={`Интерьер клиники`}
-                  loading="lazy"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
+          {/* Bento Grid Layout */}
+          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            {/* Большое фото слева */}
+            <div className="col-span-2 row-span-2 overflow-hidden rounded-2xl">
+              <img
+                src={clinic1}
+                alt="Интерьер клиники"
+                loading="lazy"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            {/* Верхний правый */}
+            <div className="overflow-hidden rounded-2xl">
+              <img
+                src={clinic2}
+                alt="Интерьер клиники"
+                loading="lazy"
+                className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            {/* Верхний крайний правый */}
+            <div className="overflow-hidden rounded-2xl">
+              <img
+                src={clinic3}
+                alt="Интерьер клиники"
+                loading="lazy"
+                className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            {/* Нижний правый */}
+            <div className="overflow-hidden rounded-2xl">
+              <img
+                src={clinic4}
+                alt="Интерьер клиники"
+                loading="lazy"
+                className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            {/* Нижний крайний правый */}
+            <div className="overflow-hidden rounded-2xl">
+              <img
+                src={clinic5}
+                alt="Интерьер клиники"
+                loading="lazy"
+                className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </div>
         </div>
       </section>
