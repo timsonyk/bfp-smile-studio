@@ -9,7 +9,7 @@ const TeamCard = ({ member }: TeamCardProps) => {
   return (
     <Link to={`/team/${member.slug}`} className="group block">
       <div className="overflow-hidden">
-        <div className="aspect-[3/4] overflow-hidden mb-4">
+        <div className="aspect-[3/4] overflow-hidden mb-4 rounded-2xl">
           <img
             src={member.image}
             alt={member.name}

@@ -33,7 +33,7 @@ const BeforeAfterSlider = ({ beforeImage, afterImage, alt }: BeforeAfterSliderPr
   return (
     <div className="relative w-full">
       <div
-        className="relative w-full aspect-[4/3] overflow-hidden cursor-col-resize select-none touch-pan-y"
+        className="relative w-full aspect-[4/3] overflow-hidden cursor-col-resize select-none touch-pan-y rounded-2xl"
         onMouseMove={handleMouseMove}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}

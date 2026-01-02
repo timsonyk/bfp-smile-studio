@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
@@ -15,6 +16,27 @@ import clinic5 from "@/assets/clinic-5.png";
 import kanjiImg from "@/assets/kanji.png";
 
 const Home = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const clinicImages = [clinic1, clinic2, clinic3, clinic4, clinic5];
+
+  const openLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goToPrevious = () => {
+    setCurrentImageIndex((prev) => (prev === 0 ? clinicImages.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prev) => (prev === clinicImages.length - 1 ? 0 : prev + 1));
+  };
   const mainDoctor = teamMembers[0];
   const allTeam = teamMembers;
 
@@ -192,8 +214,8 @@ const Home = () => {
           4 этапа подхода. Иероглифы — изображением.
       ═══════════════════════════════════════════════════════════════ */}
       <section className="section-padding relative overflow-hidden">
-        {/* Иероглифы как фоновый элемент — по центру, увеличены в 2 раза */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none opacity-[0.04]">
+        {/* Иероглифы как фоновый элемент — по центру между 4 блоками */}
+        <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none opacity-[0.04]">
           <img src={kanjiImg} alt="" className="w-[80rem] md:w-[120rem]" />
         </div>
 
@@ -329,53 +351,125 @@ const Home = () => {
           {/* Bento Grid Layout */}
           <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {/* Большое фото слева */}
-            <div className="col-span-2 row-span-2 overflow-hidden rounded-2xl">
+            <button
+              onClick={() => openLightbox(0)}
+              className="col-span-2 row-span-2 overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-foreground/20"
+            >
               <img
                 src={clinic1}
                 alt="Интерьер клиники"
                 loading="lazy"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
-            </div>
+            </button>
             {/* Верхний правый */}
-            <div className="overflow-hidden rounded-2xl">
+            <button
+              onClick={() => openLightbox(1)}
+              className="overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-foreground/20"
+            >
               <img
                 src={clinic2}
                 alt="Интерьер клиники"
                 loading="lazy"
                 className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
               />
-            </div>
+            </button>
             {/* Верхний крайний правый */}
-            <div className="overflow-hidden rounded-2xl">
+            <button
+              onClick={() => openLightbox(2)}
+              className="overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-foreground/20"
+            >
               <img
                 src={clinic3}
                 alt="Интерьер клиники"
                 loading="lazy"
                 className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
               />
-            </div>
+            </button>
             {/* Нижний правый */}
-            <div className="overflow-hidden rounded-2xl">
+            <button
+              onClick={() => openLightbox(3)}
+              className="overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-foreground/20"
+            >
               <img
                 src={clinic4}
                 alt="Интерьер клиники"
                 loading="lazy"
                 className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
               />
-            </div>
+            </button>
             {/* Нижний крайний правый */}
-            <div className="overflow-hidden rounded-2xl">
+            <button
+              onClick={() => openLightbox(4)}
+              className="overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-foreground/20"
+            >
               <img
                 src={clinic5}
                 alt="Интерьер клиники"
                 loading="lazy"
                 className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
               />
-            </div>
+            </button>
           </div>
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center"
+          onClick={closeLightbox}
+        >
+          {/* Кнопка закрытия */}
+          <button
+            onClick={closeLightbox}
+            className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors p-2"
+            aria-label="Закрыть"
+          >
+            <X className="w-8 h-8" />
+          </button>
+
+          {/* Кнопка назад */}
+          <button
+            onClick={(e) => { e.stopPropagation(); goToPrevious(); }}
+            className="absolute left-4 md:left-8 text-white/70 hover:text-white transition-colors p-2"
+            aria-label="Предыдущее фото"
+          >
+            <ChevronLeft className="w-10 h-10" />
+          </button>
+
+          {/* Изображение */}
+          <img
+            src={clinicImages[currentImageIndex]}
+            alt="Интерьер клиники"
+            className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {/* Кнопка вперёд */}
+          <button
+            onClick={(e) => { e.stopPropagation(); goToNext(); }}
+            className="absolute right-4 md:right-8 text-white/70 hover:text-white transition-colors p-2"
+            aria-label="Следующее фото"
+          >
+            <ChevronRight className="w-10 h-10" />
+          </button>
+
+          {/* Индикатор */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+            {clinicImages.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(idx); }}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  idx === currentImageIndex ? 'bg-white' : 'bg-white/40'
+                }`}
+                aria-label={`Фото ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* ═══════════════════════════════════════════════════════════════
           БЛОК 7: КОНТАКТЫ
