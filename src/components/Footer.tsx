@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link to="/" className="inline-block mb-4">
               <span className="text-lg font-medium tracking-tight">
-                BFP <span className="font-light">Concept</span>
+                bfp <span className="font-light">concept</span>
               </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -100,7 +100,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-border mt-10 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} BFP Concept</p>
+          <p>&copy; {new Date().getFullYear()} bfp concept</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a
               href="https://wa.me/74951200188"

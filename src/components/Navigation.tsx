@@ -24,7 +24,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <span className="text-lg font-medium tracking-tight">
-              BFP <span className="font-light">Concept</span>
+              bfp <span className="font-light">concept</span>
             </span>
           </Link>
 
