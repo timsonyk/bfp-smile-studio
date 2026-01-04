@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import BookingForm from "@/components/BookingForm";
+import ScrollAnimation from "@/components/ScrollAnimation";
 import { teamMembers } from "@/data/teamData";
 import clinic1 from "@/assets/clinic-1.png";
 import clinic2 from "@/assets/clinic-2.png";
@@ -93,23 +94,23 @@ const Home = () => {
         <div className="container mx-auto px-6 md:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Логотип */}
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-medium tracking-tight mb-8">
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-medium tracking-tight mb-8 animation-init animate-fade-in-up">
               bfp <span className="font-light">concept</span>
             </h1>
 
             {/* Разделитель */}
-            <div className="w-16 h-px bg-foreground/20 mx-auto mb-8" />
+            <div className="w-16 h-px bg-foreground/20 mx-auto mb-8 animation-init animate-expand-width animation-delay-200" />
 
-            <p className="text-xl md:text-2xl text-muted-foreground mb-6 font-light leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-6 font-light leading-relaxed animation-init animate-fade-in-up animation-delay-300">
               Клиника биофункциональной стоматологии
             </p>
 
-            <p className="text-base text-muted-foreground/70 mb-12 max-w-xl mx-auto leading-relaxed">
+            <p className="text-base text-muted-foreground/70 mb-12 max-w-xl mx-auto leading-relaxed animation-init animate-fade-in-up animation-delay-400">
               Мы восстанавливаем функцию зубочелюстной системы, чтобы эстетика стала её естественным следствием
             </p>
 
             {/* CTA */}
-            <div className="flex flex-wrap justify-center gap-4 mb-16">
+            <div className="flex flex-wrap justify-center gap-4 mb-16 animation-init animate-fade-in-up animation-delay-500">
               <a
                 href="https://wa.me/74951200188"
                 target="_blank"
@@ -128,7 +129,7 @@ const Home = () => {
             </div>
 
             {/* Контакты — горизонтально */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 text-sm text-muted-foreground">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 text-sm text-muted-foreground animation-init animate-fade-in animation-delay-600">
               <a
                 href="tel:+74951200188"
                 className="hover:text-foreground transition-colors"
@@ -142,7 +143,7 @@ const Home = () => {
         </div>
 
         {/* Скролл-индикатор */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animation-init animate-fade-in animation-delay-800">
           <div className="w-px h-12 bg-gradient-to-b from-transparent via-foreground/20 to-foreground/40" />
         </div>
       </section>
@@ -156,54 +157,58 @@ const Home = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
               {/* Фото */}
-              <div className="overflow-hidden rounded-2xl">
-                <img
-                  src={mainDoctor.image}
-                  alt={mainDoctor.name}
-                  className="w-full aspect-[3/4] object-cover object-top"
-                />
-              </div>
+              <ScrollAnimation animation="left">
+                <div className="overflow-hidden rounded-2xl">
+                  <img
+                    src={mainDoctor.image}
+                    alt={mainDoctor.name}
+                    className="w-full aspect-[3/4] object-cover object-top"
+                  />
+                </div>
+              </ScrollAnimation>
 
               {/* Информация */}
-              <div className="md:pt-8">
-                <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-6">
-                  Основатель
-                </p>
+              <ScrollAnimation animation="right" delay={100}>
+                <div className="md:pt-8">
+                  <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-6">
+                    Основатель
+                  </p>
 
-                <h2 className="text-3xl md:text-4xl font-medium mb-4">
-                  {mainDoctor.name}
-                </h2>
+                  <h2 className="text-3xl md:text-4xl font-medium mb-4">
+                    {mainDoctor.name}
+                  </h2>
 
-                <p className="text-muted-foreground mb-12">
-                  {mainDoctor.position}
-                </p>
+                  <p className="text-muted-foreground mb-12">
+                    {mainDoctor.position}
+                  </p>
 
-                {/* Факты */}
-                <div className="space-y-6">
-                  <div className="border-t border-border pt-6">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Опыт</p>
-                    <p className="text-lg">С 1995 года в стоматологии</p>
+                  {/* Факты */}
+                  <div className="space-y-6">
+                    <div className="border-t border-border pt-6">
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Опыт</p>
+                      <p className="text-lg">С 1995 года в стоматологии</p>
+                    </div>
+                    <div className="border-t border-border pt-6">
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Специализация</p>
+                      <p className="text-lg">Ортопедия, гнатология, функциональная диагностика</p>
+                    </div>
+                    <div className="border-t border-border pt-6">
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Подход</p>
+                      <p className="text-lg">Автор концепции bfp — биофункциональной философии лечения</p>
+                    </div>
                   </div>
-                  <div className="border-t border-border pt-6">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Специализация</p>
-                    <p className="text-lg">Ортопедия, гнатология, функциональная диагностика</p>
-                  </div>
-                  <div className="border-t border-border pt-6">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Подход</p>
-                    <p className="text-lg">Автор концепции bfp — биофункциональной философии лечения</p>
+
+                  <div className="mt-12">
+                    <Link
+                      to={`/team/${mainDoctor.slug}`}
+                      className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      Подробнее о враче
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
                   </div>
                 </div>
-
-                <div className="mt-12">
-                  <Link
-                    to={`/team/${mainDoctor.slug}`}
-                    className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    Подробнее о враче
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
+              </ScrollAnimation>
             </div>
           </div>
         </div>
@@ -215,36 +220,40 @@ const Home = () => {
       ═══════════════════════════════════════════════════════════════ */}
       <section className="section-padding relative overflow-hidden">
         {/* Иероглифы как фоновый элемент — по центру между 4 блоками */}
-        <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none opacity-[0.04]">
+        <div className="absolute top-[60%] left-[52%] -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none opacity-[0.04]">
           <img src={kanjiImg} alt="" className="w-[80rem] md:w-[120rem]" />
         </div>
 
         <div className="container mx-auto px-6 md:px-8 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             {/* Заголовок */}
-            <div className="text-center mb-16 md:mb-24">
-              <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
-                Подход
-              </p>
-              <h2 className="text-3xl md:text-4xl font-medium">
-                Философия лечения
-              </h2>
-            </div>
+            <ScrollAnimation>
+              <div className="text-center mb-16 md:mb-24">
+                <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
+                  Подход
+                </p>
+                <h2 className="text-3xl md:text-4xl font-medium">
+                  Философия лечения
+                </h2>
+              </div>
+            </ScrollAnimation>
 
             {/* 4 блока философии */}
-            <div className="grid md:grid-cols-2 gap-x-16 gap-y-12 md:gap-y-16">
-              {philosophySteps.map((step) => (
-                <div key={step.number} className="border-l-2 border-border pl-8">
-                  <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
-                    {step.number}
-                  </p>
-                  <h3 className="text-xl md:text-2xl font-medium mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
+            <div className="grid md:grid-cols-2 gap-x-12 gap-y-12 md:gap-y-16 md:translate-x-8">
+              {philosophySteps.map((step, idx) => (
+                <ScrollAnimation key={step.number} delay={idx * 100}>
+                  <div className="border-l-2 border-border pl-8">
+                    <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
+                      {step.number}
+                    </p>
+                    <h3 className="text-xl md:text-2xl font-medium mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </ScrollAnimation>
               ))}
             </div>
           </div>
@@ -258,43 +267,49 @@ const Home = () => {
       <section className="section-padding bg-secondary">
         <div className="container mx-auto px-6 md:px-8">
           {/* Заголовок */}
-          <div className="text-center mb-12 md:mb-16">
-            <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
-              Результаты
-            </p>
-            <h2 className="text-3xl md:text-4xl font-medium">
-              Работы
-            </h2>
-          </div>
+          <ScrollAnimation>
+            <div className="text-center mb-12 md:mb-16">
+              <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
+                Результаты
+              </p>
+              <h2 className="text-3xl md:text-4xl font-medium">
+                Работы
+              </h2>
+            </div>
+          </ScrollAnimation>
 
           {/* Слайдеры */}
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6 md:gap-8">
               {beforeAfterCases.map((item, idx) => (
-                <div key={idx}>
-                  <BeforeAfterSlider
-                    beforeImage={item.before}
-                    afterImage={item.after}
-                    alt={item.title}
-                  />
-                  <p className="text-sm text-muted-foreground mt-4 text-center">
-                    {item.title}
-                  </p>
-                </div>
+                <ScrollAnimation key={idx} delay={idx * 100} animation="scale">
+                  <div>
+                    <BeforeAfterSlider
+                      beforeImage={item.before}
+                      afterImage={item.after}
+                      alt={item.title}
+                    />
+                    <p className="text-sm text-muted-foreground mt-4 text-center">
+                      {item.title}
+                    </p>
+                  </div>
+                </ScrollAnimation>
               ))}
             </div>
           </div>
 
           {/* Ссылка */}
-          <div className="text-center mt-12 md:mt-16">
-            <Link
-              to="/before-after"
-              className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Все работы
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
-          </div>
+          <ScrollAnimation delay={300}>
+            <div className="text-center mt-12 md:mt-16">
+              <Link
+                to="/before-after"
+                className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Все работы
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
 
@@ -304,32 +319,38 @@ const Home = () => {
       ═══════════════════════════════════════════════════════════════ */}
       <section className="section-padding">
         <div className="container mx-auto px-6 md:px-8">
-          <div className="text-center mb-12 md:mb-16">
-            <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
-              Специалисты
-            </p>
-            <h2 className="text-3xl md:text-4xl font-medium">
-              Команда
-            </h2>
-          </div>
+          <ScrollAnimation>
+            <div className="text-center mb-12 md:mb-16">
+              <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
+                Специалисты
+              </p>
+              <h2 className="text-3xl md:text-4xl font-medium">
+                Команда
+              </h2>
+            </div>
+          </ScrollAnimation>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-            {allTeam.map((member) => (
-              <div key={member.id}>
-                <TeamCard member={member} />
-              </div>
+            {allTeam.map((member, idx) => (
+              <ScrollAnimation key={member.id} delay={idx * 50} animation="scale">
+                <div>
+                  <TeamCard member={member} />
+                </div>
+              </ScrollAnimation>
             ))}
           </div>
 
-          <div className="text-center mt-12 md:mt-16">
-            <Link
-              to="/team"
-              className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Вся команда
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
-          </div>
+          <ScrollAnimation delay={200}>
+            <div className="text-center mt-12 md:mt-16">
+              <Link
+                to="/team"
+                className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Вся команда
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
 
@@ -339,17 +360,20 @@ const Home = () => {
       ═══════════════════════════════════════════════════════════════ */}
       <section className="section-padding bg-secondary">
         <div className="container mx-auto px-6 md:px-8">
-          <div className="text-center mb-12 md:mb-16">
-            <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
-              Пространство
-            </p>
-            <h2 className="text-3xl md:text-4xl font-medium">
-              Клиника
-            </h2>
-          </div>
+          <ScrollAnimation>
+            <div className="text-center mb-12 md:mb-16">
+              <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
+                Пространство
+              </p>
+              <h2 className="text-3xl md:text-4xl font-medium">
+                Клиника
+              </h2>
+            </div>
+          </ScrollAnimation>
 
           {/* Bento Grid Layout */}
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          <ScrollAnimation animation="scale" delay={100}>
+            <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {/* Большое фото слева */}
             <button
               onClick={() => openLightbox(0)}
@@ -410,7 +434,8 @@ const Home = () => {
                 className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
               />
             </button>
-          </div>
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
 
@@ -480,65 +505,69 @@ const Home = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
               {/* Контактная информация */}
-              <div>
-                <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
-                  Связаться
-                </p>
-                <h2 className="text-3xl md:text-4xl font-medium mb-10">
-                  Контакты
-                </h2>
+              <ScrollAnimation animation="left">
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
+                    Связаться
+                  </p>
+                  <h2 className="text-3xl md:text-4xl font-medium mb-10">
+                    Контакты
+                  </h2>
 
-                <div className="space-y-8">
-                  <div>
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Адрес</p>
-                    <p className="text-lg">Москва, Дербеневская набережная, 1/2</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Телефон</p>
-                    <a
-                      href="tel:+74951200188"
-                      className="text-lg hover:text-muted-foreground transition-colors"
-                    >
-                      +7 (495) 120-01-88
-                    </a>
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Email</p>
-                    <a
-                      href="mailto:info@bfpconcept.ru"
-                      className="text-lg hover:text-muted-foreground transition-colors"
-                    >
-                      info@bfpconcept.ru
-                    </a>
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Мессенджеры</p>
-                    <div className="flex gap-6">
+                  <div className="space-y-8">
+                    <div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Адрес</p>
+                      <p className="text-lg">Москва, Дербеневская набережная, 1/2</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Телефон</p>
                       <a
-                        href="https://wa.me/74951200188"
+                        href="tel:+74951200188"
                         className="text-lg hover:text-muted-foreground transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
                       >
-                        WhatsApp
+                        +7 (495) 120-01-88
                       </a>
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Email</p>
                       <a
-                        href="https://t.me/bfpconcept"
+                        href="mailto:info@bfpconcept.ru"
                         className="text-lg hover:text-muted-foreground transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
                       >
-                        Telegram
+                        info@bfpconcept.ru
                       </a>
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Мессенджеры</p>
+                      <div className="flex gap-6">
+                        <a
+                          href="https://wa.me/74951200188"
+                          className="text-lg hover:text-muted-foreground transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          WhatsApp
+                        </a>
+                        <a
+                          href="https://t.me/bfpconcept"
+                          className="text-lg hover:text-muted-foreground transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Telegram
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </ScrollAnimation>
 
               {/* Форма записи */}
-              <div>
-                <BookingForm />
-              </div>
+              <ScrollAnimation animation="right" delay={100}>
+                <div>
+                  <BookingForm />
+                </div>
+              </ScrollAnimation>
             </div>
           </div>
         </div>

@@ -78,3 +78,13 @@ Add routes in `src/App.tsx` above the catch-all `"*"` route:
 ```tsx
 <Route path="/new-page" element={<NewPage />} />
 ```
+
+## Assets
+
+- **Images:** Store in `src/assets/` and import directly (Vite handles bundling)
+- **Kanji background:** `src/assets/kanji.png` — used as decorative background element in philosophy section
+
+## Important Notes
+
+- Keep this file updated with new features, conventions, and architectural decisions
+- Document any non-obvious patterns or project-specific implementations
