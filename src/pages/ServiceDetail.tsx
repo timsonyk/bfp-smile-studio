@@ -20,7 +20,7 @@ const ServiceDetail = () => {
 
       {/* Breadcrumbs */}
       <section className="pt-20 md:pt-32 pb-6 md:pb-8">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="flex items-center space-x-1.5 sm:space-x-2 text-xs sm:text-sm text-muted-foreground overflow-x-auto">
             <Link to="/" className="hover:text-primary transition-colors whitespace-nowrap">Главная</Link>
             <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
@@ -33,7 +33,7 @@ const ServiceDetail = () => {
 
       {/* Hero */}
       <section className="pb-12 md:pb-20 lg:pb-24">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h1 className="text-[1.75rem] leading-tight sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6">{service.title}</h1>
             <p className="text-[0.9375rem] leading-relaxed sm:text-lg md:text-xl text-muted-foreground">{service.description}</p>
@@ -43,7 +43,7 @@ const ServiceDetail = () => {
 
       {/* Stages */}
       <section className="py-12 md:py-20 lg:py-24 bg-secondary/30">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto reveal-section">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-center">Этапы лечения</h2>
             
@@ -83,7 +83,7 @@ const ServiceDetail = () => {
 
       {/* Benefits */}
       <section className="py-12 md:py-20 lg:py-24">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto reveal-section reveal-delay-1">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-center">Преимущества</h2>
             
@@ -119,7 +119,7 @@ const ServiceDetail = () => {
 
       {/* Indications */}
       <section className="py-12 md:py-20 lg:py-24 bg-secondary/30">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto reveal-section reveal-delay-2">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-center">Показания</h2>
             
@@ -148,7 +148,7 @@ const ServiceDetail = () => {
 
       {/* FAQ */}
       <section className="py-12 md:py-20 lg:py-24">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-3xl mx-auto reveal-section reveal-delay-3">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-center">Часто задаваемые вопросы</h2>
             <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
@@ -169,7 +169,7 @@ const ServiceDetail = () => {
 
       {/* Booking */}
       <section className="py-12 md:py-20 lg:py-24 bg-secondary/30">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-2xl mx-auto reveal-section reveal-delay-4">
             <div className="bg-card rounded-xl md:rounded-2xl shadow-xl p-6 sm:p-8 md:p-12">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Записаться на прием</h2>

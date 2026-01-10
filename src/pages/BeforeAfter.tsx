@@ -76,7 +76,7 @@ const BeforeAfter = () => {
 
       {/* Hero Section */}
       <section className="pt-20 md:pt-28 lg:pt-32 pb-12 md:pb-20 lg:pb-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h1 className="text-[1.75rem] leading-tight sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6">Результаты лечения</h1>
             <p className="text-[0.9375rem] leading-relaxed sm:text-lg md:text-xl text-muted-foreground">
@@ -88,7 +88,7 @@ const BeforeAfter = () => {
 
       {/* Filters */}
       <section className="py-8 md:py-12 bg-secondary/30">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="flex flex-wrap justify-center gap-2.5 md:gap-3">
             {filters.map((filter) => (
               <Button
@@ -106,7 +106,7 @@ const BeforeAfter = () => {
 
       {/* Cases Grid */}
       <section className="py-12 md:py-20 lg:py-24 pb-20 md:pb-24">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-7xl mx-auto">
             {filteredCases.map((caseItem, idx) => (
               <div key={caseItem.id} className={`reveal-section reveal-delay-${(idx % 2) + 1}`}>
@@ -127,7 +127,7 @@ const BeforeAfter = () => {
 
       {/* CTA Section */}
       <section className="py-14 md:py-20 lg:py-24 bg-secondary/30">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-8">Хотите такой же результат?</h2>
             <p className="text-[0.9375rem] leading-relaxed sm:text-lg md:text-xl text-muted-foreground mb-7 md:mb-8">

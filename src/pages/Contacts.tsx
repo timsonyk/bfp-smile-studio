@@ -8,7 +8,7 @@ const Contacts = () => {
 
       {/* Hero Section */}
       <section className="pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-20 lg:pb-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Контакты</h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
@@ -20,7 +20,7 @@ const Contacts = () => {
 
       {/* Contact Info & Form */}
       <section className="py-12 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Information */}
             <div className="reveal-section">
@@ -104,7 +104,7 @@ const Contacts = () => {
 
       {/* Map Section */}
       <section className="py-12 md:py-20 lg:py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-6xl mx-auto reveal-section">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Как нас найти</h2>
             <div className="aspect-video bg-muted rounded-xl md:rounded-2xl overflow-hidden shadow-xl">

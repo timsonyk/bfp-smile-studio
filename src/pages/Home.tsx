@@ -94,8 +94,8 @@ const Home = () => {
         <div className="container mx-auto px-6 md:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Логотип */}
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-medium tracking-tight mb-8 animation-init animate-fade-in-up">
-              bfp <span className="font-light">concept</span>
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight mb-8 animation-init animate-fade-in-up">
+              <span className="font-bold">bfp</span><span className="font-light">concept</span>
             </h1>
 
             {/* Разделитель */}
@@ -117,7 +117,7 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-foreground text-background text-sm rounded-lg hover:bg-foreground/90 transition-colors"
               >
-                Записаться на приём
+                WhatsApp
               </a>
               <Link
                 to="/about"

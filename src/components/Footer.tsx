@@ -8,8 +8,8 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="md:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <span className="text-lg font-medium tracking-tight">
-                bfp <span className="font-light">concept</span>
+              <span className="text-lg tracking-tight">
+                <span className="font-bold">bfp</span><span className="font-light">concept</span>
               </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">

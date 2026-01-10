@@ -17,7 +17,7 @@ const TeamMember = () => {
       <Navigation />
 
       <section className="pt-20 md:pt-28 lg:pt-32 pb-12 md:pb-20 lg:pb-24">
-        <div className="container mx-auto px-5 sm:px-6 md:px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12">
               {/* Photo */}

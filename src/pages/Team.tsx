@@ -10,7 +10,7 @@ const Team = () => {
 
       {/* Hero Section */}
       <section className="pt-32 pb-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Наша команда</h1>
             <p className="text-xl text-muted-foreground">
@@ -22,7 +22,7 @@ const Team = () => {
 
       {/* Team Grid */}
       <section className="py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {teamMembers.map((member, idx) => (
               <div key={member.id} className={`reveal-section reveal-delay-${(idx % 4) + 1}`}>
@@ -35,7 +35,7 @@ const Team = () => {
 
       {/* Join Team Section */}
       <section className="py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Присоединяйтесь к нашей команде</h2>
             <p className="text-xl text-muted-foreground mb-8">

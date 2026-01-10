@@ -54,7 +54,7 @@ const About = () => {
 
       {/* Hero Section */}
       <section className="pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-20 lg:pb-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">О клинике</h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
@@ -66,7 +66,7 @@ const About = () => {
 
       {/* Philosophy Section */}
       <section className="py-12 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto reveal-section">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-center">Наша философия</h2>
             <div className="space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg text-muted-foreground">
@@ -89,7 +89,7 @@ const About = () => {
 
       {/* Principles Section */}
       <section className="py-12 md:py-20 lg:py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 lg:mb-16 text-center reveal-section">Принципы работы</h2>
             <div className="grid sm:grid-cols-3 gap-6 md:gap-8">
@@ -109,7 +109,7 @@ const About = () => {
 
       {/* Technologies Section */}
       <section className="py-12 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 lg:mb-16 text-center reveal-section">Современные технологии</h2>
             <div className="grid sm:grid-cols-3 gap-6 md:gap-8">
@@ -132,7 +132,7 @@ const About = () => {
 
       {/* Mission Section */}
       <section className="py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Наша миссия</h2>
             <p className="text-xl text-muted-foreground mb-8">
@@ -147,7 +147,7 @@ const About = () => {
 
       {/* Gallery Section */}
       <section className="py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center reveal-section">Интерьеры клиники</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
             <div className="aspect-square overflow-hidden rounded-xl shadow-lg reveal-section reveal-delay-1">
@@ -191,7 +191,7 @@ const About = () => {
 
       {/* Team Preview */}
       <section className="py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="text-center mb-16 reveal-section">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Наша команда</h2>
             <p className="text-xl text-muted-foreground">

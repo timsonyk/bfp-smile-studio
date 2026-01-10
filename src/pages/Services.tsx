@@ -21,7 +21,7 @@ const Services = () => {
 
       {/* Hero Section */}
       <section className="pt-32 pb-24 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Наши услуги</h1>
             <p className="text-xl text-muted-foreground">
@@ -33,7 +33,7 @@ const Services = () => {
 
       {/* Services Grid */}
       <section className="py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, idx) => {
               const Icon = iconMap[service.icon];
@@ -60,7 +60,7 @@ const Services = () => {
 
       {/* CTA Section */}
       <section className="py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Не знаете, с чего начать?</h2>
             <p className="text-xl text-muted-foreground mb-8">

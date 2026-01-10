@@ -11,7 +11,7 @@ const ArturMakarov = () => {
       <Navigation />
 
       <section className="pt-32 pb-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
               {/* Photo */}
