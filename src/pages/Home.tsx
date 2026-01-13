@@ -112,12 +112,12 @@ const Home = () => {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 md:mb-16 animation-init animate-fade-in-up animation-delay-500 px-4">
               <a
-                href="https://wa.me/74951200188"
+                href="https://t.me/bfsclinic"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background text-sm rounded-lg hover:bg-foreground/90 transition-colors btn-press"
               >
-                WhatsApp
+                Telegram
               </a>
               <Link
                 to="/about"
@@ -538,19 +538,19 @@ const Home = () => {
                       </a>
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Мессенджеры</p>
-                      <div className="flex gap-6">
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Мессенджеры</p>
+                      <div className="flex gap-3">
                         <a
                           href="https://wa.me/74951200188"
-                          className="text-lg hover:text-muted-foreground transition-colors"
+                          className="inline-flex items-center justify-center rounded-md text-sm font-medium bg-[#25D366] text-white hover:bg-[#25D366]/90 h-10 px-5 transition-colors"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           WhatsApp
                         </a>
                         <a
-                          href="https://t.me/bfpconcept"
-                          className="text-lg hover:text-muted-foreground transition-colors"
+                          href="https://t.me/bfsclinic"
+                          className="inline-flex items-center justify-center rounded-md text-sm font-medium bg-[#0088cc] text-white hover:bg-[#0088cc]/90 h-10 px-5 transition-colors"
                           target="_blank"
                           rel="noopener noreferrer"
                         >

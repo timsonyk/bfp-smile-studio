@@ -147,8 +147,37 @@ const About = () => {
       {/* Gallery Section */}
       <section className="py-12 md:py-24">
         <div className="container mx-auto px-6 md:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-8 md:mb-16 text-center reveal-section">Интерьеры клиники</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-6 md:mb-16 text-center reveal-section">Интерьеры клиники</h2>
+
+          {/* Mobile: Bento Grid как на главной */}
+          <div className="md:hidden grid grid-cols-2 gap-3">
+            <button
+              onClick={() => setSelectedImage(clinicImages[0])}
+              className="col-span-2 row-span-2 overflow-hidden rounded-2xl cursor-pointer"
+            >
+              <img
+                src={clinicImages[0].src}
+                alt={clinicImages[0].alt}
+                className="w-full h-full object-cover"
+              />
+            </button>
+            {clinicImages.slice(1).map((image, idx) => (
+              <button
+                key={idx}
+                onClick={() => setSelectedImage(image)}
+                className="overflow-hidden rounded-2xl cursor-pointer"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover aspect-square"
+                />
+              </button>
+            ))}
+          </div>
+
+          {/* Desktop: 5 колонок */}
+          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
             {clinicImages.map((image, idx) => (
               <button
                 key={idx}

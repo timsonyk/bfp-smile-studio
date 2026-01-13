@@ -83,7 +83,7 @@ const Contacts = () => {
                     <a href="https://wa.me/74951234567" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#25D366] text-white hover:bg-[#25D366]/90 h-10 md:h-11 px-6">
                       WhatsApp
                     </a>
-                    <a href="https://t.me/bfpconcept" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#0088cc] text-white hover:bg-[#0088cc]/90 h-10 md:h-11 px-6">
+                    <a href="https://t.me/bfsclinic" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#0088cc] text-white hover:bg-[#0088cc]/90 h-10 md:h-11 px-6">
                       Telegram
                     </a>
                   </div>
