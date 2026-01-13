@@ -20,10 +20,10 @@ const Services = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 bg-gradient-to-b from-primary/5 to-background">
+      <section className="pt-24 md:pt-28 lg:pt-32 pb-8 md:pb-12">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Наши услуги</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 md:mb-6">Наши услуги</h1>
             <p className="text-xl text-muted-foreground">
               Полный спектр стоматологических услуг высочайшего качества
             </p>
@@ -32,7 +32,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24">
+      <section className="pt-8 md:pt-12 pb-16 md:pb-24">
         <div className="container mx-auto px-6 md:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, idx) => {
@@ -43,9 +43,9 @@ const Services = () => {
                   to={`/services/${service.slug}`}
                   className={`reveal-section reveal-delay-${(idx % 3) + 1}`}
                 >
-                  <div className="bg-card rounded-xl p-8 shadow-lg card-hover h-full">
-                    <Icon className="w-12 h-12 mb-4 text-primary" />
-                    <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                  <div className="bg-card rounded-xl p-8 shadow-lg card-hover h-full text-center">
+                    <Icon className="w-12 h-12 mb-4 text-primary mx-auto" />
+                    <h3 className="text-2xl font-medium mb-4">{service.title}</h3>
                     <p className="text-muted-foreground mb-6">{service.shortDescription}</p>
                     <span className="text-primary font-medium hover:underline">
                       Подробнее →
@@ -59,10 +59,10 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-secondary/30">
+      <section className="py-24 bg-secondary">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">Не знаете, с чего начать?</h2>
+            <h2 className="text-4xl md:text-5xl font-medium mb-8">Не знаете, с чего начать?</h2>
             <p className="text-xl text-muted-foreground mb-8">
               Запишитесь на первичную консультацию, и мы составим индивидуальный план лечения
             </p>

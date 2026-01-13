@@ -115,13 +115,13 @@ const Home = () => {
                 href="https://wa.me/74951200188"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 bg-foreground text-background text-sm rounded-lg hover:bg-foreground/90 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-foreground text-background text-sm rounded-lg hover:bg-foreground/90 transition-colors btn-press"
               >
                 WhatsApp
               </a>
               <Link
                 to="/about"
-                className="inline-flex items-center px-8 py-4 border border-border text-sm rounded-lg hover:bg-secondary transition-colors"
+                className="inline-flex items-center px-8 py-4 border border-border text-sm rounded-lg hover:bg-secondary transition-colors btn-press"
               >
                 О клинике
                 <ArrowRight className="ml-2 w-4 h-4" />

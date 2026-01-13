@@ -124,8 +124,19 @@ All colors MUST be HSL.
 }
 
 @layer base {
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border;
+  }
+
+  /* Text selection */
+  ::selection {
+    background-color: hsl(30 10% 15% / 0.15);
+    color: hsl(30 10% 12%);
   }
 
   body {
@@ -134,24 +145,43 @@ All colors MUST be HSL.
     font-weight: 400;
     letter-spacing: 0;
     line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Noise texture for sections */
-  section, header, footer, nav, main, .noise-section {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(40 25% 96%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(35 15% 75%);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(35 15% 65%);
+  }
+
+  /* Noise texture for content sections only */
+  section {
     position: relative;
+    isolation: isolate;
   }
 
-  section::after, header::after, footer::after, nav::after, main::after, .noise-section::after {
+  section::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     pointer-events: none;
-    opacity: 0.11;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    z-index: 1;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    z-index: -1;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -176,9 +206,6 @@ All colors MUST be HSL.
     font-weight: 500;
   }
 
-  p {
-    max-width: 65ch;
-  }
 }
 
 @layer utilities {
@@ -359,4 +386,95 @@ All colors MUST be HSL.
 .scroll-animate-right.visible {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   УЛУЧШЕНИЯ UX/UI
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Плавные переходы для интерактивных элементов */
+a, button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Улучшенные focus состояния для доступности */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid hsl(30 10% 15% / 0.5);
+  outline-offset: 2px;
+}
+
+/* Анимация подчёркивания ссылок в японском стиле */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Subtle lift эффект для карточек */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px -12px hsl(30 10% 15% / 0.1);
+}
+
+/* Мягкое увеличение изображений */
+.img-zoom {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-zoom:hover {
+  transform: scale(1.03);
+}
+
+/* Кнопки с эффектом нажатия */
+.btn-press:active {
+  transform: scale(0.98);
+}
+
+/* Градиентная линия-разделитель */
+.divider-gradient {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(30 10% 15% / 0.2) 20%,
+    hsl(30 10% 15% / 0.2) 80%,
+    transparent
+  );
+}
+
+/* Тонкая тень для изображений */
+.img-shadow {
+  box-shadow: 0 8px 30px -8px hsl(30 10% 15% / 0.12);
+}
+
+/* Плавное появление при наведении */
+.fade-in-hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.fade-in-hover:hover {
+  opacity: 1;
 }

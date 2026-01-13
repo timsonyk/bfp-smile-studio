@@ -75,10 +75,10 @@ const BeforeAfter = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-20 md:pt-28 lg:pt-32 pb-12 md:pb-20 lg:pb-24 bg-gradient-to-b from-primary/5 to-background">
+      <section className="pt-24 md:pt-28 lg:pt-32 pb-8 md:pb-12">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
-            <h1 className="text-[1.75rem] leading-tight sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6">Результаты лечения</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 md:mb-6">Результаты лечения</h1>
             <p className="text-[0.9375rem] leading-relaxed sm:text-lg md:text-xl text-muted-foreground">
               Наши работы — лучшее доказательство качества и профессионализма
             </p>
@@ -87,7 +87,7 @@ const BeforeAfter = () => {
       </section>
 
       {/* Filters */}
-      <section className="py-8 md:py-12 bg-secondary/30">
+      <section className="py-8 md:py-12">
         <div className="container mx-auto px-6 md:px-8">
           <div className="flex flex-wrap justify-center gap-2.5 md:gap-3">
             {filters.map((filter) => (
@@ -105,7 +105,7 @@ const BeforeAfter = () => {
       </section>
 
       {/* Cases Grid */}
-      <section className="py-12 md:py-20 lg:py-24 pb-20 md:pb-24">
+      <section className="pt-8 md:pt-12 pb-16 md:pb-20">
         <div className="container mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-7xl mx-auto">
             {filteredCases.map((caseItem, idx) => (
@@ -115,8 +115,8 @@ const BeforeAfter = () => {
                   afterImage={caseItem.afterImage}
                   alt={caseItem.title}
                 />
-                <div className="mt-5 md:mt-6">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">{caseItem.title}</h3>
+                <div className="mt-5 md:mt-6 text-center">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-medium mb-2">{caseItem.title}</h3>
                   <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{caseItem.description}</p>
                 </div>
               </div>
@@ -126,10 +126,10 @@ const BeforeAfter = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-14 md:py-20 lg:py-24 bg-secondary/30">
+      <section className="py-14 md:py-20 lg:py-24 bg-secondary">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
-            <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-8">Хотите такой же результат?</h2>
+            <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-5 md:mb-8">Хотите такой же результат?</h2>
             <p className="text-[0.9375rem] leading-relaxed sm:text-lg md:text-xl text-muted-foreground mb-7 md:mb-8">
               Запишитесь на консультацию, и мы составим индивидуальный план лечения
             </p>

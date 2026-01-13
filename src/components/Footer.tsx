@@ -24,22 +24,22 @@ const Footer = () => {
             </p>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors link-underline">
                   О клинике
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/team" className="text-muted-foreground hover:text-foreground transition-colors link-underline">
                   Команда
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/services" className="text-muted-foreground hover:text-foreground transition-colors link-underline">
                   Услуги
                 </Link>
               </li>
               <li>
-                <Link to="/before-after" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/before-after" className="text-muted-foreground hover:text-foreground transition-colors link-underline">
                   До/После
                 </Link>
               </li>
@@ -53,22 +53,22 @@ const Footer = () => {
             </p>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/services/diagnostics" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/services/diagnostics" className="text-muted-foreground hover:text-foreground transition-colors link-underline">
                   Диагностика
                 </Link>
               </li>
               <li>
-                <Link to="/services/orthopedics" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/services/orthopedics" className="text-muted-foreground hover:text-foreground transition-colors link-underline">
                   Ортопедия
                 </Link>
               </li>
               <li>
-                <Link to="/services/surgery" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/services/surgery" className="text-muted-foreground hover:text-foreground transition-colors link-underline">
                   Хирургия
                 </Link>
               </li>
               <li>
-                <Link to="/services/aesthetics" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/services/aesthetics" className="text-muted-foreground hover:text-foreground transition-colors link-underline">
                   Эстетика
                 </Link>
               </li>
