@@ -15,6 +15,12 @@ import clinic4 from "@/assets/clinic-4.png";
 import clinic5 from "@/assets/clinic-5.png";
 
 import kanjiImg from "@/assets/kanji.png";
+import before1 from "@/assets/before1.jpg";
+import after1 from "@/assets/after1.jpg";
+import before2 from "@/assets/before2.jpg";
+import after2 from "@/assets/after2.jpg";
+import before3 from "@/assets/before3.jpg";
+import after3 from "@/assets/after3.jpg";
 
 const Home = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -43,18 +49,18 @@ const Home = () => {
 
   const beforeAfterCases = [
     {
-      before: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop",
-      after: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop",
+      before: before1,
+      after: after1,
       title: "Комплексная реабилитация"
     },
     {
-      before: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&h=600&fit=crop",
-      after: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&h=600&fit=crop",
+      before: before2,
+      after: after2,
       title: "Эстетическая реставрация"
     },
     {
-      before: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&h=600&fit=crop",
-      after: "https://images.unsplash.com/photo-1579165466991-467135ad3110?w=800&h=600&fit=crop",
+      before: before3,
+      after: after3,
       title: "Функциональное восстановление"
     },
   ];

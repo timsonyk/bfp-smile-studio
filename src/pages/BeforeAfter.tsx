@@ -3,6 +3,12 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import { Button } from "@/components/ui/button";
+import before1 from "@/assets/before1.jpg";
+import after1 from "@/assets/after1.jpg";
+import before2 from "@/assets/before2.jpg";
+import after2 from "@/assets/after2.jpg";
+import before3 from "@/assets/before3.jpg";
+import after3 from "@/assets/after3.jpg";
 
 const BeforeAfter = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -21,24 +27,24 @@ const BeforeAfter = () => {
       category: "orthopedics",
       title: "Полная реконструкция улыбки",
       description: "Комплексное протезирование с восстановлением прикуса",
-      beforeImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=900&fit=crop",
-      afterImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&h=900&fit=crop",
+      beforeImage: before1,
+      afterImage: after1,
     },
     {
       id: 2,
       category: "aesthetics",
       title: "Керамические виниры",
       description: "Эстетическая коррекция формы и цвета",
-      beforeImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=900&fit=crop",
-      afterImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&h=900&fit=crop",
+      beforeImage: before2,
+      afterImage: after2,
     },
     {
       id: 3,
       category: "surgery",
       title: "Имплантация и протезирование",
       description: "Восстановление отсутствующих зубов",
-      beforeImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=900&fit=crop",
-      afterImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&h=900&fit=crop",
+      beforeImage: before3,
+      afterImage: after3,
     },
     {
       id: 4,

@@ -23,6 +23,9 @@ const TeamCard = ({ member }: TeamCardProps) => {
           <p className="text-xs md:text-sm text-muted-foreground">
             {member.position}
           </p>
+          <p className="text-xs text-primary mt-2 opacity-70 group-hover:opacity-100 transition-opacity">
+            Подробнее →
+          </p>
         </div>
       </div>
     </Link>

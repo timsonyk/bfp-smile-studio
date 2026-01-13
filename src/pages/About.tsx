@@ -225,7 +225,7 @@ const About = () => {
               Профессионалы, которым вы можете доверять
             </p>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-8 md:mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
             {teamMembers.map((member, idx) => (
               <div key={member.id} className={`reveal-section reveal-delay-${idx + 1}`}>
                 <TeamCard member={member} />
