@@ -130,14 +130,14 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-24 bg-secondary">
+      <section className="py-12 md:py-24 bg-secondary">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto text-center reveal-section">
-            <h2 className="text-4xl md:text-5xl font-medium mb-8">Наша миссия</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-6 md:mb-8">Наша миссия</h2>
+            <p className="text-sm sm:text-base md:text-xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
               Мы стремимся изменить представление о стоматологии — от симптоматического лечения к комплексному восстановлению здоровья зубочелюстной системы.
             </p>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-sm sm:text-base md:text-xl text-muted-foreground leading-relaxed">
               Наша цель — не просто красивая улыбка, а здоровье, функция и гармония всего организма.
             </p>
           </div>
@@ -145,9 +145,9 @@ const About = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-24">
+      <section className="py-12 md:py-24">
         <div className="container mx-auto px-6 md:px-8">
-          <h2 className="text-4xl md:text-5xl font-medium mb-16 text-center reveal-section">Интерьеры клиники</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-8 md:mb-16 text-center reveal-section">Интерьеры клиники</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
             {clinicImages.map((image, idx) => (
               <button
@@ -188,15 +188,15 @@ const About = () => {
       )}
 
       {/* Team Preview */}
-      <section className="py-24 bg-secondary">
+      <section className="py-12 md:py-24 bg-secondary">
         <div className="container mx-auto px-6 md:px-8">
-          <div className="text-center mb-16 reveal-section">
-            <h2 className="text-4xl md:text-5xl font-medium mb-4">Наша команда</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="text-center mb-8 md:mb-16 reveal-section">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-3 md:mb-4">Наша команда</h2>
+            <p className="text-sm sm:text-base md:text-xl text-muted-foreground">
               Профессионалы, которым вы можете доверять
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-8 md:mb-12">
             {teamMembers.map((member, idx) => (
               <div key={member.id} className={`reveal-section reveal-delay-${idx + 1}`}>
                 <TeamCard member={member} />

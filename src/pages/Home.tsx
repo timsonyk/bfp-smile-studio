@@ -94,34 +94,34 @@ const Home = () => {
         <div className="container mx-auto px-6 md:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Логотип */}
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight mb-8 animation-init animate-fade-in-up">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl tracking-tight mb-6 md:mb-8 animation-init animate-fade-in-up">
               <span className="font-bold">bfp</span><span className="font-light">concept</span>
             </h1>
 
             {/* Разделитель */}
-            <div className="w-16 h-px bg-foreground/20 mx-auto mb-8 animation-init animate-expand-width animation-delay-200" />
+            <div className="w-12 md:w-16 h-px bg-foreground/20 mx-auto mb-6 md:mb-8 animation-init animate-expand-width animation-delay-200" />
 
-            <p className="text-xl md:text-2xl text-muted-foreground mb-6 font-light leading-relaxed animation-init animate-fade-in-up animation-delay-300">
+            <p className="text-lg md:text-2xl text-muted-foreground mb-4 md:mb-6 font-light leading-relaxed animation-init animate-fade-in-up animation-delay-300 px-4">
               Клиника биофункциональной стоматологии
             </p>
 
-            <p className="text-base text-muted-foreground/70 mb-12 max-w-xl mx-auto leading-relaxed animation-init animate-fade-in-up animation-delay-400">
+            <p className="text-sm md:text-base text-muted-foreground/70 mb-8 md:mb-12 max-w-xl mx-auto leading-relaxed animation-init animate-fade-in-up animation-delay-400 px-4">
               Мы восстанавливаем функцию зубочелюстной системы, чтобы эстетика стала её естественным следствием
             </p>
 
             {/* CTA */}
-            <div className="flex flex-wrap justify-center gap-4 mb-16 animation-init animate-fade-in-up animation-delay-500">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 md:mb-16 animation-init animate-fade-in-up animation-delay-500 px-4">
               <a
                 href="https://wa.me/74951200188"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 bg-foreground text-background text-sm rounded-lg hover:bg-foreground/90 transition-colors btn-press"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background text-sm rounded-lg hover:bg-foreground/90 transition-colors btn-press"
               >
                 WhatsApp
               </a>
               <Link
                 to="/about"
-                className="inline-flex items-center px-8 py-4 border border-border text-sm rounded-lg hover:bg-secondary transition-colors btn-press"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-border text-sm rounded-lg hover:bg-secondary transition-colors btn-press"
               >
                 О клинике
                 <ArrowRight className="ml-2 w-4 h-4" />
@@ -129,7 +129,7 @@ const Home = () => {
             </div>
 
             {/* Контакты — горизонтально */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 text-sm text-muted-foreground animation-init animate-fade-in animation-delay-600">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-12 text-xs sm:text-sm text-muted-foreground animation-init animate-fade-in animation-delay-600 px-4">
               <a
                 href="tel:+74951200188"
                 className="hover:text-foreground transition-colors"
@@ -137,7 +137,7 @@ const Home = () => {
                 +7 (495) 120-01-88
               </a>
               <span className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground/50" />
-              <span>Москва, Дербеневская наб., 1/2</span>
+              <span className="text-center">Москва, Дербеневская наб., 1/2</span>
             </div>
           </div>
         </div>

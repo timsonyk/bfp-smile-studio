@@ -4,21 +4,61 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
+const TELEGRAM_BOT_TOKEN = "REDACTED";
+const TELEGRAM_CHAT_ID = "389481960";
+
 const BookingForm = () => {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Заявка отправлена",
-      description: "Мы свяжемся с вами в ближайшее время",
-    });
-    setFormData({ name: "", phone: "", message: "" });
+    setIsLoading(true);
+
+    const text = `
+📋 Новая заявка с сайта
+
+👤 Имя: ${formData.name}
+📞 Телефон: ${formData.phone}
+💬 Сообщение: ${formData.message || "Не указано"}
+    `.trim();
+
+    try {
+      const response = await fetch(
+        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text: text,
+          }),
+        }
+      );
+
+      if (response.ok) {
+        toast({
+          title: "Заявка отправлена",
+          description: "Мы свяжемся с вами в ближайшее время",
+        });
+        setFormData({ name: "", phone: "", message: "" });
+      } else {
+        throw new Error("Ошибка отправки");
+      }
+    } catch (error) {
+      toast({
+        title: "Ошибка",
+        description: "Не удалось отправить заявку. Попробуйте позже.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -63,10 +103,11 @@ const BookingForm = () => {
 
       <Button
         type="submit"
-        className="w-full h-12 text-base rounded-none bg-foreground text-background hover:bg-foreground/90"
+        disabled={isLoading}
+        className="w-full h-12 text-base rounded-none bg-foreground text-background hover:bg-foreground/90 disabled:opacity-50"
         size="lg"
       >
-        Отправить
+        {isLoading ? "Отправка..." : "Отправить"}
       </Button>
     </form>
   );
