@@ -108,13 +108,13 @@ const Contacts = () => {
           <div className="max-w-6xl mx-auto reveal-section">
             <h2 className="text-2xl md:text-3xl font-medium mb-6 md:mb-8 text-center">Как нас найти</h2>
             <a
-              href="https://yandex.ru/maps/?pt=37.653505,55.727541&z=17&l=map"
+              href="https://yandex.ru/maps/213/moscow/?ll=37.653864%2C55.727389&mode=poi&poi%5Bpoint%5D=37.653688%2C55.727475&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1026128887&z=18.21"
               target="_blank"
               rel="noopener noreferrer"
               className="block aspect-video bg-muted rounded-xl md:rounded-2xl overflow-hidden shadow-xl relative group"
             >
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=37.653505%2C55.727541&z=17&pt=37.653505,55.727541"
+                src="https://yandex.ru/map-widget/v1/?ll=37.653688%2C55.727475&z=17&pt=37.653688,55.727475,pm2rdm"
                 width="100%"
                 height="100%"
                 frameBorder="0"

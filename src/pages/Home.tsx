@@ -116,7 +116,14 @@ const Home = () => {
                 +7 (495) 120-01-88
               </a>
               <span className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground/50" />
-              <span className="text-center">Москва, Дербеневская наб., 1/2</span>
+              <a
+                href="https://yandex.ru/maps/213/moscow/?ll=37.653864%2C55.727389&mode=poi&poi%5Bpoint%5D=37.653688%2C55.727475&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1026128887&z=18.21"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center hover:text-foreground transition-colors"
+              >
+                Москва, Дербеневская наб., 1/2
+              </a>
             </div>
           </div>
         </div>
@@ -423,7 +430,7 @@ const Home = () => {
                     ))}
                   </div>
                   <p className="text-muted-foreground leading-relaxed flex-grow mb-6">
-                    Наконец-то нашла клинику, где не просто лечат зубы, а разбираются в причинах проблем. Борис Фёдорович объяснил связь прикуса с головными болями, о которой я даже не подозревала. После лечения ушли мигрени, которые мучили годами.
+                    Наконец-то нашла клинику, где не просто лечат зубы, а разбираются в причинах проблем. Артур Владимирович объяснил связь прикуса с головными болями, о которой я даже не подозревала. После лечения ушли мигрени, которые мучили годами.
                   </p>
                   <div className="border-t border-border pt-4">
                     <p className="font-medium">Анна М.</p>
