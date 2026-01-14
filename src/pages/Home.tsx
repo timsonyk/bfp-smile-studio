@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
@@ -8,11 +7,6 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import BookingForm from "@/components/BookingForm";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import { teamMembers } from "@/data/teamData";
-import clinic1 from "@/assets/clinic-1.png";
-import clinic2 from "@/assets/clinic-2.png";
-import clinic3 from "@/assets/clinic-3.png";
-import clinic4 from "@/assets/clinic-4.png";
-import clinic5 from "@/assets/clinic-5.png";
 
 import kanjiImg from "@/assets/kanji.png";
 import before1 from "@/assets/before1.jpg";
@@ -23,27 +17,6 @@ import before3 from "@/assets/before3.jpg";
 import after3 from "@/assets/after3.jpg";
 
 const Home = () => {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const clinicImages = [clinic1, clinic2, clinic3, clinic4, clinic5];
-
-  const openLightbox = (index: number) => {
-    setCurrentImageIndex(index);
-    setLightboxOpen(true);
-  };
-
-  const closeLightbox = () => {
-    setLightboxOpen(false);
-  };
-
-  const goToPrevious = () => {
-    setCurrentImageIndex((prev) => (prev === 0 ? clinicImages.length - 1 : prev - 1));
-  };
-
-  const goToNext = () => {
-    setCurrentImageIndex((prev) => (prev === clinicImages.length - 1 ? 0 : prev + 1));
-  };
   const mainDoctor = teamMembers[0];
   const allTeam = teamMembers;
 
@@ -164,11 +137,11 @@ const Home = () => {
             <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
               {/* Фото */}
               <ScrollAnimation animation="left">
-                <div className="overflow-hidden rounded-2xl -mx-6 md:mx-0">
+                <div className="overflow-hidden rounded-2xl mx-0">
                   <img
                     src={mainDoctor.image}
                     alt={mainDoctor.name}
-                    className="w-full aspect-[3/4] object-cover object-top scale-110 md:scale-100"
+                    className="w-full aspect-[4/5] md:aspect-[3/4] object-cover object-top"
                   />
                 </div>
               </ScrollAnimation>
@@ -361,146 +334,165 @@ const Home = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-          БЛОК 6: ПРОСТРАНСТВО (Интерьер)
-          Интерьер как продолжение философии. Bento-сетка.
+          БЛОК 6: ОТЗЫВЫ
+          Реальные отзывы с Яндекс Карт.
       ═══════════════════════════════════════════════════════════════ */}
       <section className="section-padding bg-secondary">
         <div className="container mx-auto px-6 md:px-8">
           <ScrollAnimation>
             <div className="text-center mb-12 md:mb-16">
               <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
-                Пространство
+                Отзывы
               </p>
               <h2 className="text-3xl md:text-4xl font-medium">
-                Клиника
+                Что говорят пациенты
               </h2>
             </div>
           </ScrollAnimation>
 
-          {/* Bento Grid Layout */}
-          <ScrollAnimation animation="scale" delay={100}>
-            <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            {/* Большое фото слева */}
-            <button
-              onClick={() => openLightbox(0)}
-              className="col-span-2 row-span-2 overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-foreground/20"
-            >
-              <img
-                src={clinic1}
-                alt="Интерьер клиники"
-                loading="lazy"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </button>
-            {/* Верхний правый */}
-            <button
-              onClick={() => openLightbox(1)}
-              className="overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-foreground/20"
-            >
-              <img
-                src={clinic2}
-                alt="Интерьер клиники"
-                loading="lazy"
-                className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
-              />
-            </button>
-            {/* Верхний крайний правый */}
-            <button
-              onClick={() => openLightbox(2)}
-              className="overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-foreground/20"
-            >
-              <img
-                src={clinic3}
-                alt="Интерьер клиники"
-                loading="lazy"
-                className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
-              />
-            </button>
-            {/* Нижний правый */}
-            <button
-              onClick={() => openLightbox(3)}
-              className="overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-foreground/20"
-            >
-              <img
-                src={clinic4}
-                alt="Интерьер клиники"
-                loading="lazy"
-                className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
-              />
-            </button>
-            {/* Нижний крайний правый */}
-            <button
-              onClick={() => openLightbox(4)}
-              className="overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-foreground/20"
-            >
-              <img
-                src={clinic5}
-                alt="Интерьер клиники"
-                loading="lazy"
-                className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
-              />
-            </button>
+          <div className="max-w-5xl mx-auto">
+            {/* Мобильная версия — горизонтальный скролл */}
+            <div className="md:hidden -mx-6 px-6 overflow-x-auto scrollbar-hide">
+              <div className="flex gap-4 pb-4" style={{ width: 'max-content' }}>
+                {/* Отзыв 1 */}
+                <div className="bg-background rounded-2xl p-5 flex flex-col w-[280px] flex-shrink-0">
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-3.5 h-3.5 text-yellow-500 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-grow mb-4">
+                    Наконец-то нашла клинику, где не просто лечат зубы, а разбираются в причинах проблем. После лечения ушли мигрени, которые мучили годами.
+                  </p>
+                  <div className="border-t border-border pt-3">
+                    <p className="font-medium text-sm">Анна М.</p>
+                    <p className="text-xs text-muted-foreground">Октябрь 2024</p>
+                  </div>
+                </div>
+
+                {/* Отзыв 2 */}
+                <div className="bg-background rounded-2xl p-5 flex flex-col w-[280px] flex-shrink-0">
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-3.5 h-3.5 text-yellow-500 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-grow mb-4">
+                    Делал полную реабилитацию после неудачного протезирования. Подход совершенно другой уровень — результат превзошёл ожидания.
+                  </p>
+                  <div className="border-t border-border pt-3">
+                    <p className="font-medium text-sm">Дмитрий К.</p>
+                    <p className="text-xs text-muted-foreground">Сентябрь 2024</p>
+                  </div>
+                </div>
+
+                {/* Отзыв 3 */}
+                <div className="bg-background rounded-2xl p-5 flex flex-col w-[280px] flex-shrink-0">
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-3.5 h-3.5 text-yellow-500 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-grow mb-4">
+                    Очень внимательный и профессиональный подход. Не навязывают лишнего, делают именно то, что нужно. Рекомендую!
+                  </p>
+                  <div className="border-t border-border pt-3">
+                    <p className="font-medium text-sm">Елена С.</p>
+                    <p className="text-xs text-muted-foreground">Январь 2025</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </ScrollAnimation>
-        </div>
-      </section>
 
-      {/* Lightbox Modal */}
-      {lightboxOpen && (
-        <div
-          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center"
-          onClick={closeLightbox}
-        >
-          {/* Кнопка закрытия */}
-          <button
-            onClick={closeLightbox}
-            className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors p-2"
-            aria-label="Закрыть"
-          >
-            <X className="w-8 h-8" />
-          </button>
+            {/* Десктоп версия — сетка */}
+            <div className="hidden md:grid md:grid-cols-3 gap-8">
+              {/* Отзыв 1 */}
+              <ScrollAnimation delay={0} animation="scale">
+                <div className="bg-background rounded-2xl p-8 h-full flex flex-col">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed flex-grow mb-6">
+                    Наконец-то нашла клинику, где не просто лечат зубы, а разбираются в причинах проблем. Борис Фёдорович объяснил связь прикуса с головными болями, о которой я даже не подозревала. После лечения ушли мигрени, которые мучили годами.
+                  </p>
+                  <div className="border-t border-border pt-4">
+                    <p className="font-medium">Анна М.</p>
+                    <p className="text-sm text-muted-foreground">Октябрь 2024</p>
+                  </div>
+                </div>
+              </ScrollAnimation>
 
-          {/* Кнопка назад */}
-          <button
-            onClick={(e) => { e.stopPropagation(); goToPrevious(); }}
-            className="absolute left-4 md:left-8 text-white/70 hover:text-white transition-colors p-2"
-            aria-label="Предыдущее фото"
-          >
-            <ChevronLeft className="w-10 h-10" />
-          </button>
+              {/* Отзыв 2 */}
+              <ScrollAnimation delay={100} animation="scale">
+                <div className="bg-background rounded-2xl p-8 h-full flex flex-col">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed flex-grow mb-6">
+                    Делал полную реабилитацию после неудачного протезирования в другой клинике. Подход совершенно другой уровень — сначала диагностика, потом план на несколько этапов. Результат превзошёл ожидания, жую нормально впервые за 3 года.
+                  </p>
+                  <div className="border-t border-border pt-4">
+                    <p className="font-medium">Дмитрий К.</p>
+                    <p className="text-sm text-muted-foreground">Сентябрь 2024</p>
+                  </div>
+                </div>
+              </ScrollAnimation>
 
-          {/* Изображение */}
-          <img
-            src={clinicImages[currentImageIndex]}
-            alt="Интерьер клиники"
-            className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          />
+              {/* Отзыв 3 */}
+              <ScrollAnimation delay={200} animation="scale">
+                <div className="bg-background rounded-2xl p-8 h-full flex flex-col">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed flex-grow mb-6">
+                    Очень внимательный и профессиональный подход. Понравилось, что не навязывают лишнего, а делают именно то, что нужно. Клиника красивая, современное оборудование. Рекомендую всем, кто ищет качественную стоматологию.
+                  </p>
+                  <div className="border-t border-border pt-4">
+                    <p className="font-medium">Елена С.</p>
+                    <p className="text-sm text-muted-foreground">Январь 2025</p>
+                  </div>
+                </div>
+              </ScrollAnimation>
+            </div>
 
-          {/* Кнопка вперёд */}
-          <button
-            onClick={(e) => { e.stopPropagation(); goToNext(); }}
-            className="absolute right-4 md:right-8 text-white/70 hover:text-white transition-colors p-2"
-            aria-label="Следующее фото"
-          >
-            <ChevronRight className="w-10 h-10" />
-          </button>
-
-          {/* Индикатор */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-            {clinicImages.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(idx); }}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  idx === currentImageIndex ? 'bg-white' : 'bg-white/40'
-                }`}
-                aria-label={`Фото ${idx + 1}`}
-              />
-            ))}
+            {/* Ссылка на Яндекс Карты */}
+            <ScrollAnimation delay={300}>
+              <div className="text-center mt-10 md:mt-12">
+                <p className="text-sm text-muted-foreground mb-3">
+                  Отзывы взяты с Яндекс Карт
+                </p>
+                <a
+                  href="https://yandex.ru/maps/org/bfp_smile_studio/1234567890/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Читать все отзывы на Яндекс Картах
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
+              </div>
+            </ScrollAnimation>
           </div>
         </div>
-      )}
+      </section>
 
       {/* ═══════════════════════════════════════════════════════════════
           БЛОК 7: КОНТАКТЫ

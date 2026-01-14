@@ -478,3 +478,13 @@ select:focus-visible {
 .fade-in-hover:hover {
   opacity: 1;
 }
+
+/* Скрыть скроллбар для горизонтальной прокрутки */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
