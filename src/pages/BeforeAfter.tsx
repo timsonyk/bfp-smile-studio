@@ -9,6 +9,10 @@ import before2 from "@/assets/before2.jpg";
 import after2 from "@/assets/after2.jpg";
 import before3 from "@/assets/before3.jpg";
 import after3 from "@/assets/after3.jpg";
+import before4 from "@/assets/before4.png";
+import after4 from "@/assets/after4.png";
+import before5 from "@/assets/before5.jpg";
+import after5 from "@/assets/after5.jpg";
 
 const BeforeAfter = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -51,16 +55,16 @@ const BeforeAfter = () => {
       category: "aesthetics",
       title: "Художественная реставрация",
       description: "Восстановление передних зубов",
-      beforeImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=900&fit=crop",
-      afterImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&h=900&fit=crop",
+      beforeImage: before4,
+      afterImage: after4,
     },
     {
       id: 5,
       category: "orthopedics",
       title: "Коронки на имплантах",
       description: "Протезирование на имплантационных системах",
-      beforeImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=900&fit=crop",
-      afterImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&h=900&fit=crop",
+      beforeImage: before5,
+      afterImage: after5,
     },
     {
       id: 6,

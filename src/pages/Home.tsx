@@ -164,11 +164,11 @@ const Home = () => {
             <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
               {/* Фото */}
               <ScrollAnimation animation="left">
-                <div className="overflow-hidden rounded-2xl">
+                <div className="overflow-hidden rounded-2xl -mx-6 md:mx-0">
                   <img
                     src={mainDoctor.image}
                     alt={mainDoctor.name}
-                    className="w-full aspect-[3/4] object-cover object-top"
+                    className="w-full aspect-[3/4] object-cover object-top scale-110 md:scale-100"
                   />
                 </div>
               </ScrollAnimation>
