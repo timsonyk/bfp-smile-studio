@@ -8,8 +8,8 @@ interface TeamCardProps {
 const TeamCard = ({ member }: TeamCardProps) => {
   return (
     <Link to={`/team/${member.slug}`} className="group block">
-      <div className="overflow-hidden card-hover">
-        <div className="aspect-[3/4] overflow-hidden mb-4 rounded-2xl img-shadow">
+      <div className="card-hover">
+        <div className="aspect-[3/4] overflow-hidden mb-4 rounded-2xl shadow-[0_0_25px_rgba(0,0,0,0.15)]">
           <img
             src={member.image}
             alt={member.name}
