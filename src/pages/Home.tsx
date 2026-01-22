@@ -67,7 +67,6 @@ const Home = () => {
 
       {/* ═══════════════════════════════════════════════════════════════
           БЛОК 1: КЛИНИКА (Hero)
-          Минималистичный вариант — текст по центру с иероглифами на фоне
       ═══════════════════════════════════════════════════════════════ */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="container mx-auto px-6 md:px-8 relative z-10">
@@ -81,14 +80,14 @@ const Home = () => {
             <div className="w-12 md:w-16 h-px bg-foreground/20 mx-auto mb-6 md:mb-8 animation-init animate-expand-width animation-delay-200" />
 
             <p className="text-lg md:text-2xl text-muted-foreground mb-4 md:mb-6 font-light leading-relaxed animation-init animate-fade-in-up animation-delay-300 px-4">
-              Клиника биофункциональной стоматологии
+              Стоматология Артура Макарова
             </p>
 
             <p className="text-sm md:text-base text-muted-foreground/70 mb-8 md:mb-12 max-w-xl mx-auto leading-relaxed animation-init animate-fade-in-up animation-delay-400 px-4">
               Мы восстанавливаем функцию зубочелюстной системы, чтобы эстетика стала её естественным следствием
             </p>
 
-            {/* CTA */}
+            {/* CTA кнопки */}
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 md:mb-16 animation-init animate-fade-in-up animation-delay-500 px-4">
               <a
                 href="https://t.me/bfsclinic"
@@ -107,7 +106,7 @@ const Home = () => {
               </Link>
             </div>
 
-            {/* Контакты — горизонтально */}
+            {/* Контакты */}
             <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-12 text-xs sm:text-sm text-muted-foreground animation-init animate-fade-in animation-delay-600 px-4">
               <a
                 href="tel:+74951200188"
@@ -247,10 +246,51 @@ const Home = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-          БЛОК 4: РЕЗУЛЬТАТЫ (До/После)
-          Спокойная подача. Результат как факт.
+          БЛОК 4: КОМАНДА
+          Люди. Без театральности.
       ═══════════════════════════════════════════════════════════════ */}
       <section className="section-padding bg-secondary">
+        <div className="container mx-auto px-6 md:px-8">
+          <ScrollAnimation>
+            <div className="text-center mb-12 md:mb-16">
+              <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
+                Специалисты
+              </p>
+              <h2 className="text-3xl md:text-4xl font-medium">
+                Команда
+              </h2>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
+            {allTeam.map((member, idx) => (
+              <ScrollAnimation key={member.id} delay={idx * 50} animation="scale">
+                <div>
+                  <TeamCard member={member} />
+                </div>
+              </ScrollAnimation>
+            ))}
+          </div>
+
+          <ScrollAnimation delay={200}>
+            <div className="text-center mt-12 md:mt-16">
+              <Link
+                to="/team"
+                className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Вся команда
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          БЛОК 5: РЕЗУЛЬТАТЫ (До/После)
+          Спокойная подача. Результат как факт.
+      ═══════════════════════════════════════════════════════════════ */}
+      <section className="section-padding">
         <div className="container mx-auto px-6 md:px-8">
           {/* Заголовок */}
           <ScrollAnimation>
@@ -292,47 +332,6 @@ const Home = () => {
                 className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Все работы
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════
-          БЛОК 5: КОМАНДА
-          Люди. Без театральности.
-      ═══════════════════════════════════════════════════════════════ */}
-      <section className="section-padding">
-        <div className="container mx-auto px-6 md:px-8">
-          <ScrollAnimation>
-            <div className="text-center mb-12 md:mb-16">
-              <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
-                Специалисты
-              </p>
-              <h2 className="text-3xl md:text-4xl font-medium">
-                Команда
-              </h2>
-            </div>
-          </ScrollAnimation>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-            {allTeam.map((member, idx) => (
-              <ScrollAnimation key={member.id} delay={idx * 50} animation="scale">
-                <div>
-                  <TeamCard member={member} />
-                </div>
-              </ScrollAnimation>
-            ))}
-          </div>
-
-          <ScrollAnimation delay={200}>
-            <div className="text-center mt-12 md:mt-16">
-              <Link
-                to="/team"
-                className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Вся команда
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
