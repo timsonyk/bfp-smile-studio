@@ -190,7 +190,7 @@ const Navigation = () => {
       >
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-background/98 backdrop-blur-sm"
+          className="absolute inset-0 bg-background"
           onClick={() => setIsOpen(false)}
           aria-hidden="true"
         />
