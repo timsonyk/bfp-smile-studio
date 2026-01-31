@@ -1,7 +1,7 @@
-import makarovImg from "@/assets/makarov.png";
-import aivazyanImg from "@/assets/aivazyan.png";
-import mamishevImg from "@/assets/mamishov.png";
-import ayurovaImg from "@/assets/ayurova.png";
+import makarovImg from "@/assets/makarov.jpg";
+import aivazyanImg from "@/assets/aivazyan.jpg";
+import mamishevImg from "@/assets/mamishov.jpg";
+import ayurovaImg from "@/assets/ayurova.jpg";
 
 export interface TeamMember {
   id: string;
