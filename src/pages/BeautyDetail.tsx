@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { Sparkles, ArrowLeft, Phone } from "lucide-react";
+import { PenTool, ArrowLeft, Phone } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollAnimation from "@/components/ScrollAnimation";
@@ -46,7 +46,7 @@ const BeautyDetail = () => {
                 className="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{ background: "linear-gradient(135deg, hsl(35 65% 55%) 0%, hsl(25 70% 50%) 100%)" }}
               >
-                <Sparkles className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                <PenTool className="w-6 h-6 md:w-7 md:h-7 text-white" />
               </div>
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium" style={{ color: "hsl(25 50% 25%)" }}>
                 {service.pageTitle}
@@ -81,7 +81,7 @@ const BeautyDetail = () => {
                 {/* Плейсхолдер, если видео не загружено */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <div className="text-center">
-                    <Sparkles className="w-16 h-16 mx-auto mb-4 opacity-20" style={{ color: "hsl(35 60% 50%)" }} />
+                    <PenTool className="w-16 h-16 mx-auto mb-4 opacity-20" style={{ color: "hsl(35 60% 50%)" }} />
                     <p className="text-sm text-muted-foreground/50">Видео скоро появится</p>
                   </div>
                 </div>

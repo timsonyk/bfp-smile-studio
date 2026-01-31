@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Sparkles, ArrowRight, ArrowLeft } from "lucide-react";
+import { PenTool, ArrowRight, ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollAnimation from "@/components/ScrollAnimation";
@@ -33,7 +33,7 @@ const Beauty = () => {
                 className="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center"
                 style={{ background: "linear-gradient(135deg, hsl(35 65% 55%) 0%, hsl(25 70% 50%) 100%)" }}
               >
-                <Sparkles className="w-7 h-7 md:w-8 md:h-8 text-white" />
+                <PenTool className="w-7 h-7 md:w-8 md:h-8 text-white" />
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium" style={{ color: "hsl(25 50% 25%)" }}>
                 Красота
