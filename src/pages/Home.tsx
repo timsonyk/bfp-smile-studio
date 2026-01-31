@@ -213,7 +213,6 @@ const Home = () => {
           <div className="w-px h-12 bg-gradient-to-b from-transparent via-foreground/20 to-foreground/40" />
         </div>
       </section>
-
       {/* ═══════════════════════════════════════════════════════════════
           БЛОК 2: ВРАЧ
           Не личный бренд, а часть клиники.
