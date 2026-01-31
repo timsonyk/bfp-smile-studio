@@ -72,13 +72,18 @@ const Home = () => {
         <div className="container mx-auto px-6 md:px-8 relative z-10">
           <div className="max-w-5xl mx-auto">
             {/* Шапка */}
-            <div className="text-center mb-12 md:mb-16">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6 animation-init animate-fade-in-up">
-                Стоматология Артура Макарова
+            <div className="text-center mb-6 md:mb-8">
+              {/* Логотип */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6 animation-init animate-fade-in-up">
+                <span className="font-bold">bfp</span><span className="font-light">concept</span>
               </h1>
 
+              <p className="text-lg md:text-xl text-muted-foreground mb-4 font-light animation-init animate-fade-in-up animation-delay-100">
+                Стоматология Артура Макарова
+              </p>
+
               {/* Разделитель */}
-              <div className="w-12 md:w-16 h-px bg-foreground/20 mx-auto mb-6 animation-init animate-expand-width animation-delay-200" />
+              <div className="w-12 md:w-16 h-px bg-foreground/20 mx-auto mb-4 animation-init animate-expand-width animation-delay-200" />
 
               {/* Контакты */}
               <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-8 text-sm text-muted-foreground animation-init animate-fade-in animation-delay-300">
