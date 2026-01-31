@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sword, PenTool } from "lucide-react";
+import { ArrowRight, HeartPulse, Sparkles } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
@@ -105,54 +105,80 @@ const Home = () => {
               Что вас беспокоит?
             </p>
 
-            {/* Два блока выбора — минималистичный японский стиль */}
+            {/* Два блока выбора */}
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 animation-init animate-fade-in-up animation-delay-500">
-              {/* Блок "Здоровье" */}
+              {/* Блок "Здоровье" — холодные тона */}
               <Link
                 to="/health"
-                className="group relative border border-border rounded-lg p-8 md:p-10 transition-all duration-500 hover:border-foreground/30 hover:shadow-lg bg-background"
+                className="group relative overflow-hidden rounded-2xl p-8 md:p-12 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl"
+                style={{
+                  background: "linear-gradient(135deg, hsl(200 35% 94%) 0%, hsl(185 30% 90%) 100%)"
+                }}
               >
-                {/* Декоративная линия слева */}
-                <div className="absolute left-0 top-8 bottom-8 w-px bg-gradient-to-b from-transparent via-foreground/20 to-transparent group-hover:via-foreground/40 transition-all duration-500" />
+                {/* Декоративный элемент */}
+                <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform translate-x-8 -translate-y-8">
+                  <HeartPulse className="w-full h-full" style={{ color: "hsl(200 60% 40%)" }} />
+                </div>
 
-                <div className="relative z-10 pl-6">
-                  <Sword className="w-8 h-8 md:w-10 md:h-10 text-foreground/70 mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:text-foreground" strokeWidth={1.5} />
+                <div className="relative z-10">
+                  <div
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+                    style={{ background: "hsl(200 50% 45%)" }}
+                  >
+                    <HeartPulse className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  </div>
 
-                  <h2 className="text-2xl md:text-3xl font-medium mb-3 text-foreground">
+                  <h2 className="text-2xl md:text-3xl font-medium mb-3" style={{ color: "hsl(200 40% 25%)" }}>
                     Здоровье
                   </h2>
 
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-base md:text-lg mb-6" style={{ color: "hsl(200 30% 35%)" }}>
                     Лечение и избавление от боли
                   </p>
 
-                  <div className="inline-flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                  <div
+                    className="inline-flex items-center text-sm font-medium transition-all duration-300 group-hover:gap-3"
+                    style={{ color: "hsl(200 50% 40%)" }}
+                  >
                     <span>Перейти</span>
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                   </div>
                 </div>
               </Link>
 
-              {/* Блок "Красота" */}
+              {/* Блок "Красота" — тёплые тона */}
               <Link
                 to="/beauty"
-                className="group relative border border-border rounded-lg p-8 md:p-10 transition-all duration-500 hover:border-foreground/30 hover:shadow-lg bg-background"
+                className="group relative overflow-hidden rounded-2xl p-8 md:p-12 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl"
+                style={{
+                  background: "linear-gradient(135deg, hsl(35 45% 93%) 0%, hsl(25 50% 90%) 100%)"
+                }}
               >
-                {/* Декоративная линия слева */}
-                <div className="absolute left-0 top-8 bottom-8 w-px bg-gradient-to-b from-transparent via-foreground/20 to-transparent group-hover:via-foreground/40 transition-all duration-500" />
+                {/* Декоративный элемент */}
+                <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform translate-x-8 -translate-y-8">
+                  <Sparkles className="w-full h-full" style={{ color: "hsl(35 70% 45%)" }} />
+                </div>
 
-                <div className="relative z-10 pl-6">
-                  <PenTool className="w-8 h-8 md:w-10 md:h-10 text-foreground/70 mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:text-foreground" strokeWidth={1.5} />
+                <div className="relative z-10">
+                  <div
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+                    style={{ background: "linear-gradient(135deg, hsl(35 65% 55%) 0%, hsl(25 70% 50%) 100%)" }}
+                  >
+                    <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  </div>
 
-                  <h2 className="text-2xl md:text-3xl font-medium mb-3 text-foreground">
+                  <h2 className="text-2xl md:text-3xl font-medium mb-3" style={{ color: "hsl(25 50% 25%)" }}>
                     Красота
                   </h2>
 
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-base md:text-lg mb-6" style={{ color: "hsl(25 35% 40%)" }}>
                     Эстетика и идеальная улыбка
                   </p>
 
-                  <div className="inline-flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                  <div
+                    className="inline-flex items-center text-sm font-medium transition-all duration-300 group-hover:gap-3"
+                    style={{ color: "hsl(35 60% 45%)" }}
+                  >
                     <span>Перейти</span>
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                   </div>

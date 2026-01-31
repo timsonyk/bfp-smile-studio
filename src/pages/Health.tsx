@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Sword, ArrowRight, ArrowLeft } from "lucide-react";
+import { HeartPulse, ArrowRight, ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollAnimation from "@/components/ScrollAnimation";
@@ -33,7 +33,7 @@ const Health = () => {
                 className="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center"
                 style={{ background: "hsl(200 50% 45%)" }}
               >
-                <Sword className="w-7 h-7 md:w-8 md:h-8 text-white" />
+                <HeartPulse className="w-7 h-7 md:w-8 md:h-8 text-white" />
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium" style={{ color: "hsl(200 40% 25%)" }}>
                 Здоровье
