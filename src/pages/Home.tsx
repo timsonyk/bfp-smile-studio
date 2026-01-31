@@ -104,6 +104,15 @@ const Home = () => {
                 >
                   Москва, Дербеневская наб., 1/2
                 </a>
+                <span className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground/30" />
+                <a
+                  href="https://t.me/bfsclinic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Telegram
+                </a>
               </div>
             </div>
 
@@ -113,7 +122,7 @@ const Home = () => {
             </p>
 
             {/* Два блока выбора */}
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 animation-init animate-fade-in-up animation-delay-500">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 animation-init animate-fade-in-up animation-delay-500 max-w-4xl mx-auto">
               {/* Блок "Здоровье" — с катаной */}
               <Link
                 to="/health"
@@ -123,10 +132,10 @@ const Home = () => {
                 <img
                   src={katanaImg}
                   alt="Здоровье"
-                  className="w-full aspect-[4/3] object-contain"
+                  className="w-full aspect-[3/2] object-contain scale-[1.18]"
                 />
 
-                <div className="p-6 md:p-8">
+                <div className="p-4 md:p-6">
                   <h2 className="text-2xl md:text-3xl font-medium mb-2 text-foreground">
                     Здоровье
                   </h2>
@@ -151,10 +160,10 @@ const Home = () => {
                 <img
                   src={brushImg}
                   alt="Красота"
-                  className="w-full aspect-[4/3] object-contain"
+                  className="w-full aspect-[3/2] object-contain p-4"
                 />
 
-                <div className="p-6 md:p-8">
+                <div className="p-4 md:p-6">
                   <h2 className="text-2xl md:text-3xl font-medium mb-2 text-foreground">
                     Красота
                   </h2>
@@ -169,26 +178,6 @@ const Home = () => {
                   </div>
                 </div>
               </Link>
-            </div>
-
-            {/* Дополнительные ссылки */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mt-12 animation-init animate-fade-in animation-delay-600">
-              <Link
-                to="/about"
-                className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                О клинике
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-              <a
-                href="https://t.me/bfsclinic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Telegram
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
             </div>
           </div>
         </div>
