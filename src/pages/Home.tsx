@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, HeartPulse, Sparkles } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
@@ -66,57 +66,144 @@ const Home = () => {
       <Navigation />
 
       {/* ═══════════════════════════════════════════════════════════════
-          БЛОК 1: КЛИНИКА (Hero)
-          Минималистичный вариант — текст по центру с иероглифами на фоне
+          БЛОК 1: КЛИНИКА (Hero) — выбор категории
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 pb-12">
         <div className="container mx-auto px-6 md:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Логотип */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl tracking-tight mb-6 md:mb-8 animation-init animate-fade-in-up">
-              <span className="font-bold">bfp</span><span className="font-light">concept</span>
-            </h1>
+          <div className="max-w-5xl mx-auto">
+            {/* Шапка */}
+            <div className="text-center mb-12 md:mb-16">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6 animation-init animate-fade-in-up">
+                Стоматология Артура Макарова
+              </h1>
 
-            {/* Разделитель */}
-            <div className="w-12 md:w-16 h-px bg-foreground/20 mx-auto mb-6 md:mb-8 animation-init animate-expand-width animation-delay-200" />
+              {/* Разделитель */}
+              <div className="w-12 md:w-16 h-px bg-foreground/20 mx-auto mb-6 animation-init animate-expand-width animation-delay-200" />
 
-            <p className="text-lg md:text-2xl text-muted-foreground mb-4 md:mb-6 font-light leading-relaxed animation-init animate-fade-in-up animation-delay-300 px-4">
-              Клиника биофункциональной стоматологии
+              {/* Контакты */}
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-8 text-sm text-muted-foreground animation-init animate-fade-in animation-delay-300">
+                <a
+                  href="tel:+74951200188"
+                  className="hover:text-foreground transition-colors font-medium"
+                >
+                  +7 (495) 120-01-88
+                </a>
+                <span className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground/30" />
+                <a
+                  href="https://yandex.ru/maps/213/moscow/?ll=37.653864%2C55.727389&mode=poi&poi%5Bpoint%5D=37.653688%2C55.727475&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1026128887&z=18.21"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Москва, Дербеневская наб., 1/2
+                </a>
+              </div>
+            </div>
+
+            {/* Подзаголовок */}
+            <p className="text-center text-muted-foreground mb-8 md:mb-12 animation-init animate-fade-in-up animation-delay-400">
+              Что вас беспокоит?
             </p>
 
-            <p className="text-sm md:text-base text-muted-foreground/70 mb-8 md:mb-12 max-w-xl mx-auto leading-relaxed animation-init animate-fade-in-up animation-delay-400 px-4">
-              Мы восстанавливаем функцию зубочелюстной системы, чтобы эстетика стала её естественным следствием
-            </p>
-
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 md:mb-16 animation-init animate-fade-in-up animation-delay-500 px-4">
-              <a
-                href="https://t.me/bfsclinic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background text-sm rounded-lg hover:bg-foreground/90 transition-colors btn-press"
+            {/* Два блока выбора */}
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 animation-init animate-fade-in-up animation-delay-500">
+              {/* Блок "Здоровье" — холодные тона */}
+              <Link
+                to="/health"
+                className="group relative overflow-hidden rounded-2xl p-8 md:p-12 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl"
+                style={{
+                  background: "linear-gradient(135deg, hsl(200 35% 94%) 0%, hsl(185 30% 90%) 100%)"
+                }}
               >
-                Telegram
-              </a>
+                {/* Декоративный элемент */}
+                <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform translate-x-8 -translate-y-8">
+                  <HeartPulse className="w-full h-full" style={{ color: "hsl(200 60% 40%)" }} />
+                </div>
+
+                <div className="relative z-10">
+                  <div
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+                    style={{ background: "hsl(200 50% 45%)" }}
+                  >
+                    <HeartPulse className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  </div>
+
+                  <h2 className="text-2xl md:text-3xl font-medium mb-3" style={{ color: "hsl(200 40% 25%)" }}>
+                    Здоровье
+                  </h2>
+
+                  <p className="text-base md:text-lg mb-6" style={{ color: "hsl(200 30% 35%)" }}>
+                    Лечение и избавление от боли
+                  </p>
+
+                  <div
+                    className="inline-flex items-center text-sm font-medium transition-all duration-300 group-hover:gap-3"
+                    style={{ color: "hsl(200 50% 40%)" }}
+                  >
+                    <span>Перейти</span>
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  </div>
+                </div>
+              </Link>
+
+              {/* Блок "Красота" — тёплые тона */}
+              <Link
+                to="/beauty"
+                className="group relative overflow-hidden rounded-2xl p-8 md:p-12 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl"
+                style={{
+                  background: "linear-gradient(135deg, hsl(35 45% 93%) 0%, hsl(25 50% 90%) 100%)"
+                }}
+              >
+                {/* Декоративный элемент */}
+                <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform translate-x-8 -translate-y-8">
+                  <Sparkles className="w-full h-full" style={{ color: "hsl(35 70% 45%)" }} />
+                </div>
+
+                <div className="relative z-10">
+                  <div
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+                    style={{ background: "linear-gradient(135deg, hsl(35 65% 55%) 0%, hsl(25 70% 50%) 100%)" }}
+                  >
+                    <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  </div>
+
+                  <h2 className="text-2xl md:text-3xl font-medium mb-3" style={{ color: "hsl(25 50% 25%)" }}>
+                    Красота
+                  </h2>
+
+                  <p className="text-base md:text-lg mb-6" style={{ color: "hsl(25 35% 40%)" }}>
+                    Эстетика и идеальная улыбка
+                  </p>
+
+                  <div
+                    className="inline-flex items-center text-sm font-medium transition-all duration-300 group-hover:gap-3"
+                    style={{ color: "hsl(35 60% 45%)" }}
+                  >
+                    <span>Перейти</span>
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            {/* Дополнительные ссылки */}
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mt-12 animation-init animate-fade-in animation-delay-600">
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-border text-sm rounded-lg hover:bg-secondary transition-colors btn-press"
+                className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 О клинике
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-            </div>
-
-            {/* Контакты — горизонтально */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-12 text-xs sm:text-sm text-muted-foreground animation-init animate-fade-in animation-delay-600 px-4">
               <a
-                href="tel:+74951200188"
-                className="hover:text-foreground transition-colors"
+                href="https://t.me/bfsclinic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                +7 (495) 120-01-88
+                Telegram
+                <ArrowRight className="ml-2 w-4 h-4" />
               </a>
-              <span className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground/50" />
-              <span className="text-center">Москва, Дербеневская наб., 1/2</span>
             </div>
           </div>
         </div>
@@ -240,10 +327,51 @@ const Home = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-          БЛОК 4: РЕЗУЛЬТАТЫ (До/После)
-          Спокойная подача. Результат как факт.
+          БЛОК 4: КОМАНДА
+          Люди. Без театральности.
       ═══════════════════════════════════════════════════════════════ */}
       <section className="section-padding bg-secondary">
+        <div className="container mx-auto px-6 md:px-8">
+          <ScrollAnimation>
+            <div className="text-center mb-12 md:mb-16">
+              <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
+                Специалисты
+              </p>
+              <h2 className="text-3xl md:text-4xl font-medium">
+                Команда
+              </h2>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
+            {allTeam.map((member, idx) => (
+              <ScrollAnimation key={member.id} delay={idx * 50} animation="scale">
+                <div>
+                  <TeamCard member={member} />
+                </div>
+              </ScrollAnimation>
+            ))}
+          </div>
+
+          <ScrollAnimation delay={200}>
+            <div className="text-center mt-12 md:mt-16">
+              <Link
+                to="/team"
+                className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Вся команда
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          БЛОК 5: РЕЗУЛЬТАТЫ (До/После)
+          Спокойная подача. Результат как факт.
+      ═══════════════════════════════════════════════════════════════ */}
+      <section className="section-padding">
         <div className="container mx-auto px-6 md:px-8">
           {/* Заголовок */}
           <ScrollAnimation>
@@ -285,47 +413,6 @@ const Home = () => {
                 className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Все работы
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════════
-          БЛОК 5: КОМАНДА
-          Люди. Без театральности.
-      ═══════════════════════════════════════════════════════════════ */}
-      <section className="section-padding">
-        <div className="container mx-auto px-6 md:px-8">
-          <ScrollAnimation>
-            <div className="text-center mb-12 md:mb-16">
-              <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-4">
-                Специалисты
-              </p>
-              <h2 className="text-3xl md:text-4xl font-medium">
-                Команда
-              </h2>
-            </div>
-          </ScrollAnimation>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-            {allTeam.map((member, idx) => (
-              <ScrollAnimation key={member.id} delay={idx * 50} animation="scale">
-                <div>
-                  <TeamCard member={member} />
-                </div>
-              </ScrollAnimation>
-            ))}
-          </div>
-
-          <ScrollAnimation delay={200}>
-            <div className="text-center mt-12 md:mt-16">
-              <Link
-                to="/team"
-                className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Вся команда
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
@@ -423,7 +510,7 @@ const Home = () => {
                     ))}
                   </div>
                   <p className="text-muted-foreground leading-relaxed flex-grow mb-6">
-                    Наконец-то нашла клинику, где не просто лечат зубы, а разбираются в причинах проблем. Борис Фёдорович объяснил связь прикуса с головными болями, о которой я даже не подозревала. После лечения ушли мигрени, которые мучили годами.
+                    Наконец-то нашла клинику, где не просто лечат зубы, а разбираются в причинах проблем. Артур Владимирович объяснил связь прикуса с головными болями, о которой я даже не подозревала. После лечения ушли мигрени, которые мучили годами.
                   </p>
                   <div className="border-t border-border pt-4">
                     <p className="font-medium">Анна М.</p>
