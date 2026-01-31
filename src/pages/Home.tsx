@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, HeartPulse, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
@@ -9,6 +9,8 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 import { teamMembers } from "@/data/teamData";
 
 import kanjiImg from "@/assets/kanji.png";
+import brushImg from "@/assets/brush.jpg";
+import katanaImg from "@/assets/katana.jpg";
 import before1 from "@/assets/before1.jpg";
 import after1 from "@/assets/after1.jpg";
 import before2 from "@/assets/before2.jpg";
@@ -112,78 +114,56 @@ const Home = () => {
 
             {/* Два блока выбора */}
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 animation-init animate-fade-in-up animation-delay-500">
-              {/* Блок "Здоровье" — индиго (藍色 ai-iro) */}
+              {/* Блок "Здоровье" — с катаной */}
               <Link
                 to="/health"
-                className="group relative overflow-hidden rounded-2xl p-8 md:p-12 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl"
-                style={{
-                  background: "linear-gradient(135deg, hsl(220 25% 93%) 0%, hsl(230 20% 88%) 100%)"
-                }}
+                className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-xl bg-white"
               >
-                {/* Декоративный элемент */}
-                <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform translate-x-8 -translate-y-8">
-                  <HeartPulse className="w-full h-full" style={{ color: "hsl(225 45% 35%)" }} />
-                </div>
+                {/* Изображение катаны */}
+                <img
+                  src={katanaImg}
+                  alt="Здоровье"
+                  className="w-full aspect-[4/3] object-contain"
+                />
 
-                <div className="relative z-10">
-                  <div
-                    className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
-                    style={{ background: "hsl(225 45% 35%)" }}
-                  >
-                    <HeartPulse className="w-8 h-8 md:w-10 md:h-10 text-white" />
-                  </div>
-
-                  <h2 className="text-2xl md:text-3xl font-medium mb-3" style={{ color: "hsl(225 40% 20%)" }}>
+                <div className="p-6 md:p-8">
+                  <h2 className="text-2xl md:text-3xl font-medium mb-2 text-foreground">
                     Здоровье
                   </h2>
 
-                  <p className="text-base md:text-lg mb-6" style={{ color: "hsl(225 25% 40%)" }}>
+                  <p className="text-base md:text-lg mb-4 text-muted-foreground">
                     Лечение и избавление от боли
                   </p>
 
-                  <div
-                    className="inline-flex items-center text-sm font-medium transition-all duration-300 group-hover:gap-3"
-                    style={{ color: "hsl(225 45% 35%)" }}
-                  >
+                  <div className="inline-flex items-center text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
                     <span>Перейти</span>
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                   </div>
                 </div>
               </Link>
 
-              {/* Блок "Красота" — сакура (桜色 sakura-iro) */}
+              {/* Блок "Красота" — с кистью */}
               <Link
                 to="/beauty"
-                className="group relative overflow-hidden rounded-2xl p-8 md:p-12 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl"
-                style={{
-                  background: "linear-gradient(135deg, hsl(350 35% 94%) 0%, hsl(340 30% 90%) 100%)"
-                }}
+                className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-xl bg-white"
               >
-                {/* Декоративный элемент */}
-                <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform translate-x-8 -translate-y-8">
-                  <Sparkles className="w-full h-full" style={{ color: "hsl(345 45% 55%)" }} />
-                </div>
+                {/* Изображение кисти */}
+                <img
+                  src={brushImg}
+                  alt="Красота"
+                  className="w-full aspect-[4/3] object-contain"
+                />
 
-                <div className="relative z-10">
-                  <div
-                    className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
-                    style={{ background: "hsl(345 45% 55%)" }}
-                  >
-                    <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-white" />
-                  </div>
-
-                  <h2 className="text-2xl md:text-3xl font-medium mb-3" style={{ color: "hsl(345 40% 25%)" }}>
+                <div className="p-6 md:p-8">
+                  <h2 className="text-2xl md:text-3xl font-medium mb-2 text-foreground">
                     Красота
                   </h2>
 
-                  <p className="text-base md:text-lg mb-6" style={{ color: "hsl(345 25% 40%)" }}>
+                  <p className="text-base md:text-lg mb-4 text-muted-foreground">
                     Эстетика и идеальная улыбка
                   </p>
 
-                  <div
-                    className="inline-flex items-center text-sm font-medium transition-all duration-300 group-hover:gap-3"
-                    style={{ color: "hsl(345 45% 50%)" }}
-                  >
+                  <div className="inline-flex items-center text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
                     <span>Перейти</span>
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                   </div>
