@@ -112,38 +112,38 @@ const Home = () => {
 
             {/* Два блока выбора */}
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 animation-init animate-fade-in-up animation-delay-500">
-              {/* Блок "Здоровье" — холодные тона */}
+              {/* Блок "Здоровье" — индиго (藍色 ai-iro) */}
               <Link
                 to="/health"
                 className="group relative overflow-hidden rounded-2xl p-8 md:p-12 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl"
                 style={{
-                  background: "linear-gradient(135deg, hsl(200 35% 94%) 0%, hsl(185 30% 90%) 100%)"
+                  background: "linear-gradient(135deg, hsl(220 25% 93%) 0%, hsl(230 20% 88%) 100%)"
                 }}
               >
                 {/* Декоративный элемент */}
                 <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform translate-x-8 -translate-y-8">
-                  <HeartPulse className="w-full h-full" style={{ color: "hsl(200 60% 40%)" }} />
+                  <HeartPulse className="w-full h-full" style={{ color: "hsl(225 45% 35%)" }} />
                 </div>
 
                 <div className="relative z-10">
                   <div
                     className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
-                    style={{ background: "hsl(200 50% 45%)" }}
+                    style={{ background: "hsl(225 45% 35%)" }}
                   >
                     <HeartPulse className="w-8 h-8 md:w-10 md:h-10 text-white" />
                   </div>
 
-                  <h2 className="text-2xl md:text-3xl font-medium mb-3" style={{ color: "hsl(200 40% 25%)" }}>
+                  <h2 className="text-2xl md:text-3xl font-medium mb-3" style={{ color: "hsl(225 40% 20%)" }}>
                     Здоровье
                   </h2>
 
-                  <p className="text-base md:text-lg mb-6" style={{ color: "hsl(200 30% 35%)" }}>
+                  <p className="text-base md:text-lg mb-6" style={{ color: "hsl(225 25% 40%)" }}>
                     Лечение и избавление от боли
                   </p>
 
                   <div
                     className="inline-flex items-center text-sm font-medium transition-all duration-300 group-hover:gap-3"
-                    style={{ color: "hsl(200 50% 40%)" }}
+                    style={{ color: "hsl(225 45% 35%)" }}
                   >
                     <span>Перейти</span>
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
@@ -151,38 +151,38 @@ const Home = () => {
                 </div>
               </Link>
 
-              {/* Блок "Красота" — тёплые тона */}
+              {/* Блок "Красота" — сакура (桜色 sakura-iro) */}
               <Link
                 to="/beauty"
                 className="group relative overflow-hidden rounded-2xl p-8 md:p-12 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl"
                 style={{
-                  background: "linear-gradient(135deg, hsl(35 45% 93%) 0%, hsl(25 50% 90%) 100%)"
+                  background: "linear-gradient(135deg, hsl(350 35% 94%) 0%, hsl(340 30% 90%) 100%)"
                 }}
               >
                 {/* Декоративный элемент */}
                 <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform translate-x-8 -translate-y-8">
-                  <Sparkles className="w-full h-full" style={{ color: "hsl(35 70% 45%)" }} />
+                  <Sparkles className="w-full h-full" style={{ color: "hsl(345 45% 55%)" }} />
                 </div>
 
                 <div className="relative z-10">
                   <div
                     className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
-                    style={{ background: "linear-gradient(135deg, hsl(35 65% 55%) 0%, hsl(25 70% 50%) 100%)" }}
+                    style={{ background: "hsl(345 45% 55%)" }}
                   >
                     <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-white" />
                   </div>
 
-                  <h2 className="text-2xl md:text-3xl font-medium mb-3" style={{ color: "hsl(25 50% 25%)" }}>
+                  <h2 className="text-2xl md:text-3xl font-medium mb-3" style={{ color: "hsl(345 40% 25%)" }}>
                     Красота
                   </h2>
 
-                  <p className="text-base md:text-lg mb-6" style={{ color: "hsl(25 35% 40%)" }}>
+                  <p className="text-base md:text-lg mb-6" style={{ color: "hsl(345 25% 40%)" }}>
                     Эстетика и идеальная улыбка
                   </p>
 
                   <div
                     className="inline-flex items-center text-sm font-medium transition-all duration-300 group-hover:gap-3"
-                    style={{ color: "hsl(35 60% 45%)" }}
+                    style={{ color: "hsl(345 45% 50%)" }}
                   >
                     <span>Перейти</span>
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
