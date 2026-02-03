@@ -107,46 +107,12 @@ const Home = () => {
             <div className="grid md:grid-cols-2 gap-0 md:gap-3 animation-init animate-fade-in-up animation-delay-500 max-w-2xl mx-auto">
               {/* Блок "Здоровье" — с катаной, нижний рваный край на мобильном, правый на десктопе */}
               <div
-                className="relative aspect-[5/3] md:aspect-[4/3]"
+                className="relative aspect-[4/3]"
                 style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.15))' }}
               >
                 <Link
                   to="/health"
-                  className="group absolute inset-0 overflow-hidden transition-all duration-500 hover:scale-[1.02] bg-background"
-                  style={{
-                    clipPath: `polygon(
-                      4% 0%,
-                      96% 0%,
-                      99% 5%,
-                      94% 10%,
-                      99% 15%,
-                      94% 20%,
-                      99% 25%,
-                      94% 30%,
-                      99% 35%,
-                      94% 40%,
-                      99% 45%,
-                      94% 50%,
-                      99% 55%,
-                      94% 60%,
-                      99% 65%,
-                      94% 70%,
-                      99% 75%,
-                      94% 80%,
-                      99% 85%,
-                      94% 90%,
-                      99% 95%,
-                      96% 100%,
-                      4% 100%,
-                      2% 99%,
-                      0.5% 97%,
-                      0% 94%,
-                      0% 6%,
-                      0.5% 3%,
-                      2% 1%,
-                      4% 0%
-                    )`
-                  }}
+                  className="group absolute inset-0 overflow-hidden transition-all duration-500 hover:scale-[1.02] bg-background clip-health"
                 >
                   {/* Фоновое изображение катаны */}
                   <img
@@ -176,46 +142,12 @@ const Home = () => {
 
               {/* Блок "Красота" — с кистью, верхний рваный край на мобильном, левый на десктопе */}
               <div
-                className="relative aspect-[5/3] md:aspect-[4/3] -mt-6 md:mt-0"
+                className="relative aspect-[4/3] -mt-8 md:mt-0"
                 style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.15))' }}
               >
                 <Link
                   to="/beauty"
-                  className="group absolute inset-0 overflow-hidden transition-all duration-500 hover:scale-[1.02] bg-background"
-                  style={{
-                    clipPath: `polygon(
-                      4% 0%,
-                      6% 5%,
-                      1% 10%,
-                      6% 15%,
-                      1% 20%,
-                      6% 25%,
-                      1% 30%,
-                      6% 35%,
-                      1% 40%,
-                      6% 45%,
-                      1% 50%,
-                      6% 55%,
-                      1% 60%,
-                      6% 65%,
-                      1% 70%,
-                      6% 75%,
-                      1% 80%,
-                      6% 85%,
-                      1% 90%,
-                      6% 95%,
-                      4% 100%,
-                      96% 100%,
-                      98% 99%,
-                      99.5% 97%,
-                      100% 94%,
-                      100% 6%,
-                      99.5% 3%,
-                      98% 1%,
-                      96% 0%,
-                      4% 0%
-                    )`
-                  }}
+                  className="group absolute inset-0 overflow-hidden transition-all duration-500 hover:scale-[1.02] bg-background clip-beauty"
                 >
                   {/* Фоновое изображение кисти */}
                   <img
