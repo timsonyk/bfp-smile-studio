@@ -76,53 +76,35 @@ const Home = () => {
             {/* Шапка */}
             <div className="text-center mb-6 md:mb-8">
               {/* Логотип */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6 animation-init animate-fade-in-up">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl tracking-tight mb-4 md:mb-6 animation-init animate-fade-in-up">
                 <span className="font-bold">bfp</span><span className="font-light">concept</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-muted-foreground mb-4 font-light animation-init animate-fade-in-up animation-delay-100">
+              <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-3 md:mb-4 font-light animation-init animate-fade-in-up animation-delay-100">
                 Стоматология Артура Макарова
               </p>
 
               {/* Разделитель */}
-              <div className="w-12 md:w-16 h-px bg-foreground/20 mx-auto mb-4 animation-init animate-expand-width animation-delay-200" />
+              <div className="w-12 md:w-16 h-px bg-foreground/20 mx-auto mb-2 animation-init animate-expand-width animation-delay-200" />
 
-              {/* Контакты */}
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-8 text-sm text-muted-foreground animation-init animate-fade-in animation-delay-300">
-                <a
-                  href="tel:+74951200188"
-                  className="hover:text-foreground transition-colors font-medium"
-                >
-                  +7 (495) 120-01-88
-                </a>
-                <span className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground/30" />
-                <a
-                  href="https://yandex.ru/maps/213/moscow/?ll=37.653864%2C55.727389&mode=poi&poi%5Bpoint%5D=37.653688%2C55.727475&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1026128887&z=18.21"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Москва, Дербеневская наб., 1/2
-                </a>
-                <span className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground/30" />
-                <a
-                  href="https://t.me/bfsclinic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Telegram
-                </a>
-              </div>
+              {/* Адрес */}
+              <a
+                href="https://yandex.ru/maps/213/moscow/?ll=37.653864%2C55.727389&mode=poi&poi%5Bpoint%5D=37.653688%2C55.727475&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1026128887&z=18.21"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors animation-init animate-fade-in animation-delay-300"
+              >
+                Москва, Дербеневская наб., 1/2
+              </a>
             </div>
 
             {/* Подзаголовок */}
-            <p className="text-center text-muted-foreground mb-8 md:mb-12 animation-init animate-fade-in-up animation-delay-400">
+            <p className="text-center text-muted-foreground mb-4 md:mb-6 animation-init animate-fade-in-up animation-delay-400">
               Что вас беспокоит?
             </p>
 
             {/* Два блока выбора */}
-            <div className="grid md:grid-cols-2 gap-4 md:gap-3 animation-init animate-fade-in-up animation-delay-500 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-3 animation-init animate-fade-in-up animation-delay-500 max-w-2xl mx-auto">
               {/* Блок "Здоровье" — с катаной, правый рваный край, левые углы скруглены */}
               <div
                 className="relative aspect-[4/3]"
@@ -173,20 +155,20 @@ const Home = () => {
                     className="absolute inset-0 w-full h-full object-contain opacity-70"
                   />
 
-                  <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-between z-10">
+                  <div className="absolute inset-0 p-3 md:p-4 flex flex-col justify-between z-10">
                     <div>
-                      <h2 className="text-2xl md:text-3xl font-medium mb-2 text-foreground">
+                      <h2 className="text-lg md:text-xl font-medium mb-1 text-foreground">
                         Здоровье
                       </h2>
 
-                      <p className="text-base md:text-lg text-muted-foreground">
+                      <p className="text-xs md:text-sm text-muted-foreground">
                         Лечение и избавление от боли
                       </p>
                     </div>
 
-                    <div className="inline-flex items-center text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
+                    <div className="inline-flex items-center text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors">
                       <span>Перейти</span>
-                      <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                      <ArrowRight className="w-3 h-3 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
                     </div>
                   </div>
                 </Link>
@@ -242,20 +224,20 @@ const Home = () => {
                     className="absolute inset-0 w-full h-full object-contain opacity-70"
                   />
 
-                  <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-between items-end z-10">
+                  <div className="absolute inset-0 p-3 md:p-4 flex flex-col justify-between items-end z-10">
                     <div className="text-right">
-                      <h2 className="text-2xl md:text-3xl font-medium mb-2 text-foreground">
+                      <h2 className="text-lg md:text-xl font-medium mb-1 text-foreground">
                         Красота
                       </h2>
 
-                      <p className="text-base md:text-lg text-muted-foreground">
+                      <p className="text-xs md:text-sm text-muted-foreground">
                         Эстетика и идеальная улыбка
                       </p>
                     </div>
 
-                    <div className="inline-flex items-center text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors self-end">
+                    <div className="inline-flex items-center text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors self-end">
                       <span>Перейти</span>
-                      <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                      <ArrowRight className="w-3 h-3 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
                     </div>
                   </div>
                 </Link>
@@ -264,9 +246,23 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Скролл-индикатор */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animation-init animate-fade-in animation-delay-800">
-          <div className="w-px h-12 bg-gradient-to-b from-transparent via-foreground/20 to-foreground/40" />
+        {/* Скролл-индикатор с контактами */}
+        <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 animation-init animate-fade-in animation-delay-800 flex items-center">
+          <a
+            href="tel:+74951200188"
+            className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors font-medium text-right w-28 sm:w-32"
+          >
+            +7 (495) 120-01-88
+          </a>
+          <div className="w-px h-10 md:h-12 mx-3 md:mx-4 bg-gradient-to-b from-transparent via-foreground/20 to-foreground/40" />
+          <a
+            href="https://t.me/bfsclinic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors text-left w-28 sm:w-32"
+          >
+            Telegram
+          </a>
         </div>
       </section>
       {/* ═══════════════════════════════════════════════════════════════
