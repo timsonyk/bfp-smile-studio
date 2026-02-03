@@ -104,10 +104,10 @@ const Home = () => {
             </p>
 
             {/* Два блока выбора */}
-            <div className="grid md:grid-cols-2 gap-4 md:gap-3 animation-init animate-fade-in-up animation-delay-500 max-w-2xl mx-auto">
-              {/* Блок "Здоровье" — с катаной, правый рваный край, левые углы скруглены */}
+            <div className="grid md:grid-cols-2 gap-0 md:gap-3 animation-init animate-fade-in-up animation-delay-500 max-w-2xl mx-auto">
+              {/* Блок "Здоровье" — с катаной, нижний рваный край на мобильном, правый на десктопе */}
               <div
-                className="relative aspect-[4/3]"
+                className="relative aspect-[5/3] md:aspect-[4/3]"
                 style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.15))' }}
               >
                 <Link
@@ -174,9 +174,9 @@ const Home = () => {
                 </Link>
               </div>
 
-              {/* Блок "Красота" — с кистью, левый рваный край, правые углы скруглены */}
+              {/* Блок "Красота" — с кистью, верхний рваный край на мобильном, левый на десктопе */}
               <div
-                className="relative aspect-[4/3]"
+                className="relative aspect-[5/3] md:aspect-[4/3] -mt-6 md:mt-0"
                 style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.15))' }}
               >
                 <Link
