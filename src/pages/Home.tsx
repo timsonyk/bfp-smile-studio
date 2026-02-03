@@ -9,8 +9,8 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 import { teamMembers } from "@/data/teamData";
 
 import kanjiImg from "@/assets/kanji.png";
-import brushImg from "@/assets/brush.jpg";
-import katanaImg from "@/assets/katana.jpg";
+import katanImg from "@/assets/katan.jpg";
+import kistImg from "@/assets/kist.jpg";
 import before1 from "@/assets/before1.jpg";
 import after1 from "@/assets/after1.jpg";
 import before2 from "@/assets/before2.jpg";
@@ -122,62 +122,144 @@ const Home = () => {
             </p>
 
             {/* Два блока выбора */}
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 animation-init animate-fade-in-up animation-delay-500 max-w-4xl mx-auto">
-              {/* Блок "Здоровье" — с катаной */}
-              <Link
-                to="/health"
-                className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-xl bg-white"
+            <div className="grid md:grid-cols-2 gap-4 md:gap-3 animation-init animate-fade-in-up animation-delay-500 max-w-4xl mx-auto">
+              {/* Блок "Здоровье" — с катаной, правый рваный край, левые углы скруглены */}
+              <div
+                className="relative aspect-[4/3]"
+                style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.15))' }}
               >
-                {/* Изображение катаны */}
-                <img
-                  src={katanaImg}
-                  alt="Здоровье"
-                  className="w-full aspect-[3/2] object-contain scale-[1.18]"
-                />
+                <Link
+                  to="/health"
+                  className="group absolute inset-0 overflow-hidden transition-all duration-500 hover:scale-[1.02] bg-background"
+                  style={{
+                    clipPath: `polygon(
+                      4% 0%,
+                      96% 0%,
+                      99% 5%,
+                      94% 10%,
+                      99% 15%,
+                      94% 20%,
+                      99% 25%,
+                      94% 30%,
+                      99% 35%,
+                      94% 40%,
+                      99% 45%,
+                      94% 50%,
+                      99% 55%,
+                      94% 60%,
+                      99% 65%,
+                      94% 70%,
+                      99% 75%,
+                      94% 80%,
+                      99% 85%,
+                      94% 90%,
+                      99% 95%,
+                      96% 100%,
+                      4% 100%,
+                      2% 99%,
+                      0.5% 97%,
+                      0% 94%,
+                      0% 6%,
+                      0.5% 3%,
+                      2% 1%,
+                      4% 0%
+                    )`
+                  }}
+                >
+                  {/* Фоновое изображение катаны */}
+                  <img
+                    src={katanImg}
+                    alt="Здоровье"
+                    className="absolute inset-0 w-full h-full object-contain opacity-70"
+                  />
 
-                <div className="p-4 md:p-6">
-                  <h2 className="text-2xl md:text-3xl font-medium mb-2 text-foreground">
-                    Здоровье
-                  </h2>
+                  <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-between z-10">
+                    <div>
+                      <h2 className="text-2xl md:text-3xl font-medium mb-2 text-foreground">
+                        Здоровье
+                      </h2>
 
-                  <p className="text-base md:text-lg mb-4 text-muted-foreground">
-                    Лечение и избавление от боли
-                  </p>
+                      <p className="text-base md:text-lg text-muted-foreground">
+                        Лечение и избавление от боли
+                      </p>
+                    </div>
 
-                  <div className="inline-flex items-center text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span>Перейти</span>
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                    <div className="inline-flex items-center text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
+                      <span>Перейти</span>
+                      <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
 
-              {/* Блок "Красота" — с кистью */}
-              <Link
-                to="/beauty"
-                className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-xl bg-white"
+              {/* Блок "Красота" — с кистью, левый рваный край, правые углы скруглены */}
+              <div
+                className="relative aspect-[4/3]"
+                style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.15))' }}
               >
-                {/* Изображение кисти */}
-                <img
-                  src={brushImg}
-                  alt="Красота"
-                  className="w-full aspect-[3/2] object-contain p-4"
-                />
+                <Link
+                  to="/beauty"
+                  className="group absolute inset-0 overflow-hidden transition-all duration-500 hover:scale-[1.02] bg-background"
+                  style={{
+                    clipPath: `polygon(
+                      4% 0%,
+                      6% 5%,
+                      1% 10%,
+                      6% 15%,
+                      1% 20%,
+                      6% 25%,
+                      1% 30%,
+                      6% 35%,
+                      1% 40%,
+                      6% 45%,
+                      1% 50%,
+                      6% 55%,
+                      1% 60%,
+                      6% 65%,
+                      1% 70%,
+                      6% 75%,
+                      1% 80%,
+                      6% 85%,
+                      1% 90%,
+                      6% 95%,
+                      4% 100%,
+                      96% 100%,
+                      98% 99%,
+                      99.5% 97%,
+                      100% 94%,
+                      100% 6%,
+                      99.5% 3%,
+                      98% 1%,
+                      96% 0%,
+                      4% 0%
+                    )`
+                  }}
+                >
+                  {/* Фоновое изображение кисти */}
+                  <img
+                    src={kistImg}
+                    alt="Красота"
+                    className="absolute inset-0 w-full h-full object-contain opacity-70"
+                  />
 
-                <div className="p-4 md:p-6">
-                  <h2 className="text-2xl md:text-3xl font-medium mb-2 text-foreground">
-                    Красота
-                  </h2>
+                  <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-between items-end z-10">
+                    <div className="text-right">
+                      <h2 className="text-2xl md:text-3xl font-medium mb-2 text-foreground">
+                        Красота
+                      </h2>
 
-                  <p className="text-base md:text-lg mb-4 text-muted-foreground">
-                    Эстетика и идеальная улыбка
-                  </p>
+                      <p className="text-base md:text-lg text-muted-foreground">
+                        Эстетика и идеальная улыбка
+                      </p>
+                    </div>
 
-                  <div className="inline-flex items-center text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
-                    <span>Перейти</span>
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                    <div className="inline-flex items-center text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors self-end">
+                      <span>Перейти</span>
+                      <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

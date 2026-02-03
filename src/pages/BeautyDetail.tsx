@@ -1,9 +1,11 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { Sparkles, ArrowLeft, Phone } from "lucide-react";
+import { ArrowLeft, Phone } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import { beautyServices } from "@/data/categoryData";
+
+import kistImg from "@/assets/kist.jpg";
 
 const BeautyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -14,11 +16,18 @@ const BeautyDetail = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Фоновое изображение кисти на всю страницу */}
+      <img
+        src={kistImg}
+        alt=""
+        className="fixed inset-0 w-full h-full object-cover opacity-[0.06] pointer-events-none"
+      />
+
       <Navigation />
 
       {/* Hero */}
-      <section className="pt-32 pb-12 md:pt-40 md:pb-16">
+      <section className="pt-32 pb-12 md:pt-40 md:pb-16 relative z-10">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto">
             {/* Хлебные крошки */}
@@ -41,32 +50,23 @@ const BeautyDetail = () => {
             </nav>
 
             {/* Заголовок */}
-            <div className="flex items-start gap-4 mb-6 animation-init animate-fade-in-up">
-              <div
-                className="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center flex-shrink-0"
-                style={{ background: "linear-gradient(135deg, hsl(35 65% 55%) 0%, hsl(25 70% 50%) 100%)" }}
-              >
-                <Sparkles className="w-6 h-6 md:w-7 md:h-7 text-white" />
-              </div>
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium" style={{ color: "hsl(25 50% 25%)" }}>
-                {service.pageTitle}
-              </h1>
-            </div>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-4 animation-init animate-fade-in-up">
+              {service.pageTitle}
+            </h1>
+
+            <p className="text-lg text-muted-foreground animation-init animate-fade-in-up animation-delay-100">
+              {service.shortDescription}
+            </p>
           </div>
         </div>
       </section>
 
       {/* Видео */}
-      <section className="pb-12 md:pb-16">
+      <section className="pb-12 md:pb-16 relative z-10">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto">
             <ScrollAnimation>
-              <div
-                className="relative rounded-2xl overflow-hidden aspect-video"
-                style={{
-                  background: "linear-gradient(135deg, hsl(35 40% 94%) 0%, hsl(30 45% 92%) 100%)"
-                }}
-              >
+              <div className="relative rounded-2xl overflow-hidden aspect-video bg-secondary border border-border">
                 <video
                   className="w-full h-full object-cover"
                   controls
@@ -80,10 +80,7 @@ const BeautyDetail = () => {
 
                 {/* Плейсхолдер, если видео не загружено */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="text-center">
-                    <Sparkles className="w-16 h-16 mx-auto mb-4 opacity-20" style={{ color: "hsl(35 60% 50%)" }} />
-                    <p className="text-sm text-muted-foreground/50">Видео скоро появится</p>
-                  </div>
+                  <p className="text-sm text-muted-foreground/50">Видео скоро появится</p>
                 </div>
               </div>
             </ScrollAnimation>
@@ -92,18 +89,12 @@ const BeautyDetail = () => {
       </section>
 
       {/* Контент */}
-      <section className="pb-12 md:pb-16">
+      <section className="pb-12 md:pb-16 relative z-10">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto">
             <ScrollAnimation delay={100}>
-              <div
-                className="rounded-2xl p-8 md:p-12"
-                style={{
-                  background: "linear-gradient(135deg, hsl(35 35% 97%) 0%, hsl(30 40% 95%) 100%)",
-                  border: "1px solid hsl(35 25% 92%)"
-                }}
-              >
-                <h2 className="text-xl md:text-2xl font-medium mb-6" style={{ color: "hsl(25 40% 28%)" }}>
+              <div className="rounded-2xl p-8 md:p-12 bg-background/80 backdrop-blur-sm border border-border">
+                <h2 className="text-xl md:text-2xl font-medium mb-6">
                   О процедуре
                 </h2>
                 <div className="prose prose-lg max-w-none">
@@ -112,7 +103,6 @@ const BeautyDetail = () => {
                   </p>
                   <p className="text-muted-foreground/70 leading-relaxed">
                     Запишитесь на консультацию, чтобы мы могли оценить вашу ситуацию и предложить оптимальное решение.
-                    Мы создадим естественную красивую улыбку, которая будет гармонировать с вашим лицом.
                   </p>
                 </div>
               </div>
@@ -122,25 +112,22 @@ const BeautyDetail = () => {
       </section>
 
       {/* CTA */}
-      <section className="pb-20 md:pb-32">
+      <section className="pb-20 md:pb-32 relative z-10">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-4xl mx-auto">
             <ScrollAnimation delay={200}>
-              <div
-                className="rounded-2xl p-8 md:p-12 text-center"
-                style={{ background: "linear-gradient(135deg, hsl(35 65% 55%) 0%, hsl(25 70% 50%) 100%)" }}
-              >
-                <h3 className="text-xl md:text-2xl font-medium text-white mb-4">
+              <div className="rounded-2xl p-8 md:p-12 text-center bg-foreground">
+                <h3 className="text-xl md:text-2xl font-medium text-background mb-4">
                   Записаться на консультацию
                 </h3>
-                <p className="text-white/80 mb-8 max-w-md mx-auto">
-                  Создадим улыбку вашей мечты. Позвоните или оставьте заявку.
+                <p className="text-background/70 mb-8 max-w-md mx-auto">
+                  Создадим улыбку вашей мечты
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
                   <a
                     href="tel:+74951200188"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-white text-[hsl(25_60%_35%)] font-medium rounded-lg hover:bg-white/90 transition-colors"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-background text-foreground font-medium rounded-lg hover:bg-background/90 transition-colors"
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     +7 (495) 120-01-88
@@ -149,7 +136,7 @@ const BeautyDetail = () => {
                     href="https://t.me/bfsclinic"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-background/30 text-background font-medium rounded-lg hover:bg-background/10 transition-colors"
                   >
                     Написать в Telegram
                   </a>
