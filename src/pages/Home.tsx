@@ -9,6 +9,8 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 import { teamMembers } from "@/data/teamData";
 
 import kanjiImg from "@/assets/kanji.png";
+import katanImg from "@/assets/katan.jpg";
+import kistImg from "@/assets/kist.jpg";
 import before1 from "@/assets/before1.jpg";
 import after1 from "@/assets/after1.jpg";
 import before2 from "@/assets/before2.jpg";
@@ -66,73 +68,135 @@ const Home = () => {
       <Navigation />
 
       {/* ═══════════════════════════════════════════════════════════════
-          БЛОК 1: КЛИНИКА (Hero)
+          БЛОК 1: КЛИНИКА (Hero) — выбор категории
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 pb-12">
         <div className="container mx-auto px-6 md:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Логотип */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl tracking-tight mb-6 md:mb-8 animation-init animate-fade-in-up">
-              <span className="font-bold">bfp</span><span className="font-light">concept</span>
-            </h1>
+          <div className="max-w-5xl mx-auto">
+            {/* Шапка */}
+            <div className="text-center mb-6 md:mb-8">
+              {/* Логотип */}
+              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl tracking-tight mb-4 md:mb-6 animation-init animate-fade-in-up">
+                <span className="font-bold">bfp</span><span className="font-light">concept</span>
+              </h1>
 
-            {/* Разделитель */}
-            <div className="w-12 md:w-16 h-px bg-foreground/20 mx-auto mb-6 md:mb-8 animation-init animate-expand-width animation-delay-200" />
+              <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-3 md:mb-4 font-light animation-init animate-fade-in-up animation-delay-100">
+                Стоматология Артура Макарова
+              </p>
 
-            <p className="text-lg md:text-2xl text-muted-foreground mb-4 md:mb-6 font-light leading-relaxed animation-init animate-fade-in-up animation-delay-300 px-4">
-              Стоматология Артура Макарова
-            </p>
+              {/* Разделитель */}
+              <div className="w-12 md:w-16 h-px bg-foreground/20 mx-auto mb-2 animation-init animate-expand-width animation-delay-200" />
 
-            <p className="text-sm md:text-base text-muted-foreground/70 mb-8 md:mb-12 max-w-xl mx-auto leading-relaxed animation-init animate-fade-in-up animation-delay-400 px-4">
-              Мы восстанавливаем функцию зубочелюстной системы, чтобы эстетика стала её естественным следствием
-            </p>
-
-            {/* CTA кнопки */}
-            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 md:mb-16 animation-init animate-fade-in-up animation-delay-500 px-4">
-              <a
-                href="https://t.me/bfsclinic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background text-sm rounded-lg hover:bg-foreground/90 transition-colors btn-press"
-              >
-                Telegram
-              </a>
-              <Link
-                to="/about"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-border text-sm rounded-lg hover:bg-secondary transition-colors btn-press"
-              >
-                О клинике
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </div>
-
-            {/* Контакты */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-12 text-xs sm:text-sm text-muted-foreground animation-init animate-fade-in animation-delay-600 px-4">
-              <a
-                href="tel:+74951200188"
-                className="hover:text-foreground transition-colors"
-              >
-                +7 (495) 120-01-88
-              </a>
-              <span className="hidden sm:block w-1 h-1 rounded-full bg-muted-foreground/50" />
+              {/* Адрес */}
               <a
                 href="https://yandex.ru/maps/213/moscow/?ll=37.653864%2C55.727389&mode=poi&poi%5Bpoint%5D=37.653688%2C55.727475&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1026128887&z=18.21"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-center hover:text-foreground transition-colors"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors animation-init animate-fade-in animation-delay-300"
               >
                 Москва, Дербеневская наб., 1/2
               </a>
             </div>
+
+            {/* Подзаголовок */}
+            <p className="text-center text-muted-foreground mb-4 md:mb-6 animation-init animate-fade-in-up animation-delay-400">
+              Что вас беспокоит?
+            </p>
+
+            {/* Два блока выбора */}
+            <div className="grid md:grid-cols-2 gap-0 md:gap-3 animation-init animate-fade-in-up animation-delay-500 max-w-2xl mx-auto">
+              {/* Блок "Здоровье" — с катаной, нижний рваный край на мобильном, правый на десктопе */}
+              <div
+                className="relative aspect-[4/3]"
+                style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.15))' }}
+              >
+                <Link
+                  to="/health"
+                  className="group absolute inset-0 overflow-hidden transition-all duration-500 hover:scale-[1.02] bg-background clip-health"
+                >
+                  {/* Фоновое изображение катаны */}
+                  <img
+                    src={katanImg}
+                    alt="Здоровье"
+                    className="absolute inset-0 w-full h-full object-contain opacity-70"
+                  />
+
+                  <div className="absolute inset-0 p-3 md:p-4 flex flex-col justify-between z-10">
+                    <div>
+                      <h2 className="text-lg md:text-xl font-medium mb-1 text-foreground">
+                        Здоровье
+                      </h2>
+
+                      <p className="text-xs md:text-sm text-muted-foreground">
+                        Лечение и избавление от боли
+                      </p>
+                    </div>
+
+                    <div className="inline-flex items-center text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors">
+                      <span>Перейти</span>
+                      <ArrowRight className="w-3 h-3 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
+              </div>
+
+              {/* Блок "Красота" — с кистью, верхний рваный край на мобильном, левый на десктопе */}
+              <div
+                className="relative aspect-[4/3] -mt-8 md:mt-0"
+                style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.15))' }}
+              >
+                <Link
+                  to="/beauty"
+                  className="group absolute inset-0 overflow-hidden transition-all duration-500 hover:scale-[1.02] bg-background clip-beauty"
+                >
+                  {/* Фоновое изображение кисти */}
+                  <img
+                    src={kistImg}
+                    alt="Красота"
+                    className="absolute inset-0 w-full h-full object-contain opacity-70"
+                  />
+
+                  <div className="absolute inset-0 p-3 md:p-4 flex flex-col justify-between items-end z-10">
+                    <div className="text-right">
+                      <h2 className="text-lg md:text-xl font-medium mb-1 text-foreground">
+                        Красота
+                      </h2>
+
+                      <p className="text-xs md:text-sm text-muted-foreground">
+                        Эстетика и идеальная улыбка
+                      </p>
+                    </div>
+
+                    <div className="inline-flex items-center text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors self-end">
+                      <span>Перейти</span>
+                      <ArrowRight className="w-3 h-3 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Скролл-индикатор */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animation-init animate-fade-in animation-delay-800">
-          <div className="w-px h-12 bg-gradient-to-b from-transparent via-foreground/20 to-foreground/40" />
+        {/* Скролл-индикатор с контактами */}
+        <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 animation-init animate-fade-in animation-delay-800 flex items-center">
+          <a
+            href="tel:+74951200188"
+            className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors font-medium text-right w-28 sm:w-32"
+          >
+            +7 (495) 120-01-88
+          </a>
+          <div className="w-px h-10 md:h-12 mx-3 md:mx-4 bg-gradient-to-b from-transparent via-foreground/20 to-foreground/40" />
+          <a
+            href="https://t.me/bfsclinic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors text-left w-28 sm:w-32"
+          >
+            Telegram
+          </a>
         </div>
       </section>
-
       {/* ═══════════════════════════════════════════════════════════════
           БЛОК 2: ВРАЧ
           Не личный бренд, а часть клиники.
