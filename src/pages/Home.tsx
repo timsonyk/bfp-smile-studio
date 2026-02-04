@@ -104,7 +104,7 @@ const Home = () => {
             </p>
 
             {/* Два блока выбора */}
-            <div className="grid md:grid-cols-2 gap-0 md:gap-3 animation-init animate-fade-in-up animation-delay-500 max-w-2xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-0 md:gap-2 animation-init animate-fade-in-up animation-delay-500 max-w-xs mx-auto">
               {/* Блок "Здоровье" — с катаной, нижний рваный край на мобильном, правый на десктопе */}
               <div
                 className="relative aspect-[4/3]"
