@@ -597,15 +597,6 @@ const Home = () => {
                       </a>
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Email</p>
-                      <a
-                        href="mailto:info@bfpconcept.ru"
-                        className="text-lg hover:text-muted-foreground transition-colors"
-                      >
-                        info@bfpconcept.ru
-                      </a>
-                    </div>
-                    <div>
                       <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Мессенджеры</p>
                       <div className="flex gap-3">
                         <a

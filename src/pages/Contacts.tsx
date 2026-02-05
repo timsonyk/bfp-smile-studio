@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BookingForm from "@/components/BookingForm";
@@ -23,7 +23,7 @@ const Contacts = () => {
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Information */}
-            <div className="reveal-section text-center lg:text-left">
+            <div className="reveal-section text-left">
               <h2 className="text-2xl md:text-3xl font-medium mb-6 md:mb-8">Как с нами связаться</h2>
               
               <div className="space-y-6 md:space-y-8">
@@ -47,18 +47,6 @@ const Contacts = () => {
                     <h3 className="font-semibold text-base md:text-lg mb-1 md:mb-2">Телефон</h3>
                     <a className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors" href="tel:+74951200188">
                       +7 (495) 120-01-88
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3 md:space-x-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-base md:text-lg mb-1 md:mb-2">Email</h3>
-                    <a href="mailto:info@bfpconcept.ru" className="text-sm md:text-base text-muted-foreground hover:text-primary transition-colors">
-                      info@bfpconcept.ru
                     </a>
                   </div>
                 </div>

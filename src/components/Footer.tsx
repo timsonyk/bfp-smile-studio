@@ -89,11 +89,6 @@ const Footer = () => {
                   +7 (495) 120-01-88
                 </a>
               </li>
-              <li>
-                <a href="mailto:info@bfpconcept.ru" className="text-muted-foreground hover:text-foreground transition-colors">
-                  info@bfpconcept.ru
-                </a>
-              </li>
             </ul>
           </div>
         </div>
