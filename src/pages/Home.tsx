@@ -127,7 +127,7 @@ const Home = () => {
                         Здоровье
                       </h2>
 
-                      <p className="text-xs md:text-sm text-muted-foreground">
+                      <p className="text-[10px] md:text-xs text-muted-foreground">
                         Лечение и избавление от боли
                       </p>
                     </div>
@@ -162,7 +162,7 @@ const Home = () => {
                         Красота
                       </h2>
 
-                      <p className="text-xs md:text-sm text-muted-foreground">
+                      <p className="text-[10px] md:text-xs text-muted-foreground">
                         Эстетика и идеальная улыбка
                       </p>
                     </div>
