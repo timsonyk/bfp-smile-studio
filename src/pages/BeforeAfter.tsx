@@ -13,6 +13,8 @@ import before4 from "@/assets/before4.png";
 import after4 from "@/assets/after4.png";
 import before5 from "@/assets/before5.jpg";
 import after5 from "@/assets/after5.jpg";
+import before6 from "@/assets/before6.jpg";
+import after6 from "@/assets/after6.jpg";
 
 const BeforeAfter = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -71,8 +73,8 @@ const BeforeAfter = () => {
       category: "hygiene",
       title: "Профессиональная гигиена",
       description: "Удаление налета и отбеливание",
-      beforeImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=900&fit=crop",
-      afterImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&h=900&fit=crop",
+      beforeImage: before6,
+      afterImage: after6,
     },
   ];
 
