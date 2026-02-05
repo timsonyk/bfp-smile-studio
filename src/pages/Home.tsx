@@ -142,7 +142,7 @@ const Home = () => {
 
               {/* Блок "Красота" — с кистью, верхний рваный край на мобильном, левый на десктопе */}
               <div
-                className="relative aspect-[4/3] -mt-3 md:mt-0"
+                className="relative aspect-[4/3] -mt-1 md:mt-0"
                 style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.15))' }}
               >
                 <Link
