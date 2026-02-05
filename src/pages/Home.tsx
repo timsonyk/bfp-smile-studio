@@ -123,7 +123,7 @@ const Home = () => {
 
                   <div className="absolute inset-0 p-3 md:p-4 flex flex-col justify-between z-10">
                     <div>
-                      <h2 className="text-lg md:text-xl font-medium mb-1 text-foreground">
+                      <h2 className="text-lg md:text-xl font-medium mb-0 text-foreground">
                         Здоровье
                       </h2>
 
@@ -158,7 +158,7 @@ const Home = () => {
 
                   <div className="absolute inset-0 p-3 md:p-4 flex flex-col justify-between items-end z-10">
                     <div className="text-right">
-                      <h2 className="text-lg md:text-xl font-medium mb-1 text-foreground">
+                      <h2 className="text-lg md:text-xl font-medium mb-0 text-foreground">
                         Красота
                       </h2>
 
