@@ -89,13 +89,23 @@ const Footer = () => {
                   +7 (495) 120-01-88
                 </a>
               </li>
+              <li>
+                <a href="mailto:info@bfpconcept.ru" className="text-muted-foreground hover:text-foreground transition-colors">
+                  info@bfpconcept.ru
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="border-t border-border mt-10 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} bfp concept</p>
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <p>&copy; {new Date().getFullYear()} bfp concept</p>
+            <Link to="/privacy-policy" className="hover:text-foreground transition-colors link-underline">
+              Политика конфиденциальности
+            </Link>
+          </div>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a
               href="https://wa.me/74951200188"
