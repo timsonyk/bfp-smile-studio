@@ -129,13 +129,6 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
 
-  /* Фиксированная ширина на десктопе — блоки не сжимаются при уменьшении окна */
-  @media (min-width: 1024px) {
-    body {
-      min-width: 1280px;
-    }
-  }
-
   * {
     @apply border-border;
   }
@@ -224,6 +217,13 @@ All colors MUST be HSL.
   /* Block spacing utility */
   .section-padding {
     @apply py-16 md:py-24 lg:py-32;
+  }
+
+  /* Фиксированная высота секций на десктопе */
+  @media (min-width: 1024px) {
+    .section-padding {
+      min-height: 700px;
+    }
   }
 
   /* Container with max width for text readability */
