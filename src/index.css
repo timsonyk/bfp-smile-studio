@@ -129,6 +129,13 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
 
+  /* Фиксированная ширина на десктопе — блоки не сжимаются при уменьшении окна */
+  @media (min-width: 1024px) {
+    body {
+      min-width: 1280px;
+    }
+  }
+
   * {
     @apply border-border;
   }
