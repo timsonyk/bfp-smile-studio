@@ -219,6 +219,13 @@ All colors MUST be HSL.
     @apply py-16 md:py-24 lg:py-32;
   }
 
+  /* Фиксированная высота секций на десктопе */
+  @media (min-width: 1024px) {
+    .section-padding {
+      min-height: 700px;
+    }
+  }
+
   /* Container with max width for text readability */
   .prose-container {
     @apply max-w-3xl mx-auto;
