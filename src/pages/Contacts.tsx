@@ -68,10 +68,10 @@ const Contacts = () => {
                 <div className="pt-4 md:pt-6">
                   <h3 className="font-semibold text-base md:text-lg mb-3 md:mb-4">Мессенджеры</h3>
                   <div className="flex flex-col sm:flex-row gap-3 sm:space-x-4">
-                    <a href="https://wa.me/74951234567" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#25D366] text-white hover:bg-[#25D366]/90 h-10 md:h-11 px-6">
+                    <a href="https://wa.me/74951234567" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 h-10 md:h-11 px-6">
                       WhatsApp
                     </a>
-                    <a href="https://t.me/bfsclinic" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#0088cc] text-white hover:bg-[#0088cc]/90 h-10 md:h-11 px-6">
+                    <a href="https://t.me/bfsclinic" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 md:h-11 px-6">
                       Telegram
                     </a>
                   </div>

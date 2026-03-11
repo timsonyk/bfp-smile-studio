@@ -47,18 +47,17 @@ const CookieConsent = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-card border-t border-border shadow-lg animate-in slide-in-from-bottom-4 duration-300">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-3 md:p-4 bg-card border-t border-border shadow-lg animate-in slide-in-from-bottom-4 duration-300">
       <div className="container mx-auto max-w-4xl">
-        <div className="mb-4">
-          <h3 className="text-base font-medium mb-2">Политика использования файлов cookie</h3>
-          <p className="text-sm text-muted-foreground">
-            Мы используем файлы cookie для анализа посещаемости сайта (Яндекс.Метрика) и, если вы согласны, для показа релевантной рекламы.
-            Это помогает нам улучшать сервис. Вы можете настроить параметры ниже.
+        <div className="mb-2 md:mb-4">
+          <h3 className="text-sm md:text-base font-medium mb-1 md:mb-2">Политика использования файлов cookie</h3>
+          <p className="text-xs md:text-sm text-muted-foreground leading-snug">
+            Мы используем файлы cookie для анализа посещаемости и показа релевантной рекламы.
           </p>
         </div>
 
         {showSettings && (
-          <div className="space-y-3 mb-4 p-4 bg-muted/50 rounded-lg">
+          <div className="space-y-2 md:space-y-3 mb-3 md:mb-4 p-3 md:p-4 bg-muted/50 rounded-lg">
             <div className="flex items-start gap-3">
               <Checkbox
                 id="necessary"
@@ -116,8 +115,8 @@ const CookieConsent = () => {
           </div>
         )}
 
-        <div className="flex items-center justify-between gap-3">
-          <div className="text-xs text-muted-foreground">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-3">
+          <div className="text-xs text-muted-foreground hidden md:block">
             <Link to="/privacy-policy" className="text-primary hover:underline">
               Политика конфиденциальности
             </Link>
@@ -125,7 +124,7 @@ const CookieConsent = () => {
             <span>Выбор сохраняется на 12 месяцев</span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-2">
             {!showSettings && (
               <Button
                 variant="ghost"
@@ -160,6 +159,12 @@ const CookieConsent = () => {
             <Button size="sm" onClick={handleAcceptAll} className="text-xs">
               Принять все
             </Button>
+          </div>
+
+          <div className="text-xs text-muted-foreground text-center md:hidden">
+            <Link to="/privacy-policy" className="text-primary hover:underline">
+              Политика конфиденциальности
+            </Link>
           </div>
         </div>
       </div>
