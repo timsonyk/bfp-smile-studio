@@ -7,7 +7,6 @@ export interface TeamMember {
   id: string;
   name: string;
   position: string;
-  experience: string;
   shortDescription: string[];
   fullDescription: string[];
   image: string;
@@ -19,7 +18,6 @@ export const teamMembers: TeamMember[] = [
     id: "artur-makarov",
     name: "Артур Макаров",
     position: "Главный врач, ортопед, гнатолог",
-    experience: "Стаж с 1995 года",
     shortDescription: [
       "Ортопед, гнатолог",
       "Автор концепции bfp",
@@ -40,7 +38,6 @@ export const teamMembers: TeamMember[] = [
     id: "albert-ayvazyan",
     name: "Альберт Гайкович Айвазян",
     position: "Хирург-имплантолог",
-    experience: "Опыт более 10 лет",
     shortDescription: [
       "Современные методики имплантации",
       "Работа с микроскопом",
@@ -60,7 +57,6 @@ export const teamMembers: TeamMember[] = [
     id: "azamat-makoev",
     name: "Макоев Азамат Борисович",
     position: "Врач-ортодонт",
-    experience: "Стаж более 8 лет",
     shortDescription: [
       "Исправление прикуса у взрослых и детей",
       "Брекет-системы и элайнеры",
@@ -79,7 +75,6 @@ export const teamMembers: TeamMember[] = [
     id: "ekaterina-ayurova",
     name: "Екатерина Аюрова",
     position: "Гигиенист",
-    experience: "Опыт 10 лет",
     shortDescription: [
       "Работает под увеличением",
       "Профгигиена взрослые/дети",
