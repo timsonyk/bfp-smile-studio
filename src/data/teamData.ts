@@ -22,7 +22,6 @@ export const teamMembers: TeamMember[] = [
     experience: "Стаж с 1995 года",
     shortDescription: [
       "Ортопед, гнатолог",
-      "Стаж с 1995 года",
       "Автор концепции bfp",
       "Комплексный подход к лечению"
     ],
