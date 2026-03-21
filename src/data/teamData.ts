@@ -1,6 +1,6 @@
 import makarovImg from "@/assets/makarov.jpg";
 import aivazyanImg from "@/assets/aivazyan.jpg";
-import mamishevImg from "@/assets/mamishov.jpg";
+import makoevImg from "@/assets/makoev.jpg";
 import ayurovaImg from "@/assets/ayurova.jpg";
 
 export interface TeamMember {
@@ -59,8 +59,8 @@ export const teamMembers: TeamMember[] = [
     slug: "albert-ayvazyan"
   },
   {
-    id: "ilkin-mamishov",
-    name: "Илькин Шарафатович Мамишов",
+    id: "azamat-makoev",
+    name: "Азамат Борисович Макоев",
     position: "Терапевт, эндодонтист, ортопед",
     experience: "Опыт 10 лет",
     shortDescription: [
@@ -75,8 +75,8 @@ export const teamMembers: TeamMember[] = [
       "Протезирование на имплантах, виниры",
       "Все виды съёмного и несъёмного протезирования"
     ],
-    image: mamishevImg,
-    slug: "ilkin-mamishov"
+    image: makoevImg,
+    slug: "azamat-makoev"
   },
   {
     id: "ekaterina-ayurova",
