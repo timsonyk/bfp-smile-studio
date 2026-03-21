@@ -30,7 +30,6 @@ const ArturMakarov = () => {
                 <p className="text-lg text-muted-foreground mb-8">Основатель концепции BFP</p>
 
                 <div className="mb-8">
-                  <h2 className="text-2xl font-medium mb-4">Специализация</h2>
                   <ul className="space-y-3">
                     {doctor.fullDescription.map((item, idx) => (
                       <li key={idx} className="flex items-start text-lg">
