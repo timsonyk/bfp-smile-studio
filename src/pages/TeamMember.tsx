@@ -35,11 +35,6 @@ const TeamMember = () => {
                 <p className="text-lg sm:text-xl text-primary font-semibold mb-6 md:mb-8">{member.position}</p>
 
                 <div className="mb-6 md:mb-8">
-                  <h2 className="text-xl sm:text-2xl font-medium mb-3 md:mb-4">Опыт</h2>
-                  <p className="text-[0.9375rem] sm:text-base md:text-lg leading-relaxed">{member.experience}</p>
-                </div>
-
-                <div className="mb-6 md:mb-8">
                   <h2 className="text-xl sm:text-2xl font-medium mb-4">Специализация</h2>
                   <ul className="space-y-3">
                     {member.fullDescription.map((item, idx) => (
