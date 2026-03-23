@@ -5,7 +5,7 @@ import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const TELEGRAM_BOT_TOKEN = "REDACTED";
-const TELEGRAM_CHAT_ID = "389481960";
+const TELEGRAM_CHAT_ID = "847021021";
 
 const BookingForm = () => {
   const { toast } = useToast();
