@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
@@ -82,6 +83,11 @@ const BeforeAfter = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="До и после"
+        canonical="/before-after"
+        description="Результаты лечения в стоматологии BFP Concept. Фото работ до и после: протезирование, виниры, имплантация, эстетическая реставрация зубов."
+      />
       <Navigation />
 
       {/* Hero Section */}

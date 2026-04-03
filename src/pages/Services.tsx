@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Search, Crown, Scissors, Sparkles, Droplets, Activity, Smile } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { services } from "@/data/servicesData";
@@ -17,6 +18,11 @@ const iconMap: { [key: string]: any } = {
 const Services = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Услуги"
+        canonical="/services"
+        description="Услуги стоматологии BFP Concept: диагностика, протезирование, имплантация, эстетическая стоматология, лечение ВНЧС, гигиена полости рта. Цены и запись."
+      />
       <Navigation />
 
       {/* Hero Section */}

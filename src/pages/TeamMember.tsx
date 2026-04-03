@@ -1,4 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BookingForm from "@/components/BookingForm";
@@ -14,6 +15,11 @@ const TeamMember = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title={member.name}
+        canonical={`/team/${member.slug}`}
+        description={`${member.name} — ${member.position}. Стоматолог клиники BFP Concept в Москве. Запись на приём онлайн.`}
+      />
       <Navigation />
 
       <section className="pt-20 md:pt-28 lg:pt-32 pb-12 md:pb-20 lg:pb-24">

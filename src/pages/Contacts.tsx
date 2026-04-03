@@ -1,9 +1,15 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BookingForm from "@/components/BookingForm";
 const Contacts = () => {
   return <div className="min-h-screen">
+      <SEO
+        title="Контакты"
+        canonical="/contacts"
+        description="Контакты стоматологии BFP Concept. Адрес: Москва, Дербеневская набережная 1/2. Телефон: +7 (495) 120-01-88. Запись на приём онлайн."
+      />
       <Navigation />
 
       {/* Hero Section */}

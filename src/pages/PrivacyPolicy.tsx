@@ -1,9 +1,15 @@
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Политика конфиденциальности"
+        canonical="/privacy-policy"
+        description="Политика конфиденциальности и обработки персональных данных стоматологической клиники BFP Concept."
+      />
       <Navigation />
 
       <section className="pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-16 lg:pb-20">

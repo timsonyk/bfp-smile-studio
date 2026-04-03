@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
@@ -63,6 +64,10 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        canonical="/"
+        description="Клиника биофункциональной стоматологии в Москве. Стоматология Артура Макарова. Диагностика ВНЧС, функциональное восстановление, эстетическая реставрация зубов."
+      />
       <Navigation />
 
       {/* ═══════════════════════════════════════════════════════════════
