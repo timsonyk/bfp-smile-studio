@@ -1,4 +1,9 @@
+# BFP Concept - Robots.txt
+
 User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
 Allow: /
 
 User-agent: Bingbot
@@ -12,3 +17,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://bfpconcept.ru/sitemap.xml
+
+# Host
+Host: https://bfpconcept.ru

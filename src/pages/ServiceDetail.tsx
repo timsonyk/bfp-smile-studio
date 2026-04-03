@@ -1,5 +1,6 @@
 import { useParams, Navigate, Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BookingForm from "@/components/BookingForm";
@@ -16,6 +17,11 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title={service.title}
+        canonical={`/services/${service.slug}`}
+        description={`${service.title} в клинике BFP Concept. ${service.shortDescription} Этапы лечения, преимущества, показания. Запись на приём.`}
+      />
       <Navigation />
 
       {/* Breadcrumbs */}

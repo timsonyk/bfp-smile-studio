@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, Phone } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollAnimation from "@/components/ScrollAnimation";
@@ -17,6 +18,11 @@ const BeautyDetail = () => {
 
   return (
     <div className="min-h-screen relative">
+      <SEO
+        title={service.title}
+        canonical={`/beauty/${service.slug}`}
+        description={`${service.title} в клинике BFP Concept. ${service.description} Запись на приём.`}
+      />
       {/* Фоновое изображение кисти на всю страницу */}
       <img
         src={kistImg}

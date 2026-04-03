@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollAnimation from "@/components/ScrollAnimation";
@@ -10,6 +11,11 @@ import katanImg from "@/assets/katan.jpg";
 const Health = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Здоровье"
+        canonical="/health"
+        description="Лечение зубов и избавление от боли в клинике BFP Concept. Терапия, хирургия, лечение ВНЧС, функциональная диагностика."
+      />
       <Navigation />
 
       {/* Hero — полноэкранный с фоновым изображением */}

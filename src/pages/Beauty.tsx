@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollAnimation from "@/components/ScrollAnimation";
@@ -10,6 +11,11 @@ import kistImg from "@/assets/kist.jpg";
 const Beauty = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Красота"
+        canonical="/beauty"
+        description="Эстетическая стоматология в клинике BFP Concept. Виниры, отбеливание, реставрация зубов, улыбка мечты."
+      />
       <Navigation />
 
       {/* Hero — полноэкранный с фоновым изображением */}

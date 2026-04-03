@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Microscope, Scan, Camera, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
@@ -61,6 +62,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="О клинике"
+        canonical="/about"
+        description="BFP Concept — клиника биофункциональной стоматологии в Москве. Философия лечения, современные технологии, принципы работы. 3D-сканирование, микроскоп, фотопротокол."
+      />
       <Navigation />
 
       {/* Philosophy Section */}

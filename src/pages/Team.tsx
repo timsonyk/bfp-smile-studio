@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
@@ -6,6 +7,11 @@ import { teamMembers } from "@/data/teamData";
 const Team = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Команда"
+        canonical="/team"
+        description="Команда стоматологии BFP Concept. Врачи-стоматологи с многолетним опытом: ортопеды, терапевты, хирурги, ортодонты. Профессионалы биофункциональной стоматологии."
+      />
       <Navigation />
 
       {/* Hero Section */}
