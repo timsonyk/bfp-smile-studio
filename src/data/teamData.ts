@@ -76,7 +76,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "ekaterina-ayurova",
-    name: "Екатерина Аюрова",
+    name: "Джеева Екатерина Батыровна",
     position: "Гигиенист",
     shortDescription: [
       "Работает под увеличением",
