@@ -16,7 +16,7 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     id: "artur-makarov",
-    name: "Артур Макаров",
+    name: "Артур Владимирович Макаров",
     position: "Главный врач, ортопед, гнатолог",
     shortDescription: [
       "Ортопед, гнатолог",
