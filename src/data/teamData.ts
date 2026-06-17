@@ -16,7 +16,7 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     id: "artur-makarov",
-    name: "Артур Владимирович Макаров",
+    name: "Макаров Артур Владимирович",
     position: "Главный врач, ортопед, гнатолог",
     shortDescription: [
       "Ортопед, гнатолог",
@@ -37,7 +37,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "albert-ayvazyan",
-    name: "Альберт Гайкович Айвазян",
+    name: "Айвазян Альберт Гайкович",
     position: "Хирург-имплантолог",
     shortDescription: [
       "Современные методики имплантации",
