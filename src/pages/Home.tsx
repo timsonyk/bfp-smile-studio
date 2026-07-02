@@ -95,7 +95,7 @@ const Home = () => {
             {/* CTA кнопки */}
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 md:mb-16 animation-init animate-fade-in-up animation-delay-500 px-4">
               <a
-                href="https://t.me/bfsclinic"
+                href="https://t.me/bfpconcept"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background text-sm rounded-lg hover:bg-foreground/90 transition-colors btn-press"
@@ -558,7 +558,7 @@ const Home = () => {
                           WhatsApp
                         </a>
                         <a
-                          href="https://t.me/bfsclinic"
+                          href="https://t.me/bfpconcept"
                           className="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-5 transition-colors"
                           target="_blank"
                           rel="noopener noreferrer"
