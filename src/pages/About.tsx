@@ -7,21 +7,25 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
 import { teamMembers } from "@/data/teamData";
-import clinic1 from "@/assets/clinic-1.png";
-import clinic2 from "@/assets/clinic-2.png";
-import clinic3 from "@/assets/clinic-3.png";
-import clinic4 from "@/assets/clinic-4.png";
-import clinic5 from "@/assets/clinic-5.png";
+import clinic1 from "@/assets/clinic-1.webp";
+import clinic2 from "@/assets/clinic-2.webp";
+import clinic3 from "@/assets/clinic-3.webp";
+import clinic4 from "@/assets/clinic-4.webp";
+import clinic5 from "@/assets/clinic-5.webp";
+import clinic6 from "@/assets/clinic-6.webp";
+import clinic7 from "@/assets/clinic-7.webp";
 
 const About = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const clinicImages = [
-    { src: clinic1, alt: "Ресепшен клиники" },
+    { src: clinic1, alt: "Ресепшен клиники BFP Concept" },
     { src: clinic2, alt: "Зона ожидания" },
-    { src: clinic3, alt: "Интерьер клиники" },
-    { src: clinic4, alt: "Продукция для ухода" },
-    { src: clinic5, alt: "Коридор клиники" },
+    { src: clinic3, alt: "Стоматологический кабинет" },
+    { src: clinic4, alt: "Стена дипломов и сертификатов" },
+    { src: clinic5, alt: "Средства для ухода за полостью рта" },
+    { src: clinic6, alt: "Декор интерьера клиники" },
+    { src: clinic7, alt: "Интерьер клиники" },
   ];
 
   const principles = [

@@ -23,7 +23,6 @@ const BeforeAfter = () => {
     { id: "orthopedics", label: "Ортопедия" },
     { id: "aesthetics", label: "Эстетика" },
     { id: "surgery", label: "Хирургия" },
-    { id: "hygiene", label: "Гигиена" },
   ];
 
   const cases = [
@@ -66,14 +65,6 @@ const BeforeAfter = () => {
       description: "Протезирование на имплантационных системах",
       beforeImage: before5,
       afterImage: after5,
-    },
-    {
-      id: 6,
-      category: "hygiene",
-      title: "Профессиональная гигиена",
-      description: "Удаление налета и отбеливание",
-      beforeImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=900&fit=crop",
-      afterImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&h=900&fit=crop",
     },
   ];
 
