@@ -14,8 +14,6 @@ import before4 from "@/assets/before4.png";
 import after4 from "@/assets/after4.png";
 import before5 from "@/assets/before5.jpg";
 import after5 from "@/assets/after5.jpg";
-import before6 from "@/assets/before6.jpg";
-import after6 from "@/assets/after6.jpg";
 
 const BeforeAfter = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -25,7 +23,6 @@ const BeforeAfter = () => {
     { id: "orthopedics", label: "Ортопедия" },
     { id: "aesthetics", label: "Эстетика" },
     { id: "surgery", label: "Хирургия" },
-    { id: "hygiene", label: "Гигиена" },
   ];
 
   const cases = [
@@ -68,14 +65,6 @@ const BeforeAfter = () => {
       description: "Протезирование на имплантационных системах",
       beforeImage: before5,
       afterImage: after5,
-    },
-    {
-      id: 6,
-      category: "hygiene",
-      title: "Профессиональная гигиена",
-      description: "Удаление налета и отбеливание",
-      beforeImage: before6,
-      afterImage: after6,
     },
   ];
 
