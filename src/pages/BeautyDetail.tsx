@@ -139,7 +139,7 @@ const BeautyDetail = () => {
                     +7 (495) 120-01-88
                   </a>
                   <a
-                    href="https://t.me/bfsclinic"
+                    href="https://t.me/bfpconcept"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-8 py-4 border-2 border-background/30 text-background font-medium rounded-lg hover:bg-background/10 transition-colors"

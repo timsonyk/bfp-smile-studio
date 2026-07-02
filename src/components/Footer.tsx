@@ -116,7 +116,7 @@ const Footer = () => {
               WhatsApp
             </a>
             <a
-              href="https://t.me/bfsclinic"
+              href="https://t.me/bfpconcept"
               className="hover:text-foreground transition-colors"
               target="_blank"
               rel="noopener noreferrer"

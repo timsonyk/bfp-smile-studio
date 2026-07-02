@@ -261,7 +261,7 @@ const Navigation = () => {
                 +7 495 120 01 88
               </a>
               <a
-                href="https://t.me/bfsclinic"
+                href="https://t.me/bfpconcept"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-full bg-[#0088cc]/10 text-[#0088cc] hover:bg-[#0088cc]/20 transition-colors duration-300"
