@@ -39,6 +39,10 @@ const About = () => {
     "col-span-2",
   ];
 
+  // Порядок фото для десктопа: clinic2 и clinic4 поменяны местами (мобильный порядок не меняется)
+  const desktopImages = [...clinicImages];
+  [desktopImages[1], desktopImages[3]] = [desktopImages[3], desktopImages[1]];
+
   const principles = [
     {
       number: "01",
@@ -199,7 +203,7 @@ const About = () => {
 
           {/* Desktop: бенто с крупным ресепшеном */}
           <div className="hidden md:grid grid-cols-4 gap-4 md:auto-rows-[11rem] lg:auto-rows-[14rem] max-w-7xl mx-auto">
-            {clinicImages.map((image, idx) => (
+            {desktopImages.map((image, idx) => (
               <button
                 key={idx}
                 onClick={() => setSelectedImage(image)}
