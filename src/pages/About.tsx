@@ -28,6 +28,17 @@ const About = () => {
     { src: clinic7, alt: "Интерьер клиники" },
   ];
 
+  // Раскладка десктопной галереи (бенто): крупный ресепшен + широкие акценты
+  const bentoSpans = [
+    "col-span-2 row-span-2",
+    "col-span-2",
+    "col-span-1",
+    "col-span-1",
+    "col-span-1",
+    "col-span-1",
+    "col-span-2",
+  ];
+
   const principles = [
     {
       number: "01",
@@ -186,13 +197,13 @@ const About = () => {
             ))}
           </div>
 
-          {/* Desktop: 5 колонок */}
-          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
+          {/* Desktop: бенто с крупным ресепшеном */}
+          <div className="hidden md:grid grid-cols-4 gap-4 md:auto-rows-[11rem] lg:auto-rows-[14rem] max-w-7xl mx-auto">
             {clinicImages.map((image, idx) => (
               <button
                 key={idx}
                 onClick={() => setSelectedImage(image)}
-                className={`aspect-square overflow-hidden rounded-[10px] shadow-lg reveal-section reveal-delay-${(idx % 3) + 1} cursor-pointer`}
+                className={`${bentoSpans[idx]} overflow-hidden rounded-[10px] shadow-lg reveal-section reveal-delay-${(idx % 3) + 1} cursor-pointer`}
               >
                 <img
                   src={image.src}

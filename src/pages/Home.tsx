@@ -184,19 +184,28 @@ const Home = () => {
         </div>
 
         {/* Скролл-индикатор с контактами */}
-        <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 animation-init animate-fade-in animation-delay-800 flex items-center">
+        <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 animation-init animate-fade-in animation-delay-800 flex items-center justify-center">
           <a
             href="tel:+74951200188"
-            className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors font-medium text-right w-28 sm:w-32"
+            className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors font-medium whitespace-nowrap"
           >
             +7 (495) 120-01-88
           </a>
-          <div className="w-px h-10 md:h-12 mx-3 md:mx-4 bg-gradient-to-b from-transparent via-foreground/20 to-foreground/40" />
+          <div className="w-px h-8 md:h-10 mx-2.5 md:mx-4 bg-gradient-to-b from-transparent via-foreground/20 to-foreground/40" />
+          <a
+            href="https://wa.me/79939175822"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
+          >
+            WhatsApp
+          </a>
+          <div className="w-px h-8 md:h-10 mx-2.5 md:mx-4 bg-gradient-to-b from-transparent via-foreground/20 to-foreground/40" />
           <a
             href="https://t.me/bfpconcept"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors text-left w-28 sm:w-32"
+            className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
           >
             Telegram
           </a>
@@ -605,7 +614,7 @@ const Home = () => {
                       <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Мессенджеры</p>
                       <div className="flex gap-3">
                         <a
-                          href="https://wa.me/74951200188"
+                          href="https://wa.me/79939175822"
                           className="inline-flex items-center justify-center rounded-md text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-5 transition-colors"
                           target="_blank"
                           rel="noopener noreferrer"
