@@ -124,7 +124,7 @@ const CookieConsent = () => {
             <span>Выбор сохраняется на 12 месяцев</span>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center md:justify-end gap-2">
+          <div className="grid grid-cols-2 gap-2 md:flex md:flex-wrap md:items-center md:justify-end">
             {!showSettings && (
               <Button
                 variant="ghost"
@@ -156,7 +156,7 @@ const CookieConsent = () => {
               Только необходимые
             </Button>
 
-            <Button size="sm" onClick={handleAcceptAll} className="text-xs">
+            <Button size="sm" onClick={handleAcceptAll} className="text-xs col-span-2 md:col-span-1">
               Принять все
             </Button>
           </div>

@@ -102,6 +102,14 @@ const Home = () => {
               >
                 Telegram
               </a>
+              <a
+                href="https://wa.me/79939175822"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-border text-sm rounded-lg hover:bg-secondary transition-colors btn-press"
+              >
+                WhatsApp
+              </a>
               <Link
                 to="/about"
                 className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-border text-sm rounded-lg hover:bg-secondary transition-colors btn-press"
@@ -550,7 +558,7 @@ const Home = () => {
                       <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Мессенджеры</p>
                       <div className="flex gap-3">
                         <a
-                          href="https://wa.me/74951200188"
+                          href="https://wa.me/79939175822"
                           className="inline-flex items-center justify-center rounded-md text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-5 transition-colors"
                           target="_blank"
                           rel="noopener noreferrer"
