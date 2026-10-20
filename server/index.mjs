@@ -2,16 +2,13 @@
 //
 // Заявка с персональными данными уходит письмом в ящик клиники на Яндекс 360 —
 // это первая запись данных, и она происходит на серверах в России
-// (ч. 5 ст. 18 152-ФЗ). В Telegram, если он настроен, уходит только
-// уведомление без имени и телефона: передавать туда сами данные — это
-// трансграничная передача.
+// (ч. 5 ст. 18 152-ФЗ). Больше никуда данные не передаются.
 //
 // Переменные окружения:
 //   PORT                  порт, по умолчанию 3000
 //   SMTP_USER, SMTP_PASS  ящик на Яндекс 360 и пароль приложения к нему
 //   SMTP_HOST, SMTP_PORT  по умолчанию smtp.yandex.ru:465
 //   MAIL_TO               куда слать заявки, по умолчанию info@bfpconcept.ru
-//   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID  необязательно, уведомление без данных
 
 import http from "node:http";
 import fs from "node:fs/promises";
@@ -180,17 +177,6 @@ async function handleBooking(req, res) {
   } catch (e) {
     console.error("Не удалось отправить письмо:", e.message);
     return send(res, 502, { error: "Не удалось отправить заявку" });
-  }
-
-  if (process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID) {
-    fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        chat_id: process.env.TELEGRAM_CHAT_ID,
-        text: `📋 Новая заявка на приём с сайта. Данные — в почте ${MAIL_TO}`,
-      }),
-    }).catch((e) => console.error("Telegram:", e.message));
   }
 
   send(res, 200, { ok: true });
