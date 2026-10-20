@@ -10,6 +10,8 @@ export const clinicInfo = {
   phone: "+7 (495) 120-01-88",
   phoneHref: "tel:+74951200188",
   email: "info@bfpconcept.ru",
+  whatsapp: "https://wa.me/79939175822",
+  telegram: "https://t.me/bfpconcept",
   hours: "Ежедневно с 9:00 до 21:00",
   license: {
     number: "ЛО-77-01-014680",

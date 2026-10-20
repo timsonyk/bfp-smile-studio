@@ -64,7 +64,6 @@ npm run preview  # Preview production build
 | `/before-after` | BeforeAfter | Before/after gallery |
 | `/contacts` | Contacts | Contact information |
 | `/privacy-policy` | PrivacyPolicy | Политика обработки ПДн (ст. 18.1 152-ФЗ) |
-| `/soglasie` | Consent | Отдельное согласие на обработку ПДн для формы записи |
 | `/svedeniya` | ClinicInfo | Реквизиты, лицензия, контролирующие органы (ПП РФ № 736) |
 
 ## Conventions
@@ -84,6 +83,7 @@ Add routes in `src/App.tsx` above the catch-all `"*"` route:
 
 ## Booking form & server
 
+- **Currently disabled.** Pages show `BookingContacts` (call / WhatsApp / Telegram) instead of `BookingForm`, so the site collects no personal data. The form, `server/index.mjs`, `Dockerfile` and `src/pages/Consent.tsx` are kept for when it is decided where bookings go inside Russia; re-enabling means restoring the `/soglasie` route, its footer link and the form-related sections of the privacy policy.
 - The site is served by `server/index.mjs` (`npm start`, or the `Dockerfile` on Timeweb App Platform): it serves `dist/` and handles `POST /api/zayavka`.
 - Bookings are emailed via Yandex 360 SMTP to `MAIL_TO` (data stays on servers in Russia, ч. 5 ст. 18 152-ФЗ). Nothing else receives the data. Never send form data from the browser to third-party APIs or put tokens in frontend code.
 - Env: `SMTP_USER`, `SMTP_PASS` (Yandex app password), optional `MAIL_TO`.

@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import BookingForm from "@/components/BookingForm";
+import BookingContacts from "@/components/BookingContacts";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { services } from "@/data/servicesData";
 
@@ -179,7 +179,7 @@ const ServiceDetail = () => {
           <div className="max-w-2xl mx-auto reveal-section reveal-delay-4">
             <div className="bg-card rounded-xl md:rounded-2xl shadow-xl p-6 sm:p-8 md:p-12">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-medium mb-6 md:mb-8 text-center">Записаться на прием</h2>
-              <BookingForm />
+              <BookingContacts />
             </div>
           </div>
         </div>

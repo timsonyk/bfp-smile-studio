@@ -126,13 +126,10 @@ const Footer = () => {
             <Link to="/privacy-policy" className="hover:text-foreground transition-colors link-underline">
               Политика обработки персональных данных
             </Link>
-            <Link to="/soglasie" className="hover:text-foreground transition-colors link-underline">
-              Согласие на обработку данных
-            </Link>
           </div>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a
-              href="https://wa.me/74951200188"
+              href={clinicInfo.whatsapp}
               className="hover:text-foreground transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -140,7 +137,7 @@ const Footer = () => {
               WhatsApp
             </a>
             <a
-              href="https://t.me/bfpconcept"
+              href={clinicInfo.telegram}
               className="hover:text-foreground transition-colors"
               target="_blank"
               rel="noopener noreferrer"

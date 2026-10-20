@@ -26,7 +26,6 @@ import ServiceDetail from "./pages/ServiceDetail";
 import BeforeAfter from "./pages/BeforeAfter";
 import Contacts from "./pages/Contacts";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Consent from "./pages/Consent";
 import ClinicInfo from "./pages/ClinicInfo";
 import NotFound from "./pages/NotFound";
 import CookieConsent from "./components/CookieConsent";
@@ -51,7 +50,6 @@ const App = () => (
           <Route path="/before-after" element={<BeforeAfter />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/soglasie" element={<Consent />} />
           <Route path="/svedeniya" element={<ClinicInfo />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

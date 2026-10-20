@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import TeamCard from "@/components/TeamCard";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
-import BookingForm from "@/components/BookingForm";
+import BookingContacts from "@/components/BookingContacts";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import { teamMembers } from "@/data/teamData";
 
@@ -517,7 +517,7 @@ const Home = () => {
 
       {/* ═══════════════════════════════════════════════════════════════
           БЛОК 7: КОНТАКТЫ
-          Форма и информация.
+          Информация и запись по телефону / в мессенджерах.
       ═══════════════════════════════════════════════════════════════ */}
       <section className="section-padding">
         <div className="container mx-auto px-6 md:px-8">
@@ -557,34 +557,17 @@ const Home = () => {
                       </a>
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Мессенджеры</p>
-                      <div className="flex gap-3">
-                        <a
-                          href="https://wa.me/79939175822"
-                          className="inline-flex items-center justify-center rounded-md text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-5 transition-colors"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          WhatsApp
-                        </a>
-                        <a
-                          href="https://t.me/bfpconcept"
-                          className="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-5 transition-colors"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Telegram
-                        </a>
-                      </div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Часы работы</p>
+                      <p className="text-lg">Ежедневно с 9:00 до 21:00</p>
                     </div>
                   </div>
                 </div>
               </ScrollAnimation>
 
-              {/* Форма записи */}
+              {/* Запись */}
               <ScrollAnimation animation="right" delay={100}>
-                <div>
-                  <BookingForm />
+                <div className="bg-secondary rounded-2xl p-8 md:p-10 h-full">
+                  <BookingContacts title="Записаться на приём" />
                 </div>
               </ScrollAnimation>
             </div>

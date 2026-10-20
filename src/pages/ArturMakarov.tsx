@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import BookingForm from "@/components/BookingForm";
+import BookingContacts from "@/components/BookingContacts";
 import { teamMembers } from "@/data/teamData";
 
 const ArturMakarov = () => {
@@ -79,7 +79,7 @@ const ArturMakarov = () => {
             <div className="mt-24 reveal-section reveal-delay-4">
               <div className="bg-card rounded-2xl shadow-xl p-8 md:p-12 max-w-2xl mx-auto">
                 <h2 className="text-3xl font-medium mb-8 text-center">Записаться на прием</h2>
-                <BookingForm />
+                <BookingContacts />
               </div>
             </div>
           </div>

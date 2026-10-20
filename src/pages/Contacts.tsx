@@ -2,13 +2,13 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import BookingForm from "@/components/BookingForm";
+import BookingContacts from "@/components/BookingContacts";
 const Contacts = () => {
   return <div className="min-h-screen">
       <SEO
         title="Контакты"
         canonical="/contacts"
-        description="Контакты стоматологии BFP Concept. Адрес: Москва, Дербеневская набережная 1/2. Телефон: +7 (495) 120-01-88. Запись на приём онлайн."
+        description="Контакты стоматологии BFP Concept. Адрес: Москва, Дербеневская набережная 1/2. Телефон: +7 (495) 120-01-88. Запись по телефону и в мессенджерах."
       />
       <Navigation />
 
@@ -24,7 +24,7 @@ const Contacts = () => {
         </div>
       </section>
 
-      {/* Contact Info & Form */}
+      {/* Contact Info & Booking */}
       <section className="pt-8 md:pt-12 pb-16 md:pb-24">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 md:gap-12">
@@ -83,25 +83,14 @@ const Contacts = () => {
                   </div>
                 </div>
 
-                <div className="pt-4 md:pt-6">
-                  <h3 className="font-semibold text-base md:text-lg mb-3 md:mb-4">Мессенджеры</h3>
-                  <div className="flex flex-col sm:flex-row gap-3 sm:space-x-4">
-                    <a href="https://wa.me/74951234567" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 md:h-11 px-6">
-                      WhatsApp
-                    </a>
-                    <a href="https://t.me/bfpconcept" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 h-10 md:h-11 px-6">
-                      Telegram
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
 
-            {/* Booking Form */}
+            {/* Booking */}
             <div className="reveal-section reveal-delay-1">
               <div className="bg-card rounded-xl md:rounded-2xl shadow-xl p-6 md:p-8">
                 <h2 className="text-2xl md:text-3xl font-medium mb-6 md:mb-8 text-center">Записаться на прием</h2>
-                <BookingForm />
+                <BookingContacts />
               </div>
             </div>
           </div>

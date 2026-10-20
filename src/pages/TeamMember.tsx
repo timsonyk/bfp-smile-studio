@@ -2,7 +2,7 @@ import { useParams, Navigate } from "react-router-dom";
 import SEO from "@/components/SEO";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import BookingForm from "@/components/BookingForm";
+import BookingContacts from "@/components/BookingContacts";
 import { teamMembers } from "@/data/teamData";
 
 const TeamMember = () => {
@@ -69,7 +69,7 @@ const TeamMember = () => {
             <div className="mt-16 md:mt-20 lg:mt-24 reveal-section reveal-delay-3">
               <div className="bg-card rounded-xl md:rounded-2xl shadow-xl p-6 sm:p-8 md:p-12 max-w-2xl mx-auto">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-medium mb-6 md:mb-8 text-center">Записаться на прием</h2>
-                <BookingForm />
+                <BookingContacts />
               </div>
             </div>
           </div>
