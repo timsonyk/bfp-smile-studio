@@ -16,6 +16,7 @@ import before2 from "@/assets/before2.jpg";
 import after2 from "@/assets/after2.jpg";
 import before3 from "@/assets/before3.jpg";
 import after3 from "@/assets/after3.jpg";
+import { MEDICAL_WARNING } from "@/data/clinicInfo";
 
 const Home = () => {
   const mainDoctor = teamMembers[0];
@@ -496,10 +497,10 @@ const Home = () => {
             <ScrollAnimation delay={300}>
               <div className="text-center mt-10 md:mt-12">
                 <p className="text-sm text-muted-foreground mb-3">
-                  Отзывы взяты с Яндекс Карт
+                  Отзывы взяты с Яндекс Карт. Результат лечения индивидуален
                 </p>
                 <a
-                  href="https://yandex.ru/maps/org/bfp_smile_studio/1234567890/"
+                  href="https://yandex.ru/maps/org/1026128887/reviews/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -507,6 +508,7 @@ const Home = () => {
                   Читать все отзывы на Яндекс Картах
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
+                <p className="mt-6 text-base md:text-lg font-medium uppercase tracking-wide text-foreground/80">{MEDICAL_WARNING}</p>
               </div>
             </ScrollAnimation>
           </div>

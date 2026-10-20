@@ -63,6 +63,9 @@ npm run preview  # Preview production build
 | `/services/:slug` | ServiceDetail | Individual service |
 | `/before-after` | BeforeAfter | Before/after gallery |
 | `/contacts` | Contacts | Contact information |
+| `/privacy-policy` | PrivacyPolicy | Политика обработки ПДн (ст. 18.1 152-ФЗ) |
+| `/soglasie` | Consent | Отдельное согласие на обработку ПДн для формы записи |
+| `/svedeniya` | ClinicInfo | Реквизиты, лицензия, контролирующие органы (ПП РФ № 736) |
 
 ## Conventions
 
@@ -78,6 +81,18 @@ Add routes in `src/App.tsx` above the catch-all `"*"` route:
 ```tsx
 <Route path="/new-page" element={<NewPage />} />
 ```
+
+## Booking form & server
+
+- The site is served by `server/index.mjs` (`npm start`, or the `Dockerfile` on Timeweb App Platform): it serves `dist/` and handles `POST /api/zayavka`.
+- Bookings are emailed via Yandex 360 SMTP to `MAIL_TO` (data stays on servers in Russia, ч. 5 ст. 18 152-ФЗ). Telegram, if configured, gets only a ping without personal data. Never send form data from the browser to third-party APIs or put tokens in frontend code.
+- Env: `SMTP_USER`, `SMTP_PASS` (Yandex app password), optional `MAIL_TO`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`.
+- Consent checkbox must stay unticked by default. When changing `src/pages/Consent.tsx`, bump `CONSENT_VERSION` in the server.
+
+## Legal
+
+- Clinic requisites, license, supervisors and the medical-ad warning live in `src/data/clinicInfo.ts` — edit only there.
+- Medical-ad warning («Имеются противопоказания…», ч. 7 ст. 24 38-ФЗ) is shown in the footer, on `/before-after` and under reviews. Avoid claims like «безболезненно», «гарантия», «лучший».
 
 ## Assets
 

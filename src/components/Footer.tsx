@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { clinicInfo, MEDICAL_WARNING } from "@/data/clinicInfo";
 
 const Footer = () => {
   return (
@@ -98,12 +99,35 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Предупреждение для рекламы медуслуг (ч. 7 ст. 24 38-ФЗ) */}
+        <p className="mt-10 md:mt-12 text-center text-lg md:text-2xl font-medium uppercase tracking-wide text-foreground/80">
+          {MEDICAL_WARNING}
+        </p>
+
+        {/* Реквизиты и лицензия (ПП РФ № 736, ст. 9 ЗоЗПП) */}
+        <div className="mt-6 text-xs text-muted-foreground text-center md:text-left leading-relaxed">
+          <p>
+            {clinicInfo.shortName} · ОГРН {clinicInfo.ogrn} · ИНН {clinicInfo.inn} ·{" "}
+            {clinicInfo.address}
+          </p>
+          <p>
+            Лицензия на медицинскую деятельность № {clinicInfo.license.number} от{" "}
+            {clinicInfo.license.date}, выдана: {clinicInfo.license.issuer}
+          </p>
+        </div>
+
         {/* Bottom */}
-        <div className="border-t border-border mt-10 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-muted-foreground">
-          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+        <div className="border-t border-border mt-6 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-muted-foreground">
+          <div className="flex flex-col md:flex-row md:flex-wrap items-center gap-2 md:gap-4">
             <p>&copy; {new Date().getFullYear()} bfp concept</p>
+            <Link to="/svedeniya" className="hover:text-foreground transition-colors link-underline">
+              Сведения о клинике
+            </Link>
             <Link to="/privacy-policy" className="hover:text-foreground transition-colors link-underline">
-              Политика конфиденциальности
+              Политика обработки персональных данных
+            </Link>
+            <Link to="/soglasie" className="hover:text-foreground transition-colors link-underline">
+              Согласие на обработку данных
             </Link>
           </div>
           <div className="flex gap-4 mt-4 md:mt-0">

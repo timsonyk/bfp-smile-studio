@@ -16,6 +16,7 @@ import before5 from "@/assets/before5.jpg";
 import after5 from "@/assets/after5.jpg";
 import before6 from "@/assets/before6.jpg";
 import after6 from "@/assets/after6.jpg";
+import { MEDICAL_WARNING } from "@/data/clinicInfo";
 
 const BeforeAfter = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -97,8 +98,9 @@ const BeforeAfter = () => {
           <div className="max-w-4xl mx-auto text-center reveal-section">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 md:mb-6">Результаты лечения</h1>
             <p className="text-[0.9375rem] leading-relaxed sm:text-lg md:text-xl text-muted-foreground">
-              Наши работы — лучшее доказательство качества и профессионализма
+              Клинические случаи наших пациентов. Результат лечения индивидуален и зависит от исходной ситуации
             </p>
+            <p className="mt-6 text-base md:text-lg font-medium uppercase tracking-wide text-foreground/80">{MEDICAL_WARNING}</p>
           </div>
         </div>
       </section>
